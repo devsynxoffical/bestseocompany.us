@@ -8,7 +8,7 @@ export const contentType = "image/png";
 export default function OpengraphImage() {
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: "#F3F2EE", padding: 72, fontFamily: "sans-serif" }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: "#FFFFFF", padding: 72, fontFamily: "sans-serif" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 18, fontSize: 34, fontWeight: 800, color: "#111" }}>
           <div style={{ width: 60, height: 60, borderRadius: 16, background: "#111", display: "flex", alignItems: "center", justifyContent: "center", color: "#A2F27F", fontSize: 34 }}>↗</div>
           bestseocompany.us
