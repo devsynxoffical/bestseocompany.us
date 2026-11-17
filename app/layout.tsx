@@ -41,9 +41,20 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
+const heroBuildScript = `try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){var d=document.documentElement;d.classList.add('hero-build');setTimeout(function(){if(!d.dataset.heroReady)d.classList.remove('hero-build')},8000)}}catch(e){}`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-US" className={`${inter.variable} ${interTight.variable} ${dmMono.variable} ${instrumentSerif.variable}`}>
+    <html
+      lang="en-US"
+      className={`${inter.variable} ${interTight.variable} ${dmMono.variable} ${instrumentSerif.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Hide hero layers before first paint so the "built by agents" intro can play.
+            Falls back to the plain hero if the app hasn't hydrated within 8 seconds. */}
+        <script dangerouslySetInnerHTML={{ __html: heroBuildScript }} />
+      </head>
       <body>{children}</body>
     </html>
   );

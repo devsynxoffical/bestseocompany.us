@@ -47,7 +47,7 @@ lib/
 
 | # | Section | File | Motion |
 |---|---------|------|--------|
-| 1 | Hero | `Hero.tsx` | Headline lines slide up, highlight draws in, "#1" pops, stat stickers follow the mouse |
+| 1 | Hero | `Hero.tsx` | **Built live by 9 SEO agents**: named cursors draw selection boxes with live size labels, slide in the headline rows, click the highlight and #1 badge, type the paragraph, swarm the form and drag the stat stickers in. A status bar counts layers with Skip / Replay. Stickers follow the mouse afterwards |
 | 2 | Ticker bands | `Marquees.tsx` | Two tilted bands; speed, direction and skew react to scroll velocity |
 | 3 | About statement | `Statement.tsx` | Words fill grey → ink while scrolling; stats count up |
 | 4 | "We help ___" | `WhoWeHelp.tsx` | Rotating audience word with resizing highlight; industry pills tilt in |
@@ -67,6 +67,10 @@ lib/
 | — | Footer | `layout/Footer.tsx` | Wordmark letters rise in; newsletter form |
 
 Site-wide: scroll progress bar, hide-on-scroll header, custom cursor with labels (`data-cursor="Label"` on any element), magnetic buttons, word-by-word heading reveals.
+
+### How the hero build works
+
+`app/layout.tsx` has a tiny inline script that adds `hero-build` to `<html>` before first paint (skipped for reduced motion), so hero layers start hidden with no flash. `Hero.tsx` measures each layer, then runs a timed script of cursor moves, box growth and reveals. If the page hasn't hydrated within 8 seconds, the script removes the class and the plain hero shows. To tweak timing, edit the millisecond values in `run()`; agent names and colours are in `AGENTS`.
 
 ### How reveals work
 
