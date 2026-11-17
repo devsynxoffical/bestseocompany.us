@@ -1,0 +1,85 @@
+# bestseocompany.us
+
+Homepage for **Best SEO Company**, a US-based SEO agency. Built with **Next.js 16 (App Router)**, **React 19** and **TypeScript**. It has no UI or animation libraries: every effect is hand-written CSS and small React hooks, so the bundle stays light.
+
+## Quick start
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build (static)
+npm start          # serve the production build
+npm run typecheck  # TypeScript only
+```
+
+Requires Node.js 20 or newer.
+
+## Deploy
+
+The page is fully static, so any Node host or static host works.
+
+- **Vercel**: import the repo. No settings needed.
+- **cPanel / shared hosting**: add `output: "export"` to `next.config.ts`, run `npm run build`, and upload the generated `out/` folder to `public_html`. (Remove the `headers()` block first; static export doesn't support it.)
+
+## Project structure
+
+```
+app/
+  layout.tsx            Fonts (next/font), metadata, viewport
+  page.tsx              Puts the sections together in order
+  globals.css           Design tokens + all section styles
+  sitemap.ts            /sitemap.xml
+  robots.ts             /robots.txt
+  opengraph-image.tsx   Social share image (generated)
+  icon.svg              Favicon
+components/
+  layout/               Header, Footer, ScrollProgress, CustomCursor
+  sections/             One file per homepage section (see below)
+  ui/                   Reveal, SplitText, CountUp, MagneticLink, Globe, Logo
+  StructuredData.tsx    JSON-LD (ProfessionalService, WebSite, FAQPage)
+hooks/                  useReveal, useRafLoop, useReducedMotion
+lib/
+  content.ts            ALL page copy and numbers: edit text here
+  utils.ts              clamp, easing, number formatting
+```
+
+## Sections and their motion
+
+| # | Section | File | Motion |
+|---|---------|------|--------|
+| 1 | Hero | `Hero.tsx` | Headline lines slide up, highlight draws in, "#1" pops, stat stickers follow the mouse |
+| 2 | Ticker bands | `Marquees.tsx` | Two tilted bands; speed, direction and skew react to scroll velocity |
+| 3 | About statement | `Statement.tsx` | Words fill grey → ink while scrolling; stats count up |
+| 4 | "We help ___" | `WhoWeHelp.tsx` | Rotating audience word with resizing highlight; industry pills tilt in |
+| 5 | Floating 3D SEO objects | `FloatingSeo.tsx` | Magnifier, #1 coin, map pin, review card, chart, search bar etc. drift at different scroll speeds and tilt toward the mouse |
+| 6 | Services folder tabs | `Services.tsx`, `ServiceVisuals.tsx` | Autoplaying tabs with progress bar; gauges fill, search query types, map pins drop, link chart draws |
+| 7 | About bento grid | `AboutBento.tsx`, `ui/Globe.tsx` | Tiles tilt in 3D with glare, floating principle card, draggable canvas globe, laurels grow, live cursors, looping stepper |
+| 8 | Reporting dashboard | `DashboardReel.tsx` | Panel scales to full size on scroll; KPIs count up; bars rise |
+| 9 | Why us | `WhyUs.tsx` | Sticky cards stack and shrink underneath |
+| 10 | Case studies | `CaseStack.tsx` | Pinned card stack; each card slides over the last; crossing ribbons change colour/words per case |
+| 11 | Before / after | `BeforeAfter.tsx` | Draggable comparison slider that sways until touched |
+| 12 | Process | `Process.tsx` | Progress line fills with scroll and lights each step |
+| 13 | Testimonials | `Testimonials.tsx` | Infinite quote row, pauses on hover |
+| 14 | Pricing | `Pricing.tsx` | Sliding Monthly/Yearly toggle, prices tween |
+| 15 | Blog | `Blog.tsx` | Thumbnail zoom, underline grows on hover |
+| 16 | FAQ | `Faq.tsx` | Smooth-height accordion |
+| 17 | Call to action | `Cta.tsx` | Clip reveal, spinning badge, drifting blobs |
+| — | Footer | `layout/Footer.tsx` | Wordmark letters rise in; newsletter form |
+
+Site-wide: scroll progress bar, hide-on-scroll header, custom cursor with labels (`data-cursor="Label"` on any element), magnetic buttons, word-by-word heading reveals.
+
+### How reveals work
+
+`useReveal` keeps the page complete without JavaScript: everything renders visible on the server, and only elements that start **below the fold** get the hidden `pre` class until they scroll into view. Visitors with **reduced motion** turned on get a still page: no reveals, autoplay, parallax or pinned stacks.
+
+## Editing content
+
+Change copy, prices, stats, FAQs and case studies in **`lib/content.ts`**. The FAQ also feeds the FAQPage structured data automatically.
+
+## Before launch: checklist
+
+- [ ] Replace the **SAMPLE** items in `lib/content.ts`: case studies, testimonials, stats (350+, 94%, 4,800+, 38 states…), lead-source split and dashboard numbers. Publishing invented reviews or results can break FTC rules and Google's review policies.
+- [ ] Connect the **audit form** (`components/sections/Hero.tsx`) and **newsletter form** (`components/layout/Footer.tsx`). Both have a `TODO` where the request should be sent, e.g. a Route Handler at `app/api/audit/route.ts` that emails you or posts to your CRM.
+- [ ] Point the blog links (`#blog`) at real article pages.
+- [ ] Add Privacy and Terms pages and link them in the footer.
+- [ ] Check `site` details (email, hours, founding year) in `lib/content.ts`.
