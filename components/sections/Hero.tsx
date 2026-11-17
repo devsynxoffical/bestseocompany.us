@@ -27,11 +27,14 @@ export function Hero() {
             <span className="dot" aria-hidden="true">★</span> {hero.badge}
           </span>
         </div>
-        <h1>
-          <span className="row"><span>Rank <span className="serp">#1</span> on</span></span>
-          <span className="row"><span>Google. <span className="hl">Grow</span></span></span>
-          <span className="row"><span>for real.</span></span>
-        </h1>
+        <div className="hero-title">
+          <h1>
+            <span className="row"><span>Rank <span className="serp">#1</span> on</span></span>
+            <span className="row"><span>Google. <span className="hl">Grow</span></span></span>
+            <span className="row"><span>for real.</span></span>
+          </h1>
+          <HeroCursors />
+        </div>
         <div className="hero-grid">
           <p className="hero-copy">{hero.copy}</p>
           <AuditForm />
@@ -48,6 +51,28 @@ export function Hero() {
         ))}
       </div>
     </section>
+  );
+}
+
+const heroCursors = [
+  { name: "Your customer", className: "hc1" },
+  { name: "Googlebot", className: "hc2" },
+  { name: "SEO strategist", className: "hc3" },
+];
+
+/** Multiplayer-style named cursors that glide around the headline and "click" on words. */
+function HeroCursors() {
+  return (
+    <div className="hero-cursors" aria-hidden="true">
+      {heroCursors.map((c) => (
+        <span key={c.name} className={`hcur ${c.className}`}>
+          <svg viewBox="0 0 24 24" width="26" height="26">
+            <path d="M3 2l18 8-8 2.5L10.5 21z" />
+          </svg>
+          <b>{c.name}</b>
+        </span>
+      ))}
+    </div>
   );
 }
 
