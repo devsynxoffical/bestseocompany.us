@@ -25,8 +25,8 @@ export const nav = [
 ];
 
 export const hero = {
-  badge: "US-based SEO team, no long-term contracts",
-  copy: "We help US businesses climb search results with technical fixes, content people actually read, and links that hold up. You get monthly reports in plain English.",
+  badge: "Best SEO Company · US-based SEO agency",
+  copy: "Best SEO Company helps US businesses get found first on Google. We grow your rankings with technical fixes, content people actually read, and links that hold up. You get monthly reports in plain English.",
   formNote: "Free 40-point audit. Results in 48 hours.",
   // SAMPLE figures
   stickers: [

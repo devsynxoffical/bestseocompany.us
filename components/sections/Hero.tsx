@@ -292,13 +292,13 @@ export function Hero() {
         </div>
         <h1>
           <span className={cx("row", on.r0 && "on")} data-build="r0">
-            <span>Rank <span className={cx("serp", on.serp && "on")}>#1</span> on</span>
-          </span>
+            <span>Rank <span className={cx("serp", on.serp && "on")}>#1</span> with</span>
+          </span>{" "}
           <span className={cx("row", on.r1 && "on")} data-build="r1">
-            <span>Google. <span className={cx("hl", on.hl && "on")}>Grow</span></span>
-          </span>
+            <span><span className={cx("hl", on.hl && "on")}>Best SEO</span></span>
+          </span>{" "}
           <span className={cx("row", on.r2 && "on")} data-build="r2">
-            <span>for real.</span>
+            <span>Company.</span>
           </span>
         </h1>
         <div className="hero-grid">

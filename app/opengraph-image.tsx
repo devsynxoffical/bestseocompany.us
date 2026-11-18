@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Best SEO Company: Rank #1 on Google. Grow for real.";
+export const alt = "Rank #1 on Google with Best SEO Company";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -14,9 +14,9 @@ export default function OpengraphImage() {
           bestseocompany.us
         </div>
         <div style={{ display: "flex", flexDirection: "column", fontSize: 108, fontWeight: 800, letterSpacing: -5, lineHeight: 0.95, color: "#111" }}>
-          <div style={{ display: "flex" }}>Rank #1 on Google.</div>
+          <div style={{ display: "flex" }}>Rank #1 with</div>
           <div style={{ display: "flex" }}>
-            <span style={{ background: "#A2F27F", borderRadius: 18, padding: "0 16px" }}>Grow</span>&nbsp;for real.
+            <span style={{ background: "#A2F27F", borderRadius: 18, padding: "0 16px" }}>Best SEO</span>&nbsp;Company.
           </div>
         </div>
         <div style={{ display: "flex", gap: 14 }}>
