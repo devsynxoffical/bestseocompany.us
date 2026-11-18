@@ -16,13 +16,12 @@ export const site = {
 };
 
 export const nav = [
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Why us", href: "#why" },
-  { label: "Results", href: "#results" },
-  { label: "Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "Free tools", href: "/tools" },
+  { label: "Guides", href: "/guides" },
+  { label: "Results", href: "/#results" },
+  { label: "Pricing", href: "/#pricing" },
 ];
 
 export const hero = {
@@ -64,18 +63,18 @@ export const statement = {
 export const audiences = {
   rotating: ["plumbers", "dentists", "law firms", "roofers", "online stores", "SaaS teams"],
   industries: [
-    "Home services",
-    "Dental & medical",
-    "Law firms",
-    "Roofing & HVAC",
-    "E-commerce",
-    "SaaS",
-    "Real estate",
-    "Restaurants",
-    "Auto repair",
-    "Med spas",
-    "Financial advisors",
-    "Multi-location brands",
+    { name: "Home services", href: "/industries/home-services-seo" },
+    { name: "Dental & medical", href: "/industries/dental-seo" },
+    { name: "Law firms", href: "/industries/law-firm-seo" },
+    { name: "Roofing & HVAC", href: "/industries/roofing-seo" },
+    { name: "E-commerce", href: "/services/ecommerce-seo" },
+    { name: "SaaS", href: "/industries/saas-seo" },
+    { name: "Real estate", href: "/industries/real-estate-seo" },
+    { name: "Restaurants", href: "/industries/restaurant-seo" },
+    { name: "Auto repair", href: "/industries/auto-repair-seo" },
+    { name: "Med spas", href: "/industries/med-spa-seo" },
+    { name: "Financial advisors", href: "/industries/financial-services-seo" },
+    { name: "Multi-location brands", href: "/services/multi-location-seo" },
   ],
 };
 
@@ -89,11 +88,13 @@ export type Service = {
   stat: string;
   statLabel: string;
   visual: "audit" | "serp" | "map" | "links";
+  href: string;
 };
 
 export const services: Service[] = [
   {
     id: "technical",
+    href: "/services/technical-seo",
     color: "lav",
     title: "Technical SEO & Site Health",
     copy: "We crawl every page, fix speed and Core Web Vitals, clean up indexing errors and add schema, so Google can read your site properly.",
@@ -104,6 +105,7 @@ export const services: Service[] = [
   },
   {
     id: "content",
+    href: "/guides/seo-keyword-research",
     color: "pink",
     title: "Content That Ranks & Converts",
     copy: "Our writers build pages around what your buyers search for, from service pages to buying guides. Every piece has a target keyword and a job to do.",
@@ -114,6 +116,7 @@ export const services: Service[] = [
   },
   {
     id: "local",
+    href: "/services/local-seo",
     color: "taupe",
     title: "Local SEO & Google Maps",
     copy: "We optimize your Google Business Profile, build citations and set up review flows so you show up in the map pack where nearby customers search.",
@@ -124,6 +127,7 @@ export const services: Service[] = [
   },
   {
     id: "links",
+    href: "/services/link-building",
     color: "lime",
     title: "Link Building & Digital PR",
     copy: "We earn links from real publications through data stories, expert quotes and outreach. No private blog networks, no paid link farms.",
@@ -232,9 +236,9 @@ export const plans = [
 export const yearlyDiscount = 0.15;
 
 export const posts = [
-  { tag: "AI search", read: "6 min read", title: "How to show up in Google's AI Overviews in 2026", color: "var(--lav)", art: "card" },
-  { tag: "Local SEO", read: "8 min read", title: "The 12-point Google Business Profile checklist", color: "var(--lime)", art: "pin" },
-  { tag: "Links", read: "5 min read", title: "Digital PR ideas that earn links without paying for them", color: "var(--pink)", art: "network" },
+  { tag: "AI search", read: "6 min read", title: "How do I choose an SEO agency for AEO visibility?", color: "var(--lav)", art: "card", href: "/guides/choose-seo-agency-for-aeo" },
+  { tag: "Pricing", read: "7 min read", title: "How much does SEO cost?", color: "var(--lime)", art: "pin", href: "/guides/seo-cost" },
+  { tag: "Links", read: "7 min read", title: "What is SEO link building?", color: "var(--pink)", art: "network", href: "/guides/what-is-link-building" },
 ] as const;
 
 export const faqs = [

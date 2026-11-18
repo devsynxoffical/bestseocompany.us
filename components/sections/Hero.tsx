@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { hero } from "@/lib/content";
 import { hasFinePointer, prefersReducedMotion } from "@/hooks/useReducedMotion";
 import { cx, easeOutCubic } from "@/lib/utils";
+import { submitLead } from "@/lib/lead";
 
 /* ------------------------------------------------------------------------- *
  * "Built live by SEO agents" hero.
@@ -419,7 +420,8 @@ function AuditForm() {
   const [note, setNote] = useState(hero.formNote);
   const input = useRef<HTMLInputElement>(null);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const [busy, setBusy] = useState(false);
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const clean = site.trim().replace(/^https?:\/\//, "");
     if (!/^[^\s]+\.[a-z]{2,}/i.test(clean)) {
@@ -427,8 +429,10 @@ function AuditForm() {
       input.current?.focus();
       return;
     }
-    // TODO: send `clean` to your CRM / email (e.g. a Next.js Route Handler at app/api/audit/route.ts)
-    setNote(`Thanks. Your audit request for ${clean} is in the queue. We'll email you within 48 hours.`);
+    setBusy(true);
+    const error = await submitLead({ type: "audit", website: clean });
+    setBusy(false);
+    setNote(error ?? `Thanks. Your audit request for ${clean} is in. We'll email you within 48 hours. Want instant results? Try our free audit tool.`);
   };
 
   return (
@@ -446,8 +450,8 @@ function AuditForm() {
           value={site}
           onChange={(e) => setSite(e.target.value)}
         />
-        <button className="btn red" type="submit">
-          Get my free audit <span className="arrow" aria-hidden="true">↗</span>
+        <button className="btn red" type="submit" disabled={busy}>
+          {busy ? "Sending…" : "Get my free audit"} <span className="arrow" aria-hidden="true">↗</span>
         </button>
       </form>
       <p className="audit-note" role="status">{note}</p>

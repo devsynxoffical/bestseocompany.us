@@ -1,7 +1,3 @@
-import { ScrollProgress } from "@/components/layout/ScrollProgress";
-import { CustomCursor } from "@/components/layout/CustomCursor";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { StructuredData } from "@/components/StructuredData";
 import { Hero } from "@/components/sections/Hero";
 import { Marquees } from "@/components/sections/Marquees";
@@ -25,9 +21,6 @@ export default function HomePage() {
   return (
     <>
       <StructuredData />
-      <ScrollProgress />
-      <CustomCursor />
-      <Header />
       <main id="top">
         <Hero />
         <Marquees />
@@ -47,7 +40,6 @@ export default function HomePage() {
         <Faq />
         <Cta />
       </main>
-      <Footer />
     </>
   );
 }

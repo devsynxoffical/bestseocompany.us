@@ -76,6 +76,27 @@ Site-wide: scroll progress bar, hide-on-scroll header, custom cursor with labels
 
 `useReveal` keeps the page complete without JavaScript: everything renders visible on the server, and only elements that start **below the fold** get the hidden `pre` class until they scroll into view. Visitors with **reduced motion** turned on get a still page: no reveals, autoplay, parallax or pinned stacks.
 
+## Content pages (81 URLs)
+
+| Section | URL | Count | Content file | Template |
+|---|---|---|---|---|
+| Industries | `/industries/[slug]` (+ searchable hub `/industries`) | 45 | `lib/pages/industries-a.ts`, `-b.ts`, `-c.ts` | `app/industries/[slug]/page.tsx` |
+| Services | `/services/[slug]` (+ hub `/services`) | 14 | `lib/pages/services.ts` | `app/services/[slug]/page.tsx` |
+| Free tools | `/tools/[slug]` (`/tools` redirects to the hub) | 5 | `lib/pages/tools.ts` | `app/tools/[slug]/page.tsx` |
+| Guides | `/guides/[slug]` (+ hub `/guides`) | 13 | `lib/pages/guides-1.ts`, `-2.ts`, `-3.ts` | `app/guides/[slug]/page.tsx` |
+
+Each content file is plain typed data (`lib/pages/types.ts`); edit copy there. Every page ships with its own title, meta description, canonical URL, Open Graph tags, breadcrumbs and JSON-LD (Service / WebApplication / Article + FAQPage + BreadcrumbList), and is listed in `/sitemap.xml`. Pages are statically generated at build time.
+
+Merged keywords (to avoid pages competing with each other): **Dental + Dentist** → `/industries/dental-seo`; **MVA + Car Accident Lawyers** → `/industries/car-accident-lawyer-seo`; **Burial Insurance + Final Expense** → `/industries/final-expense-insurance-seo`; **Attorney/Lawyers** → `/industries/law-firm-seo`; **"What is SEO"** (listed twice) → `/guides/what-is-seo`.
+
+### Free SEO audit tool
+`/tools/seo-audit-tool` is live: `POST /api/audit` fetches the page server-side and runs ~20 checks (status, redirects, HTTPS, speed, title, description, headings, word count, alt text, links, canonical, robots, viewport, lang, Open Graph, JSON-LD, robots.txt, sitemap). Requests to private/internal addresses, non-standard ports and credentials are blocked on every redirect hop, with a 10s timeout, 3 MB cap and a per-IP rate limit.
+
+The backlink, traffic and rank checkers collect a request (website, email, keywords) for your team to fulfil.
+
+### Forms and leads
+Every form posts to `POST /api/lead`. Set **`LEAD_WEBHOOK_URL`** in Vercel → Settings → Environment Variables (a Zapier/Make/Slack/CRM webhook that accepts JSON) to receive them. Without it, leads only appear in Vercel's function logs. See `.env.example`.
+
 ## Editing content
 
 Change copy, prices, stats, FAQs and case studies in **`lib/content.ts`**. The FAQ also feeds the FAQPage structured data automatically.
@@ -83,7 +104,6 @@ Change copy, prices, stats, FAQs and case studies in **`lib/content.ts`**. The F
 ## Before launch: checklist
 
 - [ ] Replace the **SAMPLE** items in `lib/content.ts`: case studies, testimonials, stats (350+, 94%, 4,800+, 38 states…), lead-source split and dashboard numbers. Publishing invented reviews or results can break FTC rules and Google's review policies.
-- [ ] Connect the **audit form** (`components/sections/Hero.tsx`) and **newsletter form** (`components/layout/Footer.tsx`). Both have a `TODO` where the request should be sent, e.g. a Route Handler at `app/api/audit/route.ts` that emails you or posts to your CRM.
-- [ ] Point the blog links (`#blog`) at real article pages.
+- [ ] Set `LEAD_WEBHOOK_URL` so form submissions reach you, and decide who fulfils backlink / traffic / rank report requests.
 - [ ] Add Privacy and Terms pages and link them in the footer.
 - [ ] Check `site` details (email, hours, founding year) in `lib/content.ts`.

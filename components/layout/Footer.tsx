@@ -1,21 +1,28 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/lib/content";
 import { Logo } from "@/components/ui/Logo";
 import { useReveal } from "@/hooks/useReveal";
+import { submitLead } from "@/lib/lead";
 
 const wordmark = ["b", "e", "s", "t", "s", "e", "o", ".", "u", "s"];
 
-export function Footer() {
+type FooterLink = { href: string; label: string };
+export type FooterColumns = { services: FooterLink[]; industries: FooterLink[]; tools: FooterLink[]; guides: FooterLink[] };
+
+export function Footer({ columns }: { columns: FooterColumns }) {
   const [note, setNote] = useState("One email a month. Unsubscribe anytime.");
   const [email, setEmail] = useState("");
   const markRef = useReveal<HTMLDivElement>();
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: connect to your email platform (Mailchimp, ConvertKit, HubSpot...)
-    setNote(/.+@.+\..+/.test(email) ? "You're on the list. Thanks for subscribing." : "Enter a valid email address.");
+    if (!/.+@.+\..+/.test(email)) return setNote("Enter a valid email address.");
+    const error = await submitLead({ type: "newsletter", email });
+    setNote(error ?? "You're on the list. Thanks for subscribing.");
+    if (!error) setEmail("");
   };
 
   return (
@@ -26,25 +33,20 @@ export function Footer() {
             <Logo />
             <p style={{ color: "var(--ink-2)", maxWidth: "32ch" }}>{site.tagline}</p>
           </div>
-          <div>
-            <h4>Services</h4>
-            <ul>
-              <li><a href="#services">Technical SEO</a></li>
-              <li><a href="#services">Content</a></li>
-              <li><a href="#services">Local SEO</a></li>
-              <li><a href="#services">Link building</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#why">Why us</a></li>
-              <li><a href="#results">Results</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#faq">FAQ</a></li>
-            </ul>
-          </div>
+          {([
+            ["Services", columns.services, "/services", "All services"],
+            ["Industries", columns.industries, "/industries", "All 45 industries"],
+            ["Free tools", columns.tools, "", ""],
+            ["Guides", columns.guides, "/guides", "All guides"],
+          ] as const).map(([title, links, allHref, allLabel]) => (
+            <div key={title}>
+              <h4>{title}</h4>
+              <ul>
+                {links.map((l) => <li key={l.href}><Link href={l.href}>{l.label}</Link></li>)}
+                {allHref && <li><Link href={allHref} className="foot-all">{allLabel} →</Link></li>}
+              </ul>
+            </div>
+          ))}
           <div>
             <h4>SEO tips, monthly</h4>
             <form className="news" onSubmit={onSubmit} noValidate>

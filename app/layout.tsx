@@ -1,7 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Mono, Instrument_Serif, Inter, Inter_Tight } from "next/font/google";
 import { site } from "@/lib/content";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { CustomCursor } from "@/components/layout/CustomCursor";
+import { Header } from "@/components/layout/Header";
+import { Footer, type FooterColumns } from "@/components/layout/Footer";
+import { guidePages, industryPages, servicePages, toolPages } from "@/lib/pages";
 import "./globals.css";
+import "./pages.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const interTight = Inter_Tight({ subsets: ["latin"], weight: ["500", "600", "700", "800"], variable: "--font-inter-tight", display: "swap" });
@@ -41,7 +47,15 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const heroBuildScript = `try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){var d=document.documentElement;d.classList.add('hero-build');setTimeout(function(){if(!d.dataset.heroReady)d.classList.remove('hero-build')},8000)}}catch(e){}`;
+const heroBuildScript = `try{if(location.pathname==='/'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var d=document.documentElement;d.classList.add('hero-build');setTimeout(function(){if(!d.dataset.heroReady)d.classList.remove('hero-build')},8000)}}catch(e){}`;
+
+const pick = <T extends { slug: string }>(list: T[], slugs: string[]) => slugs.map((s) => list.find((x) => x.slug === s)).filter((x): x is T => !!x);
+const footerColumns: FooterColumns = {
+  services: pick(servicePages, ["local-seo", "technical-seo", "link-building", "ecommerce-seo", "answer-engine-optimization", "seo-packages"]).map((p) => ({ href: `/services/${p.slug}`, label: p.name })),
+  industries: pick(industryPages, ["law-firm-seo", "dental-seo", "roofing-seo", "hvac-seo", "plumber-seo", "med-spa-seo", "real-estate-seo"]).map((p) => ({ href: `/industries/${p.slug}`, label: `${p.name} SEO` })),
+  tools: toolPages.map((p) => ({ href: `/tools/${p.slug}`, label: p.name })),
+  guides: pick(guidePages, ["what-is-seo", "seo-cost", "best-seo-strategy", "seo-keyword-research", "track-seo-rankings"]).map((p) => ({ href: `/guides/${p.slug}`, label: p.question })),
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -55,7 +69,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Falls back to the plain hero if the app hasn't hydrated within 8 seconds. */}
         <script dangerouslySetInnerHTML={{ __html: heroBuildScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <ScrollProgress />
+        <CustomCursor />
+        <Header />
+        {children}
+        <Footer columns={footerColumns} />
+      </body>
     </html>
   );
 }

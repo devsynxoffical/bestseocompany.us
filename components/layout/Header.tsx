@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { nav } from "@/lib/content";
 import { Logo } from "@/components/ui/Logo";
@@ -8,6 +10,7 @@ import { MagneticLink } from "@/components/ui/MagneticLink";
 /** Sticky header that hides while scrolling down and returns when scrolling up. */
 export function Header() {
   const ref = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -29,13 +32,16 @@ export function Header() {
       <div className="wrap nav-inner">
         <Logo />
         <nav className="nav-links" aria-label="Main">
-          {nav.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ))}
+          {nav.map((item) => {
+            const active = !item.href.includes("#") && pathname.startsWith(item.href);
+            return (
+              <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={active ? "active" : undefined}>
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
-        <MagneticLink href="#audit" arrow>
+        <MagneticLink href="/#audit" arrow>
           Free audit
         </MagneticLink>
       </div>

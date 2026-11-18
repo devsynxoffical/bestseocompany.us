@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { services } from "@/lib/content";
 import { SplitText } from "@/components/ui/SplitText";
@@ -103,6 +104,7 @@ export function Services() {
                     <h3>{s.title}</h3>
                     <p>{s.copy}</p>
                     <ul>{s.tags.map((t) => <li key={t}>{t}</li>)}</ul>
+                    <Link href={s.href} className="panel-more">Learn more about {s.title.split(" &")[0].toLowerCase()} <span aria-hidden="true">→</span></Link>
                     <div className="panel-stat"><b>{s.stat}</b><span>{s.statLabel}</span></div>
                   </div>
                   <ServiceVisual type={s.visual} active={i === active} />

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { posts } from "@/lib/content";
 import { SplitText } from "@/components/ui/SplitText";
 import { Reveal } from "@/components/ui/Reveal";
@@ -35,22 +36,22 @@ function Thumb({ art }: { art: (typeof posts)[number]["art"] }) {
   );
 }
 
-/** Latest articles. Links point to #blog until the blog pages exist. */
+/** Latest guides. */
 export function Blog() {
   return (
     <section className="block" id="blog" style={{ paddingTop: 24 }}>
       <div className="wrap">
         <div className="sec-head">
           <SplitText parts={["Fresh from the blog."]} />
-          <Reveal as="a" className="btn ghost" href="#blog">All articles <span className="arrow" aria-hidden="true">↗</span></Reveal>
+          <Reveal><Link className="btn ghost" href="/guides">All guides <span className="arrow" aria-hidden="true">↗</span></Link></Reveal>
         </div>
         <div className="posts">
           {posts.map((p, i) => (
-            <Reveal as="a" key={p.title} delay={(i || undefined) as 1 | 2 | undefined} className="post" href="#blog" data-cursor="Read">
+            <Reveal key={p.title} delay={(i || undefined) as 1 | 2 | undefined}><Link className="post" href={p.href} data-cursor="Read">
               <div className="thumb" style={{ background: p.color }}><div className="in"><Thumb art={p.art} /></div></div>
               <div className="meta"><span>{p.tag}</span><span>{p.read}</span></div>
               <h3>{p.title}</h3>
-            </Reveal>
+            </Link></Reveal>
           ))}
         </div>
       </div>

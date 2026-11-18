@@ -8,11 +8,13 @@ export function LogoMark() {
   );
 }
 
+import Link from "next/link";
+
 export function Logo() {
   return (
-    <a href="#top" className="logo" aria-label="Best SEO Company home">
+    <Link href="/" className="logo" aria-label="Best SEO Company home">
       <LogoMark />
       bestseocompany<span className="tld">.us</span>
-    </a>
+    </Link>
   );
 }

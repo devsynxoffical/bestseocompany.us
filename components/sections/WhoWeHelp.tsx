@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { audiences } from "@/lib/content";
 import { Reveal } from "@/components/ui/Reveal";
@@ -68,11 +69,14 @@ export function WhoWeHelp() {
           get found on Google.
         </Reveal>
         <div className="inds">
-          {audiences.industries.map((name, i) => (
-            <Reveal as="span" key={name} variant="tilt" delay={(i % 5 || undefined) as 1 | 2 | 3 | 4 | undefined} className="ind">
-              {name}
+          {audiences.industries.map((ind, i) => (
+            <Reveal as="span" key={ind.name} variant="tilt" delay={(i % 5 || undefined) as 1 | 2 | 3 | 4 | undefined}>
+              <Link href={ind.href} className="ind">{ind.name}</Link>
             </Reveal>
           ))}
+          <Reveal as="span" variant="tilt">
+            <Link href="/industries" className="ind ind-all">See all 45 industries →</Link>
+          </Reveal>
         </div>
       </div>
     </section>
