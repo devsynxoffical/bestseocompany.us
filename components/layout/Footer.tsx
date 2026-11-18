@@ -73,7 +73,9 @@ export function Footer({ columns }: { columns: FooterColumns }) {
 
         <div className="legal">
           <span>© {new Date().getFullYear()} {site.name}</span>
-          <span>Privacy · Terms</span>
+          <span className="legal-links">
+            <Link href="/about">About</Link> · <Link href="/contact">Contact</Link> · <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link> · <Link href="/editorial-policy">Editorial policy</Link> · <Link href="/site-map">Sitemap</Link> · <a href="/llms.txt">llms.txt</a>
+          </span>
           <button className="totop" type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             Back to top ↑
           </button>

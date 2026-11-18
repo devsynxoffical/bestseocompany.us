@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getIndustry, industryPages, servicePages } from "@/lib/pages";
@@ -23,13 +24,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const p = getIndustry((await params).slug);
   if (!p) return {};
-  return {
-    title: { absolute: p.title },
-    description: p.metaDescription,
-    keywords: [p.primaryKeyword, ...p.secondaryKeywords],
-    alternates: { canonical: `/industries/${p.slug}` },
-    openGraph: { title: p.title, description: p.metaDescription, url: `/industries/${p.slug}`, type: "website", images: ["/opengraph-image"] },
-  };
+  return buildMetadata({ defaultImage: false, title: p.title, description: p.metaDescription, path: `/industries/${p.slug}`, keywords: [p.primaryKeyword, ...p.secondaryKeywords] });
 }
 
 const tones = ["var(--lav)", "var(--pink)", "var(--lime)", "var(--taupe)"];

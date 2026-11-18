@@ -13,6 +13,8 @@ export const site = {
   description:
     "US-based SEO agency for technical SEO, content, local SEO and link building. Free 40-point audit, monthly plain-English reports and no long-term contracts.",
   foundedYear: 2014,
+  /** Official social / directory profiles (LinkedIn, Google Business Profile, Clutch...). Added to Organization schema as sameAs. */
+  sameAs: [] as string[],
 };
 
 export const nav = [

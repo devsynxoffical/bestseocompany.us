@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { guidePages } from "@/lib/pages";
 import { breadcrumbSchema } from "@/lib/pages/schema";
@@ -7,11 +8,11 @@ import { PageHero } from "@/components/pages/PageHero";
 import { LeadBand } from "@/components/pages/LeadBand";
 import { Reveal } from "@/components/ui/Reveal";
 
-export const metadata: Metadata = {
-  title: { absolute: "SEO Guides: Straight Answers to SEO Questions | Best SEO Company" },
+export const metadata: Metadata = buildMetadata({
+  title: "SEO Guides: Straight Answers to SEO Questions | Best SEO Company",
   description: "Plain-English answers to the SEO questions business owners ask most: costs, strategy, tools, keyword research, link building, rankings and AI search.",
-  alternates: { canonical: "/guides" },
-};
+  path: "/guides",
+});
 
 const tones = ["lav", "pink", "lime", "taupe"];
 

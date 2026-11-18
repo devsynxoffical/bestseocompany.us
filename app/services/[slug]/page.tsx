@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getService, servicePages } from "@/lib/pages";
@@ -22,13 +23,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const p = getService((await params).slug);
   if (!p) return {};
-  return {
-    title: { absolute: p.title },
-    description: p.metaDescription,
-    keywords: [p.primaryKeyword, ...p.secondaryKeywords],
-    alternates: { canonical: `/services/${p.slug}` },
-    openGraph: { title: p.title, description: p.metaDescription, url: `/services/${p.slug}`, type: "website", images: ["/opengraph-image"] },
-  };
+  return buildMetadata({ defaultImage: false, title: p.title, description: p.metaDescription, path: `/services/${p.slug}`, keywords: [p.primaryKeyword, ...p.secondaryKeywords] });
 }
 
 const tones = ["var(--lav)", "var(--pink)", "var(--lime)", "var(--taupe)"];

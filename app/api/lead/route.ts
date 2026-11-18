@@ -32,6 +32,7 @@ export async function POST(req: Request) {
     name: clean(data.name, 120),
     keywords: clean(data.keywords, 600),
     location: clean(data.location, 120),
+    message: clean(data.message, 3000),
     page: clean(data.page, 300),
     receivedAt: new Date().toISOString(),
   };

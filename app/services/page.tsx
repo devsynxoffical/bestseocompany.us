@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { servicePages } from "@/lib/pages";
 import { breadcrumbSchema } from "@/lib/pages/schema";
@@ -7,11 +8,11 @@ import { PageHero } from "@/components/pages/PageHero";
 import { LeadBand } from "@/components/pages/LeadBand";
 import { Reveal } from "@/components/ui/Reveal";
 
-export const metadata: Metadata = {
-  title: { absolute: "SEO Services | Local, Technical, AEO & More | Best SEO Company" },
+export const metadata: Metadata = buildMetadata({
+  title: "SEO Services | Local, Technical, AEO & More | Best SEO Company",
   description: "Every SEO service we offer: local SEO, technical SEO, e-commerce and Shopify SEO, link building, AEO and GEO for AI search, consulting and packages.",
-  alternates: { canonical: "/services" },
-};
+  path: "/services",
+});
 
 export default function ServicesHub() {
   const crumbs = [{ name: "Home", path: "/" }, { name: "Services", path: "/services" }];

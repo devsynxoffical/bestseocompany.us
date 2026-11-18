@@ -6,6 +6,7 @@ import { CustomCursor } from "@/components/layout/CustomCursor";
 import { Header } from "@/components/layout/Header";
 import { Footer, type FooterColumns } from "@/components/layout/Footer";
 import { guidePages, industryPages, servicePages, toolPages } from "@/lib/pages";
+import { buildMenu } from "@/lib/pages/menu";
 import "./globals.css";
 import "./pages.css";
 
@@ -22,21 +23,14 @@ export const metadata: Metadata = {
   },
   description: site.description,
   keywords: ["SEO company", "SEO agency USA", "local SEO", "technical SEO", "link building", "Google Maps SEO", "SEO services"],
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    url: site.url,
-    siteName: site.name,
-    title: "Rank #1 on Google with Best SEO Company",
-    description: site.description,
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Rank #1 on Google with Best SEO Company",
-    description: site.description,
-  },
-  robots: { index: true, follow: true },
+  openGraph: { type: "website", siteName: site.name, locale: "en_US" },
+  twitter: { card: "summary_large_image" },
+  applicationName: site.name,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  category: "Search engine optimization",
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 } },
   verification: { google: "QoSGCguAm1Ze0nUWQr1YV5U1W8jmmlgnQkVCUMCRQ4M" },
   formatDetection: { telephone: false },
 };
@@ -73,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ScrollProgress />
         <CustomCursor />
-        <Header />
+        <Header menu={buildMenu()} />
         {children}
         <Footer columns={footerColumns} />
       </body>

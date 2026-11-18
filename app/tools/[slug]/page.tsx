@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTool, titleForPath, toolPages } from "@/lib/pages";
@@ -24,13 +25,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const p = getTool((await params).slug);
   if (!p) return {};
-  return {
-    title: { absolute: p.title },
-    description: p.metaDescription,
-    keywords: [p.primaryKeyword, ...p.secondaryKeywords],
-    alternates: { canonical: `/tools/${p.slug}` },
-    openGraph: { title: p.title, description: p.metaDescription, url: `/tools/${p.slug}`, type: "website", images: ["/opengraph-image"] },
-  };
+  return buildMetadata({ defaultImage: false, title: p.title, description: p.metaDescription, path: `/tools/${p.slug}`, keywords: [p.primaryKeyword, ...p.secondaryKeywords] });
 }
 
 const reportType: Record<string, { type: LeadType; cta: string; keywords?: boolean }> = {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { buildMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { getGuide, guidePages, titleForPath } from "@/lib/pages";
 import { breadcrumbSchema, faqSchema, ORG_ID } from "@/lib/pages/schema";
@@ -9,7 +9,7 @@ import { Breadcrumbs } from "@/components/pages/Breadcrumbs";
 import { FaqAccordion } from "@/components/pages/FaqAccordion";
 import { RelatedLinks } from "@/components/pages/RelatedLinks";
 import { LeadBand } from "@/components/pages/LeadBand";
-import { TocSpy } from "@/components/pages/TocSpy";
+import { ArticleBody } from "@/components/pages/ArticleBody";
 import { Reveal } from "@/components/ui/Reveal";
 import { SplitText } from "@/components/ui/SplitText";
 
@@ -25,16 +25,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const p = getGuide((await params).slug);
   if (!p) return {};
-  return {
-    title: { absolute: p.title },
-    description: p.metaDescription,
-    keywords: [p.primaryKeyword],
-    alternates: { canonical: `/guides/${p.slug}` },
-    openGraph: { title: p.title, description: p.metaDescription, url: `/guides/${p.slug}`, type: "article", publishedTime: PUBLISHED, images: ["/opengraph-image"] },
-  };
+  return buildMetadata({ defaultImage: false, title: p.title, description: p.metaDescription, path: `/guides/${p.slug}`, type: "article", publishedTime: PUBLISHED, keywords: [p.primaryKeyword] });
 }
 
-const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 export default async function GuidePageView({ params }: Params) {
   const p = getGuide((await params).slug);
@@ -42,7 +35,6 @@ export default async function GuidePageView({ params }: Params) {
   const path = `/guides/${p.slug}`;
   const crumbs = [{ name: "Home", path: "/" }, { name: "Guides", path: "/guides" }, { name: p.question, path }];
   const related = p.related.map(titleForPath).filter((x): x is NonNullable<typeof x> => !!x);
-  const toc = p.sections.map((s) => ({ id: anchor(s.heading), label: s.heading }));
 
   return (
     <main>
@@ -60,7 +52,9 @@ export default async function GuidePageView({ params }: Params) {
             dateModified: PUBLISHED,
             author: { "@type": "Organization", "@id": ORG_ID, name: site.name },
             publisher: { "@id": ORG_ID },
-            image: `${site.url}/opengraph-image`,
+            image: `${site.url}${path}/opengraph-image`,
+            inLanguage: "en-US",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: [".g-answer p", ".g-h1"] },
           },
           faqSchema(p.faqs),
         ]}
@@ -78,42 +72,7 @@ export default async function GuidePageView({ params }: Params) {
         </div>
       </header>
 
-      <div className="wrap g-body">
-        <aside className="g-side">
-          <TocSpy items={toc} />
-          <div className="g-side-cta">
-            <b>Free SEO audit</b>
-            <p>See how your site scores in under a minute.</p>
-            <Link href="/tools/seo-audit-tool" className="btn">Run the audit <span className="arrow" aria-hidden="true">↗</span></Link>
-          </div>
-        </aside>
-
-        <article className="g-article">
-          <Reveal className="g-takeaways">
-            <b>Key takeaways</b>
-            <ul>{p.keyTakeaways.map((t) => <li key={t}>{t}</li>)}</ul>
-          </Reveal>
-          {p.sections.map((s) => (
-            <section key={s.heading} id={anchor(s.heading)} className="g-sec">
-              <h2>{s.heading}</h2>
-              {s.paragraphs.map((t, i) => (
-                t.trim().startsWith("{") || t.includes('"@context"')
-                  ? <pre key={i} className="g-code"><code>{t}</code></pre>
-                  : <p key={i}>{t}</p>
-              ))}
-              {s.bullets && <ul>{s.bullets.map((b) => <li key={b}>{b}</li>)}</ul>}
-              {s.table && (
-                <div className="g-table">
-                  <table>
-                    <thead><tr>{s.table.head.map((h) => <th key={h} scope="col">{h}</th>)}</tr></thead>
-                    <tbody>{s.table.rows.map((r, ri) => <tr key={ri}>{r.map((c, ci) => (ci === 0 ? <th key={ci} scope="row">{c}</th> : <td key={ci}>{c}</td>))}</tr>)}</tbody>
-                  </table>
-                </div>
-              )}
-            </section>
-          ))}
-        </article>
-      </div>
+      <ArticleBody takeaways={p.keyTakeaways} sections={p.sections} />
 
       <FaqAccordion faqs={p.faqs} heading="Follow-up questions." />
       <RelatedLinks heading="Read next" items={related} />

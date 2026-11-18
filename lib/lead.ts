@@ -1,7 +1,7 @@
 export type LeadType = "audit" | "backlink-report" | "traffic-report" | "rank-report" | "newsletter" | "contact";
 
 /** Sends a form submission to /api/lead. Resolves with an error message, or null on success. */
-export async function submitLead(data: { type: LeadType; email?: string; website?: string; name?: string; keywords?: string; location?: string }) {
+export async function submitLead(data: { type: LeadType; email?: string; website?: string; name?: string; keywords?: string; location?: string; message?: string }) {
   try {
     const res = await fetch("/api/lead", {
       method: "POST",

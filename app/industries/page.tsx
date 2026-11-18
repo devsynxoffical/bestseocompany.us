@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { industryPages } from "@/lib/pages";
 import { industryCategories } from "@/lib/pages/categories";
 import { breadcrumbSchema } from "@/lib/pages/schema";
@@ -8,11 +9,11 @@ import { IndustryDirectory } from "@/components/pages/IndustryDirectory";
 import { LeadBand } from "@/components/pages/LeadBand";
 import { site } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: { absolute: "SEO by Industry | 45 Industries We Rank | Best SEO Company" },
+export const metadata: Metadata = buildMetadata({
+  title: "SEO by Industry | 45 Industries We Rank | Best SEO Company",
   description: "SEO built for your industry: law firms, roofers, dentists, HVAC, med spas, real estate, SaaS and more. See how we win searches in your market.",
-  alternates: { canonical: "/industries" },
-};
+  path: "/industries",
+});
 
 export default function IndustriesHub() {
   const catOf = (slug: string) => industryCategories.find((c) => c.slugs.includes(slug))?.name ?? "Local & professional";

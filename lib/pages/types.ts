@@ -92,3 +92,31 @@ export type GuidePage = {
   faqs: FAQ[];                // 3-4
   related: string[];          // 3-4 internal paths, e.g. "/services/local-seo", "/guides/what-is-seo"
 };
+
+/** /blog/[slug] — timely, practical posts (different topics from the evergreen guides). */
+export type BlogPost = {
+  slug: string;
+  title: string;              // H1
+  seoTitle: string;           // <title>, max 60 chars
+  metaDescription: string;    // 140-155 chars
+  primaryKeyword: string;
+  excerpt: string;            // 1-2 sentences for cards and RSS
+  date: string;               // ISO date
+  tags: string[];             // 2-4
+  readMinutes: number;
+  answer: string;             // 40-60 word summary answer
+  keyTakeaways: string[];     // exactly 4
+  sections: GuideSection[];   // 5-7
+  faqs: FAQ[];                // 3
+  related: string[];          // 3 internal paths
+};
+
+/** Long-form legal / policy pages. */
+export type PolicyPage = {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  updated: string;            // ISO date
+  intro: string;
+  sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
+};

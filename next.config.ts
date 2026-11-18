@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/tools", destination: "/tools/free-seo-tools", permanent: true },
-      { source: "/blog", destination: "/guides", permanent: true },
     ];
   },
   async headers() {

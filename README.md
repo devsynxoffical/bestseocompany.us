@@ -76,7 +76,16 @@ Site-wide: scroll progress bar, hide-on-scroll header, custom cursor with labels
 
 `useReveal` keeps the page complete without JavaScript: everything renders visible on the server, and only elements that start **below the fold** get the hidden `pre` class until they scroll into view. Visitors with **reduced motion** turned on get a still page: no reveals, autoplay, parallax or pinned stacks.
 
-## Content pages (81 URLs)
+## SEO
+
+- **Report:** [`docs/SEO-REPORT.md`](docs/SEO-REPORT.md) covers everything implemented and a launch checklist.
+- **Keyword map:** [`docs/keyword-map.csv`](docs/keyword-map.csv) lists one row per content page. Regenerate it with `npm run seo:export`.
+- **Metadata:** every page uses `buildMetadata()` in `lib/seo.ts`, which sets the title, description, canonical, hreflang, Open Graph and Twitter tags.
+- **AI search:** `/llms.txt` and `/llms-full.txt` (built in `lib/llms.ts`), AI crawlers allowed in `app/robots.ts`, and Organization schema in `components/StructuredData.tsx` (add social profiles to `site.sameAs`).
+- **Sitemaps:** `/sitemap.xml` (`app/sitemap.ts`), the HTML page `/site-map`, and the RSS feed `/blog/rss.xml`.
+- **Navigation:** the mega-menu content is built from the content registry in `lib/pages/menu.ts`.
+
+## Content pages
 
 | Section | URL | Count | Content file | Template |
 |---|---|---|---|---|
@@ -84,6 +93,9 @@ Site-wide: scroll progress bar, hide-on-scroll header, custom cursor with labels
 | Services | `/services/[slug]` (+ hub `/services`) | 14 | `lib/pages/services.ts` | `app/services/[slug]/page.tsx` |
 | Free tools | `/tools/[slug]` (`/tools` redirects to the hub) | 5 | `lib/pages/tools.ts` | `app/tools/[slug]/page.tsx` |
 | Guides | `/guides/[slug]` (+ hub `/guides`) | 13 | `lib/pages/guides-1.ts`, `-2.ts`, `-3.ts` | `app/guides/[slug]/page.tsx` |
+| Blog | `/blog/[slug]` (+ hub `/blog`, RSS) | 8 | `lib/pages/blog.ts` | `app/blog/[slug]/page.tsx` |
+| Company | `/about`, `/contact`, `/pricing`, `/free-seo-audit`, `/site-map` | 5 | in each `app/<page>/page.tsx` | |
+| Policies | `/privacy`, `/terms`, `/editorial-policy` | 3 | `lib/pages/policies.ts` (fill in the `[placeholders]`) | `components/pages/PolicyView.tsx` |
 
 Each content file is plain typed data (`lib/pages/types.ts`); edit copy there. Every page ships with its own title, meta description, canonical URL, Open Graph tags, breadcrumbs and JSON-LD (Service / WebApplication / Article + FAQPage + BreadcrumbList), and is listed in `/sitemap.xml`. Pages are statically generated at build time.
 
