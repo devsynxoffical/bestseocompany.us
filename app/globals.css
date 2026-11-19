@@ -606,14 +606,13 @@ footer{padding-block:72px 40px}
 /* ===== Hero: built live by SEO agents ===== */
 :root{--sel:#3D6BFF;--sel-soft:rgba(61,107,255,.22)}
 /* Pre-build state. html.hero-build is set before paint by an inline script. */
-html.hero-build .hero:not(.built) [data-build]:not(.on){opacity:0}
+/* Only decorative layers wait for the agents; headline, intro and form stay visible for LCP. */
+html.hero-build .hero:not(.built) [data-build="pill"]:not(.on),
+html.hero-build .hero:not(.built) [data-build^="stk"]:not(.on){opacity:0}
 html.hero-build .hero:not(.built) .hero-top,
 html.hero-build .hero:not(.built) .hero-grid{animation:none}
-html.hero-build .hero:not(.built) [data-build="pill"].on,
-html.hero-build .hero:not(.built) [data-build="form"].on{animation:fadeUp .5s var(--ease) both}
-html.hero-build .hero:not(.built) [data-build="copy"].on{opacity:1}
-html.hero-build .hero:not(.built) h1 .row>span{animation:none;transform:translateY(105%)}
-html.hero-build .hero:not(.built) h1 .row.on>span{animation:lineUp .75s var(--ease) both;transform:none}
+html.hero-build .hero:not(.built) [data-build="pill"].on{animation:fadeUp .5s var(--ease) both}
+html.hero-build .hero:not(.built) h1 .row>span{animation:none}
 html.hero-build .hero:not(.built) .hl::before{animation:none;transform:rotate(-1.5deg) scaleX(0)}
 html.hero-build .hero:not(.built) .hl.on::before{animation:mark .6s var(--ease) both}
 html.hero-build .hero:not(.built) .serp{animation:none;transform:translateY(-.06em) scale(0)}

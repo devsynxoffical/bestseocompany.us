@@ -6,7 +6,8 @@
 export const site = {
   name: "Best SEO Company",
   domain: "bestseocompany.us",
-  url: "https://bestseocompany.us",
+  /** Canonical origin. Must match the host Vercel serves (www) and the Search Console property. */
+  url: "https://www.bestseocompany.us",
   email: "hello@bestseocompany.us",
   hours: "Mon–Fri, 9am–6pm ET",
   tagline: "SEO for US businesses that want more customers from search.",

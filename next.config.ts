@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      // The *.vercel.app hostnames serve a full duplicate of the site: keep them out of search.
+      { source: "/:path*", has: [{ type: "host", value: "(?<sub>.*)\\.vercel\\.app" }], headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] },
       {
         source: "/(.*)",
         headers: [

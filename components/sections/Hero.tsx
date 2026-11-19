@@ -93,7 +93,7 @@ export function Hero() {
     const stickers = [0, 1, 2].map((i) => rel(q(`[data-build="stk${i}"]`)));
 
     setOn({});
-    setTyped(0);
+    setTyped(null);
     setBoxes([]);
     setLayers(0);
     setDrag({});
@@ -157,9 +157,8 @@ export function Hero() {
     if (copy) {
       grow("copy", copy, 2150, 520, "Writer");
       reveal("copy", 2700);
-      const len = hero.copy.length, typeStart = 2720, typeDur = 1400;
-      for (let k = 1; k <= 28; k++) at(typeStart + (typeDur * k) / 28, () => setTyped(Math.round((len * k) / 28)));
-      move("Writer", copy.x + copy.w * 0.82, copy.y + copy.h - 6, typeStart, typeDur);
+      // The paragraph stays fully visible (it's the mobile LCP element); Writer just reads along it.
+      move("Writer", copy.x + copy.w * 0.82, copy.y + copy.h - 6, 2720, 1400);
     }
 
     // 5. Form, assembled by a swarm

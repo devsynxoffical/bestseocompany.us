@@ -5,7 +5,7 @@ import { caseStudies } from "@/lib/content";
 import { SplitText } from "@/components/ui/SplitText";
 import { Reveal } from "@/components/ui/Reveal";
 import { useRafLoop } from "@/hooks/useRafLoop";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { prefersReducedMotion } from "@/hooks/useReducedMotion";
 import { clamp } from "@/lib/utils";
 
 type Mock = (typeof caseStudies)[number]["mock"];
@@ -73,13 +73,14 @@ function CaseMock({ type }: { type: Mock }) {
  * Without JS or with reduced motion it falls back to a plain list.
  */
 export function CaseStack() {
-  const reduced = useReducedMotion();
   const [live, setLive] = useState(false);
   const [active, setActive] = useState(0);
   const stack = useRef<HTMLDivElement>(null);
   const cards = useRef<Array<HTMLElement | null>>([]);
 
-  useEffect(() => setLive(!reduced), [reduced]);
+  // Read the media query directly: the hook starts as "false" and flips a frame later,
+  // which toggled the pinned layout on load and caused a 0.69 layout shift.
+  useEffect(() => setLive(!prefersReducedMotion()), []);
 
   useRafLoop(() => {
     const el = stack.current;

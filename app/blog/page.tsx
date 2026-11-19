@@ -11,7 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
   ...buildMetadata({ title: "SEO Blog: Practical Tactics for US Businesses | Best SEO Company", description: "Practical SEO tactics from Best SEO Company: Google Business Profile, reviews, Core Web Vitals, local citations, schema, site migrations and AI search.", path: "/blog" }),
-  alternates: { canonical: "/blog", languages: { "en-US": "https://bestseocompany.us/blog", "x-default": "https://bestseocompany.us/blog" }, types: { "application/rss+xml": "/blog/rss.xml" } },
+  alternates: { canonical: "/blog", languages: { "en-US": `${site.url}/blog`, "x-default": `${site.url}/blog` }, types: { "application/rss+xml": "/blog/rss.xml" } },
 };
 
 const tones = ["lav", "pink", "lime", "taupe"];

@@ -3,6 +3,7 @@
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { submitLead } from "@/lib/lead";
+import { track } from "@/lib/analytics";
 import { cx } from "@/lib/utils";
 
 type Check = { id: string; group: string; label: string; status: "pass" | "warn" | "fail" | "info"; value: string; detail: string };
@@ -32,7 +33,7 @@ export function AuditTool() {
       const res = await fetch("/api/audit", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ url }) });
       const json = await res.json();
       if (!res.ok) setError(json.error ?? "Something went wrong.");
-      else { setResult(json); setFilter("all"); }
+      else { setResult(json); setFilter("all"); track("audit_tool_run", { score: json.score }); }
     } catch {
       setError("You seem to be offline. Check your connection and try again.");
     } finally {

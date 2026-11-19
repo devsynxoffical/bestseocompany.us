@@ -7,6 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer, type FooterColumns } from "@/components/layout/Footer";
 import { guidePages, industryPages, servicePages, toolPages } from "@/lib/pages";
 import { buildMenu } from "@/lib/pages/menu";
+import { Analytics } from "@/components/Analytics";
 import "./globals.css";
 import "./pages.css";
 
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header menu={buildMenu()} />
         {children}
         <Footer columns={footerColumns} />
+        <Analytics />
       </body>
     </html>
   );

@@ -80,7 +80,7 @@ export async function safeFetch(input: URL, { timeoutMs = 10000, maxBytes = 3_00
         redirect: "manual",
         signal: controller.signal,
         headers: {
-          "user-agent": "Mozilla/5.0 (compatible; BestSEOCompanyAuditBot/1.0; +https://bestseocompany.us/tools/seo-audit-tool)",
+          "user-agent": "Mozilla/5.0 (compatible; BestSEOCompanyAuditBot/1.0; +https://www.bestseocompany.us/tools/seo-audit-tool)",
           accept: "text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8",
         },
       });
