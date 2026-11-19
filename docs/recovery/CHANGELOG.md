@@ -49,3 +49,36 @@ Every change lists the reason (with evidence), the affected URLs, how it was val
 ### Not changed (deliberately)
 - **No pages deleted or merged.** Duplication measured at 17.7% template text on industry pages (max pair overlap 13.5%). There's no evidence of thin or duplicate content, and no index data yet to show Google rejecting pages.
 - **Keyword targets unchanged.** No impression data exists yet and volume tools are out of credits; changing targets now would be guessing.
+
+## Batch 2 — 2026-11-19 (lead capture and page experience on money pages)
+
+### 2.1 Mid-page lead form on industry and service pages
+- **Reason:** industry and service pages had one lead form, at the very bottom after 9–10 sections. Visitors who are convinced halfway down had no form in view.
+- **Affected URLs:** 45 × `/industries/*`, 14 × `/services/*`.
+- **Change:** `InlineAudit` card (website + email, four concrete deliverables) after the playbook on industry pages and after the deliverables on service pages. Every submission fires `generate_lead` (`form_type: audit`) with the page path.
+- **Validated before release:** forms in `<main>` per page went from 1 → 2 (roofing, local SEO and technical SEO checked).
+- **Validate after release:** in GA4, `generate_lead` by `page_path`; compare the share of leads from mid-page vs bottom forms after 30 days.
+
+### 2.2 Interactive local rank grid
+- **Reason:** industry and local service pages were text-and-card heavy, with nothing showing what local SEO changes. The grid visualises map-pack coverage. It is labelled as an illustrative example.
+- **Affected URLs:** 45 × `/industries/*`; `/services/local-seo`, `/services/google-business-profile-seo`, `/services/multi-location-seo`, `/services/small-business-seo`.
+- **Validate after release:** GA4 engagement time on these pages, plus scroll depth if enabled.
+
+### 2.3 Month-by-month timeline and trust cards
+- **Reason:** sets expectations (SEO takes months) and answers the main buying objections (contracts, methods, reporting, who does the work). These address early drop-off and low-quality leads.
+- **Affected URLs:** 45 × `/industries/*`, 14 × `/services/*`.
+
+### 2.4 Sticky mobile CTA bar
+- **Reason:** on phones the header button is hidden below 520px, and the only path to a form was scrolling to it.
+- **Affected URLs:** all pages except `/free-seo-audit` and `/contact`, phones and tablets only. It hides near forms, near the footer and while the homepage build bar is visible.
+- **Validate after release:** GA4 event `sticky_cta_click`, and leads from `/free-seo-audit` with a referring page.
+
+### Performance check after batch 2 (same lab method, now scrolling the whole page)
+| URL | LCP before → after | CLS after | Lead forms in page |
+|---|---|---|---|
+| /industries/roofing-seo | 1,372 → 1,228 ms | 0.025 | 1 → 2 |
+| /services/local-seo | n/a → 1,396 ms | 0 | 1 → 2 |
+| /services/technical-seo | n/a → 1,420 ms | 0 | 1 → 2 |
+| / | 1,232 → 1,264 ms | 0.099 (full-page scroll; investigate in batch 3) | 1 |
+
+Crawl after batch 2: 98/98 URLs, 0 problems.

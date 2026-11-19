@@ -13,6 +13,10 @@ import { LeadBand } from "@/components/pages/LeadBand";
 import { Reveal } from "@/components/ui/Reveal";
 import { SplitText } from "@/components/ui/SplitText";
 import { MagneticLink } from "@/components/ui/MagneticLink";
+import { RankGrid } from "@/components/pages/RankGrid";
+import { InlineAudit } from "@/components/pages/InlineAudit";
+import { Timeline } from "@/components/pages/Timeline";
+import { TrustStrip } from "@/components/pages/TrustStrip";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -84,6 +88,21 @@ export default async function IndustryPageView({ params }: Params) {
         </div>
       </section>
 
+      {/* Interactive local rank grid */}
+      <section className="block" style={{ paddingTop: 24 }}>
+        <div className="wrap rg-wrap">
+          <div>
+            <Reveal as="span" variant="left" className="label eyebrow">See it on the map</Reveal>
+            <SplitText parts={["Win the map pack across your whole area."]} />
+            <Reveal as="p" className="lead-p">
+              Ranking first next door to your office isn&apos;t enough. Customers search from every neighborhood you serve, and the map pack changes block by block. We track your position across a grid of points, then work on the areas where you&apos;re invisible.
+            </Reveal>
+            <Reveal as="p" className="lead-p">Toggle the example to see what a stronger local presence looks like for {p.audience}.</Reveal>
+          </div>
+          <Reveal variant="scale"><RankGrid business={`a ${p.name.toLowerCase()} business`} query={(p.searches.find((s) => /local/i.test(s.intent)) ?? p.searches[0]).query} /></Reveal>
+        </div>
+      </section>
+
       {/* Searches */}
       <section className="block searches-sec" style={{ paddingTop: 24 }}>
         <div className="wrap">
@@ -122,6 +141,20 @@ export default async function IndustryPageView({ params }: Params) {
         </div>
       </section>
 
+      {/* Mid-page lead capture */}
+      <section className="block" style={{ paddingTop: 80, paddingBottom: 20 }}>
+        <div className="wrap">
+          <Reveal variant="up">
+            <InlineAudit
+              heading={`Get a free ${p.name.toLowerCase()} SEO audit.`}
+              copy={`We'll compare your site and Google Business Profile with the ${p.audience} who outrank you, and send the fixes that matter most.`}
+              color={p.color}
+              points={["Where you rank in the map pack today", "Technical issues holding pages back", "Keywords your competitors win and you don't", "Your top five fixes, ranked by impact"]}
+            />
+          </Reveal>
+        </div>
+      </section>
+
       {/* Quick wins + compliance */}
       <section className="block" style={{ paddingTop: 80 }}>
         <div className="wrap wins-grid">
@@ -143,6 +176,18 @@ export default async function IndustryPageView({ params }: Params) {
               </Reveal>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Timeline + trust */}
+      <section className="block" style={{ paddingTop: 24 }}>
+        <div className="wrap">
+          <div className="sec-head">
+            <SplitText parts={["What happens, month by month."]} />
+            <Reveal as="p">SEO compounds. Here&apos;s what we work on and what you should expect at each stage.</Reveal>
+          </div>
+          <Reveal><Timeline /></Reveal>
+          <div style={{ marginTop: 18 }}><TrustStrip /></div>
         </div>
       </section>
 

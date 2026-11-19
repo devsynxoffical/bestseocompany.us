@@ -12,6 +12,12 @@ import { LeadBand } from "@/components/pages/LeadBand";
 import { Reveal } from "@/components/ui/Reveal";
 import { SplitText } from "@/components/ui/SplitText";
 import { MagneticLink } from "@/components/ui/MagneticLink";
+import { RankGrid } from "@/components/pages/RankGrid";
+import { InlineAudit } from "@/components/pages/InlineAudit";
+import { Timeline } from "@/components/pages/Timeline";
+import { TrustStrip } from "@/components/pages/TrustStrip";
+
+const LOCAL_SERVICES = ["local-seo", "google-business-profile-seo", "multi-location-seo", "small-business-seo"];
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -85,6 +91,10 @@ export default async function ServicePageView({ params }: Params) {
         </div>
       </section>
 
+      <section className="block" style={{ paddingTop: 0 }}>
+        <div className="wrap"><TrustStrip /></div>
+      </section>
+
       <section className="block" style={{ paddingTop: 24 }}>
         <div className="wrap">
           <div className="sec-head">
@@ -102,6 +112,32 @@ export default async function ServicePageView({ params }: Params) {
         </div>
       </section>
 
+      <section className="block" style={{ paddingTop: 10 }}>
+        <div className="wrap">
+          <Reveal>
+            <InlineAudit
+              heading={`See what ${p.name.toLowerCase()} would change for you.`}
+              copy="Send your website. A strategist will audit it and show you exactly where this service would make the biggest difference."
+              color={p.color}
+              points={["A 40-point review of your site", "Competitor comparison for your market", "Your top five fixes, ranked by impact", "A video walkthrough, not a sales pitch"]}
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      {LOCAL_SERVICES.includes(p.slug) && (
+        <section className="block" style={{ paddingTop: 10 }}>
+          <div className="wrap rg-wrap">
+            <div>
+              <Reveal as="span" variant="left" className="label eyebrow">See it on the map</Reveal>
+              <SplitText parts={["Rank across your whole service area."]} />
+              <Reveal as="p" className="lead-p">The map pack changes from one neighborhood to the next. We measure your position on a grid of points and fix the gaps. Toggle the example to see the difference.</Reveal>
+            </div>
+            <Reveal variant="scale"><RankGrid business="your business" query="service near me" /></Reveal>
+          </div>
+        </section>
+      )}
+
       <section className="block process">
         <div className="wrap">
           <div className="sec-head">
@@ -117,6 +153,16 @@ export default async function ServicePageView({ params }: Params) {
               </Reveal>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="block" style={{ paddingTop: 80 }}>
+        <div className="wrap">
+          <div className="sec-head">
+            <SplitText parts={["Your first six months."]} />
+            <Reveal as="p">What we work on at each stage, and the outcome you should expect.</Reveal>
+          </div>
+          <Reveal><Timeline /></Reveal>
         </div>
       </section>
 
