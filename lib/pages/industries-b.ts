@@ -383,7 +383,7 @@ export const industriesB: IndustryPage[] = [
     ],
     h1: "Med Spa SEO for Booked Treatment Calendars",
     intro:
-      "Med spa clients research treatments carefully before they book. They want to know what a procedure involves, who performs it and what it costs. We help med spas rank for those treatment searches and build pages that answer the questions that lead to a consultation.",
+      "Med spa clients research treatments carefully before they book. They want to know what a procedure involves, who performs it and what it costs. Our med spa SEO helps you rank for those treatment searches and build pages that answer the questions that lead to a consultation.",
     color: "lav",
     schemaType: "HealthAndBeautyBusiness",
     challenges: [

@@ -731,7 +731,7 @@ export const services: ServicePage[] = [
     ],
     h1: "Technical SEO Services That Fix the Foundation",
     intro:
-      "Great content can't rank if search engines can't crawl, render, and index it. We find the technical problems holding your site back and help your developers fix them.",
+      "Great content can't rank if search engines can't crawl, render, and index it. Our technical SEO services find the problems holding your site back and help your developers fix them.",
     color: "lime",
     whatItIs: [
       "Technical SEO covers how search engines access and understand your site. It includes crawling, which is how bots discover pages. It includes indexing, which decides which pages can appear in results. It also covers page speed, mobile usability, rendering of JavaScript content, redirects, canonical tags, and structured data.",
