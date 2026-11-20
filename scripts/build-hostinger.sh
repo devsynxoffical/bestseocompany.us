@@ -32,7 +32,7 @@ if [ "${1:-}" = "--publish" ]; then
   fi
   find "$TMP" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
   cp -a out/. "$TMP"/
-  (cd "$TMP" && git add -A && git commit -q -m "$MSG" && git push -u origin hostinger)
+  (cd "$TMP" && git add -A && if git diff --cached --quiet; then echo "No changes to publish."; else git commit -q -m "$MSG" -m "Built from main with: npm run build:hostinger -- --publish" && git push -u origin hostinger; fi)
   git worktree remove --force "$TMP"
   echo "Published to branch: hostinger"
 fi
