@@ -1,0 +1,25 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+User-Agent: Googlebot
+User-Agent: Bingbot
+User-Agent: Applebot
+User-Agent: DuckDuckBot
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: ClaudeBot
+User-Agent: Claude-SearchBot
+User-Agent: Claude-User
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: CCBot
+User-Agent: Meta-ExternalAgent
+Allow: /
+Disallow: /api/
+
+Host: https://www.bestseocompany.us
+Sitemap: https://www.bestseocompany.us/sitemap.xml
