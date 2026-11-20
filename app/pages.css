@@ -424,3 +424,63 @@ main{overflow-x:clip}
 .scta.on{transform:none}
 .scta .btn{padding:10px 14px;font-size:14px}
 @media(min-width:1060px){.scta{display:none}}
+
+/* ===== Footer (dark, professional) ===== */
+footer.ft{--fbg:#0E0E0D;--ffg:#F3F2EE;--fmut:#A3A19A;--fline:#2A2A27;background:var(--fbg);color:var(--ffg);padding-block:0 28px;margin-top:40px;position:relative;overflow:hidden}
+.ft a{color:inherit}
+.ft-cta{display:grid;gap:22px;padding-block:clamp(48px,7vw,84px) clamp(40px,5vw,56px);border-bottom:1px solid var(--fline)}
+@media(min-width:960px){.ft-cta{grid-template-columns:1.4fr auto;align-items:end;column-gap:48px}}
+.ft-cta-copy{display:grid;gap:12px;min-width:0}
+.ft-eyebrow{justify-self:start;font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--lime);border-radius:999px;padding:6px 12px}
+.ft-cta h2{font-size:clamp(38px,5.4vw,76px);letter-spacing:-.055em;line-height:.95;color:var(--ffg)}
+.ft-cta p{color:var(--fmut);font-size:clamp(16px,1.4vw,19px);max-width:52ch}
+.ft-cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+.ft .ft-btn-primary{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.ft .ft-btn-primary::after{background:var(--ffg)}
+.ft .ft-btn-ghost{background:transparent;border-color:#4A4A46;color:var(--ffg)}
+.ft .ft-btn-ghost:hover{color:var(--ink)}
+.ft-trust{grid-column:1/-1;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--fmut);font-size:14px}
+.ft-trust li{display:flex;align-items:center;gap:8px}
+.ft-trust li::before{content:"✓";width:18px;height:18px;border-radius:50%;background:#1E1E1C;border:1px solid var(--fline);color:var(--lime);display:grid;place-items:center;font-size:10px}
+.ft-main{display:grid;gap:44px;padding-block:56px 20px}
+@media(min-width:1100px){.ft-main{grid-template-columns:minmax(260px,1.15fr) 3.4fr;gap:56px}}
+.ft-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:-.04em}
+.ft-logo .logo-mark{background:#1E1E1C;border:1px solid var(--fline)}
+.ft-tld{color:var(--fmut);font-weight:600}
+.ft-tag{color:var(--fmut);margin-top:14px;max-width:34ch;font-size:15.5px}
+.ft-contact{margin:22px 0 0;display:grid;gap:12px}
+.ft-contact div{display:grid;gap:2px}
+.ft-contact dt{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fmut)}
+.ft-contact dd{margin:0;font-size:15px}
+.ft-contact a{text-decoration:none;border-bottom:1px solid #4A4A46}
+.ft-contact a:hover{border-color:var(--lime)}
+.ft-news{margin-top:26px;display:grid;gap:8px;max-width:360px}
+.ft-news-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fmut)}
+.ft-news-row{display:flex;gap:6px;background:#1A1A18;border:1px solid var(--fline);border-radius:999px;padding:5px;transition:border-color .2s}
+.ft-news-row:focus-within{border-color:var(--lime)}
+.ft-news input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:15px;padding:8px 12px;outline:none;color:var(--ffg)}
+.ft-news input::placeholder{color:#6F6D67}
+.ft-news button{appearance:none;border:0;border-radius:999px;background:var(--ffg);color:var(--ink);font:inherit;font-weight:600;font-size:14px;padding:9px 16px;cursor:pointer;transition:background .2s}
+.ft-news button:hover{background:var(--lime)}
+.ft-news-note{font-size:12.5px;color:var(--fmut);min-height:1.3em}
+.ft-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
+@media(min-width:720px){.ft-cols{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1100px){.ft-cols{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.ft-col h3{font-family:var(--font-mono);font-weight:500;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fmut);margin:0 0 16px}
+.ft-col ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.ft-col a{text-decoration:none;font-size:15px;color:#E4E2DC;display:inline-block;transition:color .2s,transform .3s var(--ease)}
+.ft-col a:hover{color:var(--lime);transform:translateX(3px)}
+.ft-more{font-weight:600;color:var(--ffg)!important;margin-top:4px}
+.ft-mark{margin-top:28px;font-size:clamp(56px,15vw,220px);color:#1D1D1B;user-select:none}
+.ft-mark i{transition:transform 1s var(--ease),color .35s}
+.ft-mark i.dot{color:var(--lav)}
+.ft-mark i:hover{color:var(--lime)}
+.ft-legal{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;border-top:1px solid var(--fline);padding-top:22px;font-size:13.5px;color:var(--fmut)}
+.ft-legal-links{display:flex;flex-wrap:wrap;gap:6px 18px}
+.ft-legal-links a{text-decoration:none}
+.ft-legal-links a:hover{color:var(--ffg)}
+.ft-top{appearance:none;background:transparent;border:1px solid #4A4A46;color:var(--ffg);border-radius:999px;padding:7px 14px;font:inherit;font-size:13px;cursor:pointer;transition:border-color .2s,color .2s}
+.ft-top:hover{border-color:var(--lime);color:var(--lime)}
+/* Pages that already end with their own lead section don't repeat the footer CTA. */
+body:has(.lead-band, main .cta) .ft-cta{display:none}
+body:has(.lead-band, main .cta) .ft-main{padding-top:64px}

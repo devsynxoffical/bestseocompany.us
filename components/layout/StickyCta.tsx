@@ -14,7 +14,9 @@ export function StickyCta() {
       const y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
       const nearForm = Array.from(document.querySelectorAll("form")).some((f) => { const r = f.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; });
       const buildBar = document.querySelector(".hb-bar:not(.away)");
-      setShow(y > 600 && y < h - 500 && !nearForm && !buildBar);
+      const footer = document.querySelector("footer");
+      const footerVisible = !!footer && footer.getBoundingClientRect().top < window.innerHeight;
+      setShow(y > 600 && !footerVisible && !nearForm && !buildBar);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
