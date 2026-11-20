@@ -13,3 +13,5 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const p = getGuide((await params).slug);
   return renderOg({ eyebrow: p?.category ?? "Guide", title: p ? p.question : "Best SEO Company", color: "lime" });
 }
+
+export const dynamic = "force-static";

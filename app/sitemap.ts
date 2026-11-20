@@ -20,3 +20,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     e("/site-map", 0.3, "monthly"), e("/editorial-policy", 0.3, "yearly"), e("/privacy", 0.2, "yearly"), e("/terms", 0.2, "yearly"),
   ];
 }
+
+export const dynamic = "force-static";

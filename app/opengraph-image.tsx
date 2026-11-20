@@ -7,3 +7,5 @@ export const contentType = "image/png";
 export default function OpengraphImage() {
   return renderOg({ eyebrow: "US SEO agency", title: "Rank #1 with Best SEO Company.", color: "lime" });
 }
+
+export const dynamic = "force-static";

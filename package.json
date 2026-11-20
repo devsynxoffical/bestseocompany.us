@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "seo:export": "node --experimental-strip-types --no-warnings scripts/seo-export.mts"
+    "seo:export": "node --experimental-strip-types --no-warnings scripts/seo-export.mts",
+    "build:hostinger": "bash scripts/build-hostinger.sh"
   },
   "dependencies": {
     "next": "16.4.5",

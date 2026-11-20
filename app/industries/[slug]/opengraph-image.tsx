@@ -13,3 +13,5 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const p = getIndustry((await params).slug);
   return renderOg({ eyebrow: "Industry SEO", title: p ? `${p.name} SEO` : "Best SEO Company", color: p?.color });
 }
+
+export const dynamic = "force-static";
