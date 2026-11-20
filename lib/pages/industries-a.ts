@@ -13,7 +13,7 @@ export const industriesA: IndustryPage[] = [
     secondaryKeywords: [
       "mva lawyer seo",
       "seo for car accident lawyers",
-      "motor vehicle accident attorney marketing",
+      "motor vehicle accident attorney seo",
       "auto accident lawyer seo",
       "personal injury car accident seo",
     ],
@@ -106,10 +106,9 @@ export const industriesA: IndustryPage[] = [
       "Mass tort SEO for law firms. Build pages that rank as new litigation emerges, capture claimant searches nationwide and lower your cost per signed case.",
     primaryKeyword: "mass tort seo",
     secondaryKeywords: [
-      "mass tort marketing",
-      "mass tort lead generation",
       "seo for mass tort lawyers",
-      "mass tort case acquisition",
+      "mass tort law firm seo",
+      "mass tort seo agency",
       "product liability lawsuit seo",
     ],
     h1: "Mass Tort SEO for Faster Case Acquisition",
@@ -188,7 +187,7 @@ export const industriesA: IndustryPage[] = [
         a: "We look at qualified intakes and signed cases by tort, along with the rankings and traffic that drive them. Cost per signed case compared with paid channels is the most useful number for most firms.",
       },
     ],
-    related: ["car-accident-lawyer-seo", "law-firm-seo", "healthcare-seo"],
+    related: ["car-accident-lawyer-seo", "law-firm-seo", "medical-seo"],
   },
 
   // 3. Financial services
@@ -392,9 +391,9 @@ export const industriesA: IndustryPage[] = [
     primaryKeyword: "final expense insurance seo",
     secondaryKeywords: [
       "burial insurance seo",
-      "final expense leads seo",
+      "final expense agency seo",
       "seo for final expense agents",
-      "burial insurance marketing",
+      "burial insurance agency seo",
       "senior life insurance seo",
     ],
     h1: "Final Expense SEO for Exclusive Leads",
@@ -473,7 +472,7 @@ export const industriesA: IndustryPage[] = [
         a: "Pages that answer specific eligibility and cost questions perform well, especially by age and health condition. Honest comparisons between policy types also earn trust. Plain language matters more than length.",
       },
     ],
-    related: ["insurance-agency-seo", "financial-services-seo", "healthcare-seo"],
+    related: ["insurance-agency-seo", "financial-services-seo", "medical-seo"],
   },
 
   // 6. Credit repair
@@ -575,20 +574,20 @@ export const industriesA: IndustryPage[] = [
     slug: "roofing-seo",
     name: "Roofing",
     audience: "roofing contractors",
-    title: "Roofing SEO Services for Roofers | Best SEO Company",
+    title: "SEO for Roofers: Roofing SEO Services | Best SEO Company",
     metaDescription:
       "Roofing SEO for contractors. Rank in the map pack for roof repair and replacement in your service area, cut lead-site costs and book more inspections.",
-    primaryKeyword: "roofing seo",
+    primaryKeyword: "seo for roofers",
     secondaryKeywords: [
-      "seo for roofers",
+      "roofing seo",
       "roofer seo",
       "roofing contractor seo",
-      "roofing company marketing",
       "local seo for roofing companies",
+      "roofing company seo",
     ],
-    h1: "Roofing SEO That Books More Inspections",
+    h1: "SEO for Roofers Who Want More Inspections",
     intro:
-      "Homeowners call roofers after a storm, a leak or a failed inspection, and most start with Google. Roofing SEO puts your company in the map pack and organic results across your service area. We focus on the jobs you want, from emergency repairs to full replacements.",
+      "Homeowners call roofers after a storm, a leak or a failed inspection, and most start with Google. SEO for roofers puts your company in the map pack and organic results across your service area. We focus on the jobs you want, from emergency repairs to full replacements.",
     color: "taupe",
     schemaType: "RoofingContractor",
     challenges: [
@@ -678,7 +677,7 @@ export const industriesA: IndustryPage[] = [
       "seo for hvac companies",
       "hvac contractor seo",
       "heating and air seo",
-      "hvac marketing",
+      "hvac company seo",
       "local seo for hvac",
     ],
     h1: "HVAC SEO for Repair and Replacement Calls",
@@ -772,9 +771,9 @@ export const industriesA: IndustryPage[] = [
     secondaryKeywords: [
       "seo for solar companies",
       "solar installer seo",
-      "solar marketing",
+      "solar company seo",
       "solar panel company seo",
-      "solar lead generation seo",
+      "seo for solar installers",
     ],
     h1: "Solar SEO for Installers That Want Better Leads",
     intro:
@@ -866,9 +865,9 @@ export const industriesA: IndustryPage[] = [
     primaryKeyword: "home services seo",
     secondaryKeywords: [
       "seo for home service businesses",
-      "home service marketing",
-      "contractor seo",
-      "local seo for contractors",
+      "home service business seo",
+      "home service company seo",
+      "local seo for home services",
       "home improvement seo",
     ],
     h1: "Home Services SEO That Fills Your Schedule",
@@ -952,23 +951,23 @@ export const industriesA: IndustryPage[] = [
 
   // 11. Healthcare
   {
-    slug: "healthcare-seo",
-    name: "Healthcare",
+    slug: "medical-seo",
+    name: "Medical",
     audience: "medical practices and health professionals",
-    title: "Healthcare SEO for Medical Practices | Best SEO Company",
+    title: "Medical SEO for Doctors & Practices | Best SEO Company",
     metaDescription:
       "Healthcare SEO for medical practices and health professionals. Reach patients searching for care nearby with accurate, credentialed content and HIPAA care.",
-    primaryKeyword: "healthcare seo",
+    primaryKeyword: "seo for doctors",
     secondaryKeywords: [
       "medical seo",
-      "seo for doctors",
+      "healthcare seo",
       "seo for medical practices",
-      "healthcare marketing seo",
       "physician seo",
+      "medical practice seo",
     ],
-    h1: "Healthcare SEO That Brings Patients In",
+    h1: "SEO for Doctors and Medical Practices",
     intro:
-      "Patients search for care by condition, specialty and location, and they read closely before booking. Healthcare SEO helps your practice show up with accurate, credentialed content and a strong local presence. We handle it with care for patient privacy and medical accuracy.",
+      "Patients search for care by condition, specialty and location, and they read closely before booking. SEO for doctors, also called medical SEO, helps your practice show up with accurate, credentialed content and a strong local presence. We handle it with care for patient privacy and medical accuracy.",
     color: "taupe",
     schemaType: "MedicalBusiness",
     challenges: [
@@ -1050,7 +1049,7 @@ export const industriesA: IndustryPage[] = [
     slug: "wedding-photographer-seo",
     name: "Wedding Photographer",
     audience: "wedding photographers",
-    title: "Wedding Photographer SEO | Best SEO Company",
+    title: "SEO for Wedding Photographers | Best SEO Company",
     metaDescription:
       "SEO for wedding photographers. Rank for venue and location searches, show your portfolio to engaged couples and book weddings without marketplace fees.",
     primaryKeyword: "seo for wedding photographers",
@@ -1058,9 +1057,9 @@ export const industriesA: IndustryPage[] = [
       "wedding photographer seo",
       "wedding photography seo",
       "photography seo",
-      "wedding photographer marketing",
+      "seo for wedding photography businesses",
     ],
-    h1: "Wedding Photographer SEO That Books Couples",
+    h1: "SEO for Wedding Photographers Who Book More Couples",
     intro:
       "Engaged couples search by city, venue and style, then fall in love with a portfolio. SEO for wedding photographers helps your galleries show up for those searches and turns browsing into inquiries. We focus on the venues and couples that fit your work.",
     color: "lime",
@@ -1321,7 +1320,7 @@ export const industriesA: IndustryPage[] = [
         a: "Only with written parental consent. Many centers use photos of classrooms or children from behind. We help you choose safe images that still show your space.",
       },
     ],
-    related: ["healthcare-seo", "yoga-studio-seo", "gym-seo"],
+    related: ["medical-seo", "yoga-studio-seo", "gym-seo"],
   },
 
   // 15. Accountants

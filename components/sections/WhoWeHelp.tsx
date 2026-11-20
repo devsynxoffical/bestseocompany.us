@@ -75,7 +75,7 @@ export function WhoWeHelp() {
             </Reveal>
           ))}
           <Reveal as="span" variant="tilt">
-            <Link href="/industries" className="ind ind-all">See all 45 industries →</Link>
+            <Link href="/industries" className="ind ind-all">See all industries →</Link>
           </Reveal>
         </div>
       </div>

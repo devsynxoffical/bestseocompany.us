@@ -208,20 +208,20 @@ export const services: ServicePage[] = [
   {
     slug: "local-seo",
     name: "Local SEO",
-    title: "Local SEO Services That Bring in Calls",
+    title: "Local SEO for Small Business | Best SEO Company",
     metaDescription:
       "Local SEO services for US businesses: Google Business Profile, local pages, citations, and reviews that help you show up when nearby customers search.",
-    primaryKeyword: "local seo services",
+    primaryKeyword: "local seo for small business",
     secondaryKeywords: [
+      "local seo services",
       "local seo",
       "local seo company",
       "local search optimization",
-      "local seo agency",
       "map pack seo",
     ],
-    h1: "Local SEO Services for US Businesses",
+    h1: "Local SEO for Small Business That Brings Calls",
     intro:
-      "When someone nearby searches for what you sell, you want to appear in the map pack and the results below it. Our local SEO work focuses on the signals that drive those results and the calls that follow.",
+      "When someone nearby searches for what you sell, you want to appear in the map pack and the results below it. Our local SEO for small business focuses on the signals that drive those results and the calls that follow.",
     color: "taupe",
     whatItIs: [
       "Local SEO helps a business appear in searches with local intent, such as \"plumber near me\" or \"dentist in Austin\". Google weighs three main things for local results. Relevance is how well your business matches the search. Distance is how far you are from the searcher. Prominence is how well known and trusted your business is, based on reviews, links, and mentions.",
@@ -310,20 +310,20 @@ export const services: ServicePage[] = [
   {
     slug: "ecommerce-seo",
     name: "E-commerce SEO",
-    title: "E-commerce SEO Services for Online Stores",
+    title: "SEO Services for Ecommerce Stores | Best SEO Company",
     metaDescription:
       "E-commerce SEO for online stores: category page optimization, faceted navigation control, product schema, and free Merchant Center listings on Google.",
-    primaryKeyword: "ecommerce seo services",
+    primaryKeyword: "seo services for ecommerce",
     secondaryKeywords: [
+      "ecommerce seo services",
       "ecommerce seo",
       "ecommerce seo agency",
       "seo for online stores",
       "product page seo",
-      "category page seo",
     ],
-    h1: "E-commerce SEO That Helps Products Get Found",
+    h1: "SEO Services for Ecommerce Stores That Sell",
     intro:
-      "Shoppers search Google for products and categories every day. We help your store's category and product pages earn those clicks without paying for every visit.",
+      "Shoppers search Google for products and categories every day. Our SEO services for ecommerce help your category and product pages earn those clicks without paying for every visit.",
     color: "lime",
     whatItIs: [
       "E-commerce SEO is the work of getting a store's pages to rank for product searches. Category pages, also called product listing pages or PLPs, often target the broad terms with the most searches, such as \"women's running shoes\". Product pages target specific models and long-tail searches. Both need clear titles, helpful copy, and clean internal links.",
@@ -1024,20 +1024,20 @@ export const services: ServicePage[] = [
   {
     slug: "small-business-seo",
     name: "Small Business SEO",
-    title: "Small Business SEO Services That Fit a Budget",
+    title: "SEO Services for Small Business | Best SEO Company",
     metaDescription:
       "Small business SEO services with clear priorities for a limited budget. Learn what to do yourself, when to hire help, and what our Starter plan includes.",
-    primaryKeyword: "small business seo services",
+    primaryKeyword: "seo services for small business",
     secondaryKeywords: [
+      "small business seo services",
       "small business seo",
       "affordable seo services",
       "seo for small business",
-      "local small business seo",
-      "diy seo vs hiring",
+      "small business seo company",
     ],
-    h1: "SEO Services Built for Small Businesses",
+    h1: "SEO Services for Small Business Budgets",
     intro:
-      "Small businesses can't do everything at once. We focus your budget on the few things that bring in customers first, then build from there.",
+      "Small businesses can't do everything at once. Our SEO services for small business focus your budget on the few things that bring in customers first, then build from there.",
     color: "taupe",
     whatItIs: [
       "Small business SEO is about doing the right things in the right order. For most local businesses, that starts with a complete Google Business Profile, a fast and clear website, pages for each main service, and steady reviews. These basics often matter more than advanced tactics.",

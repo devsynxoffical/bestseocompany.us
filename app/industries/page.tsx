@@ -10,7 +10,7 @@ import { LeadBand } from "@/components/pages/LeadBand";
 import { site } from "@/lib/content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "SEO by Industry | 45 Industries We Rank | Best SEO Company",
+  title: "SEO by Industry: 50 Industries We Rank | Best SEO Company",
   description: "SEO built for your industry: law firms, roofers, dentists, HVAC, med spas, real estate, SaaS and more. See how we win searches in your market.",
   path: "/industries",
 });

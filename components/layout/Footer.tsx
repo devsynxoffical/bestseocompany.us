@@ -35,7 +35,7 @@ export function Footer({ columns }: { columns: FooterColumns }) {
           </div>
           {([
             ["Services", columns.services, "/services", "All services"],
-            ["Industries", columns.industries, "/industries", "All 45 industries"],
+            ["Industries", columns.industries, "/industries", "All industries"],
             ["Free tools", columns.tools, "", ""],
             ["Guides", columns.guides, "/guides", "All guides"],
           ] as const).map(([title, links, allHref, allLabel]) => (

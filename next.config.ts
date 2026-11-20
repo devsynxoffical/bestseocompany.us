@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/tools", destination: "/tools/free-seo-tools", permanent: true },
+      // Renamed to match the Semrush keyword map (2026-11-20)
+      { source: "/industries/healthcare-seo", destination: "/industries/medical-seo", permanent: true },
+      { source: "/industries/car-dealership-seo", destination: "/industries/car-dealer-seo", permanent: true },
     ];
   },
   async headers() {

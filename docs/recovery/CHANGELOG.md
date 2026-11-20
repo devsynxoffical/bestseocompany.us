@@ -82,3 +82,60 @@ Every change lists the reason (with evidence), the affected URLs, how it was val
 | / | 1,232 → 1,264 ms | 0.099 (full-page scroll; investigate in batch 3) | 1 |
 
 Crawl after batch 2: 98/98 URLs, 0 problems.
+
+## Batch 3 — 2026-11-20 (implement the Semrush keyword map for bestseocompany.us)
+
+Source: *Keyword Research Report* and *Keyword Map CSV* (Semrush US database, Nov 20, 2026; prepared by DEVSYNX). Authority Score 2, so the plan prioritizes "seo for [industry]" terms at KD ≤ 23 (P1/P2). The head terms "seo company", "seo agency" and "best seo company" (KD 49–56) stay long-term targets for the home page; no change was made for them.
+
+### 3.1 Retargeted existing pages: title, H1, primary keyword and first paragraph now use the mapped keyword
+| URL | Before (primary) | After (primary) | Volume / KD | Priority |
+|---|---|---|---|---|
+| /services/ecommerce-seo | ecommerce seo services | **seo services for ecommerce** | 2,400 / 3 | P1 |
+| /industries/chiropractor-seo | chiropractor seo (title/H1 already matched) | chiropractor seo, keyword added to intro | 2,400 / 5 | P1 |
+| /industries/dental-seo | dental seo | **seo for dentists** (+ local seo for dentists, dental seo) | 2,400 / 7 · 2,400 / 8 · 6,600 / 35 | P1 |
+| /industries/accountant-seo | seo for accountants | unchanged (already aligned) | 2,400 / 11 | P1 |
+| /industries/wedding-photographer-seo | seo for wedding photographers (title/H1 said "Wedding Photographer SEO") | title and H1 now lead with the keyword | 880 / 12 | P1 |
+| /industries/car-dealership-seo → **/industries/car-dealer-seo** | car dealership seo | **seo for car dealers** | 1,900 / 13 | P2 |
+| /services/small-business-seo | small business seo services | **seo services for small business** | 3,600 / 14 | P1 |
+| /services/local-seo | local seo services | **local seo for small business** | 2,900 / 16 | P1 |
+| /industries/med-spa-seo | med spa seo | unchanged (already aligned) | 1,000 / 16 | P1 |
+| /industries/hotel-seo | seo for hotels (title said "SEO Company for Hotels") | title, H1 and intro lead with the keyword | 1,900 / 18 | P2 |
+| /industries/plumber-seo | plumber seo | **seo for plumbers** | 2,900 / 19 | P1 |
+| /industries/law-firm-seo | law firm seo | **seo services for lawyers** | 2,900 / 19 | P1 |
+| /industries/roofing-seo | roofing seo | **seo for roofers** (roofing seo kept as secondary) | 2,400 / 21 · 4,400 / 37 | P1 |
+| /industries/restaurant-seo | restaurant seo | **seo for restaurants** | 1,900 / 21 | P2 |
+| /industries/healthcare-seo → **/industries/medical-seo** | healthcare seo | **seo for doctors** (+ medical seo) | 2,900 / 23 · 4,400 / 28 | P2 |
+| /services/technical-seo | technical seo services | unchanged (already aligned) | 6,600 / 26 | P2 |
+
+- **Reason:** the mapped keywords have measured demand and lower difficulty than the variants the pages used. The report's step 2 calls for the "H1, title and first paragraph" to use the mapped keyword.
+- **Renames:** both URLs are still unknown to Google (URL Inspection, Nov 19), so renaming costs no rankings. Permanent (308) redirects from the old URLs are in `next.config.ts`, and all internal links were updated.
+
+### 3.2 New pages (status "Check"/"New page" in the map, and not existing on the site)
+| URL | Primary keyword | Volume / KD | Priority |
+|---|---|---|---|
+| /industries/electrician-seo | seo for electricians | 2,400 / 8 | P1 |
+| /industries/landscaping-seo | landscaping seo | 1,900 / 19 | P1 |
+| /industries/contractor-seo | seo for contractors (+ seo for construction companies) | 3,600 / 20 · 2,400 / 23 | P1 / P2 |
+| /industries/personal-injury-seo | seo for personal injury lawyers | 1,900 / 20 | P1 |
+| /industries/architect-seo | seo for architects | 1,900 / 15 | P2 |
+| /services/white-label-seo | white label seo | 8,100 / 27 | P2 |
+
+### 3.3 Keyword ownership cleanup (report section 1)
+Removed secondary keywords that the report assigns to sister sites, so our pages don't compete with them:
+| URL | Removed | Owner site | Replaced with |
+|---|---|---|---|
+| /industries/mass-tort-seo | mass tort marketing, mass tort lead generation, mass tort case acquisition | scalewithads.us | mass tort law firm seo, mass tort seo agency |
+| /industries/car-accident-lawyer-seo | motor vehicle accident attorney marketing | scalewithads.us | motor vehicle accident attorney seo |
+| /industries/final-expense-insurance-seo | final expense leads seo, burial insurance marketing | scalewithads.us | final expense agency seo, burial insurance agency seo |
+| /industries/roofing-seo | roofing company marketing | roofingsystems.co | roofing company seo |
+| /industries/chiropractor-seo | chiropractic marketing, chiropractor marketing services | milliondollarfunnels.us | chiropractor seo services, local seo for chiropractors |
+| /industries/hvac-seo | hvac marketing | milliondollarfunnels.us | hvac company seo |
+| /industries/solar-seo | solar marketing, solar lead generation seo | milliondollarfunnels.us | solar company seo, seo for solar installers |
+| /industries/home-services-seo | home service marketing; contractor seo, local seo for contractors (now owned by /industries/contractor-seo) | milliondollarfunnels.us / internal | home service business seo, home service company seo, local seo for home services |
+
+### Validation
+- **Before release:** build, crawl of every sitemap URL (status, single H1, title, description, canonical, OG, JSON-LD), mapped keyword present in title + H1 + intro for every mapped page, old URLs return 308 to the new ones, keyword-map export shows no duplicate primary keywords.
+- **After release:** Search Console → Performance, filtered by each mapped keyword (impressions and average position), weekly. Semrush Position Tracking for all P1/P2 keywords (report step 6).
+
+### Not done here (needs access we don't have)
+- **Report step 5:** review the 29,800 backlinks from 79 referring domains. This needs Semrush (Backlink Audit) or Search Console → Links. Disavow only links that are clearly paid or spam networks; Google ignores most low-quality links on its own.

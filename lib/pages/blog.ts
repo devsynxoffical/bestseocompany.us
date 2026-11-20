@@ -554,7 +554,7 @@ export const blogPosts: BlogPost[] = [
         a: "Only if it breaks Google's policies, such as spam, off-topic content, harassment or a conflict of interest. You can report it from your profile. Honest negative reviews usually stay, so a thoughtful reply is your best tool.",
       },
     ],
-    related: ["/services/google-business-profile-seo", "/industries/healthcare-seo", "/blog/google-business-profile-checklist"],
+    related: ["/services/google-business-profile-seo", "/industries/medical-seo", "/blog/google-business-profile-checklist"],
   },
   {
     slug: "local-citations-guide",

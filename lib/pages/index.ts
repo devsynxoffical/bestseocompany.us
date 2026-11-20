@@ -2,14 +2,16 @@ import type { GuidePage, IndustryPage, ServicePage, ToolPage } from "./types";
 import { industriesA } from "./industries-a";
 import { industriesB } from "./industries-b";
 import { industriesC } from "./industries-c";
+import { industriesD } from "./industries-d";
 import { services } from "./services";
+import { servicesB } from "./services-b";
 import { tools } from "./tools";
 import { guides1 } from "./guides-1";
 import { guides2 } from "./guides-2";
 import { guides3 } from "./guides-3";
 
-export const industryPages: IndustryPage[] = [...industriesA, ...industriesB, ...industriesC];
-export const servicePages: ServicePage[] = services;
+export const industryPages: IndustryPage[] = [...industriesA, ...industriesB, ...industriesC, ...industriesD];
+export const servicePages: ServicePage[] = [...services, ...servicesB];
 export const toolPages: ToolPage[] = tools;
 export const guidePages: GuidePage[] = [...guides1, ...guides2, ...guides3];
 

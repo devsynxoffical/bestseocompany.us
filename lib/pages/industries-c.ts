@@ -103,12 +103,12 @@ export const industriesC: IndustryPage[] = [
     secondaryKeywords: [
       "seo for chiropractors",
       "chiropractic seo",
-      "chiropractic marketing",
-      "chiropractor marketing services",
+      "chiropractor seo services",
+      "local seo for chiropractors",
     ],
     h1: "Chiropractor SEO That Books New Patients",
     intro:
-      "Most new chiropractic patients start with a search for back pain or a chiropractor nearby. We help clinics rank for those searches and turn visits into booked first appointments. The work is local, steady and measured in new patient calls.",
+      "Most new chiropractic patients start with a search for back pain or a chiropractor nearby. Chiropractor SEO helps clinics rank for those searches and turn visits into booked first appointments. The work is local, steady and measured in new patient calls.",
     color: "pink",
     schemaType: "Chiropractor",
     challenges: [
@@ -182,26 +182,26 @@ export const industriesC: IndustryPage[] = [
         a: "You need useful content, which may or may not look like a blog. A few strong condition and FAQ pages often do more than weekly posts. We focus on topics patients actually search.",
       },
     ],
-    related: ["healthcare-seo", "med-spa-seo", "gym-seo"],
+    related: ["medical-seo", "med-spa-seo", "gym-seo"],
   },
   {
     slug: "dental-seo",
     name: "Dental",
     audience: "dentists and dental practices",
-    title: "Dental SEO for Dentists | Best SEO Company",
+    title: "SEO for Dentists: Local Dental SEO | Best SEO Company",
     metaDescription:
       "Dental SEO for dentists who want more new patients. Local rankings, treatment pages and review growth built for general, cosmetic and implant practices.",
-    primaryKeyword: "dental seo",
+    primaryKeyword: "seo for dentists",
     secondaryKeywords: [
-      "seo for dentists",
+      "local seo for dentists",
+      "dental seo",
+      "seo for dentist",
       "dentist seo",
       "dental practice seo",
-      "dental marketing",
-      "dental seo company",
     ],
-    h1: "Dental SEO That Fills Your Chairs",
+    h1: "SEO for Dentists That Fills Your Chairs",
     intro:
-      "Patients choose a dentist by location, insurance and reviews, usually in a single search. We help dental practices rank in the map pack and on the pages patients read before booking. The focus is new patient appointments, especially for high-value treatment.",
+      "Patients choose a dentist by location, insurance and reviews, usually in a single search. Our SEO for dentists, including local SEO for dentists, helps practices rank in the map pack and on the pages patients read before booking. The focus is new patient appointments, especially for high-value treatment.",
     color: "taupe",
     schemaType: "Dentist",
     challenges: [
@@ -275,7 +275,7 @@ export const industriesC: IndustryPage[] = [
         a: "Profile and on-page fixes can help within weeks. Competitive treatment terms like implants often take several months. We report monthly on calls, bookings and rankings so you can see progress.",
       },
     ],
-    related: ["orthodontist-seo", "healthcare-seo", "plastic-surgeon-seo"],
+    related: ["orthodontist-seo", "medical-seo", "plastic-surgeon-seo"],
   },
   {
     slug: "plastic-surgeon-seo",
@@ -367,7 +367,7 @@ export const industriesC: IndustryPage[] = [
         a: "Reply briefly and professionally without confirming the reviewer was a patient. Invite them to contact the office directly. Then focus on earning more reviews from satisfied patients over time.",
       },
     ],
-    related: ["med-spa-seo", "dental-seo", "healthcare-seo"],
+    related: ["med-spa-seo", "dental-seo", "medical-seo"],
   },
   {
     slug: "orthodontist-seo",
@@ -459,7 +459,7 @@ export const industriesC: IndustryPage[] = [
         a: "Consult requests, calls and new starts by source. Rankings matter, but bookings tell you if it's working. We report these monthly in plain English.",
       },
     ],
-    related: ["dental-seo", "healthcare-seo", "daycare-seo"],
+    related: ["dental-seo", "medical-seo", "daycare-seo"],
   },
   {
     slug: "veterinary-seo",
@@ -550,26 +550,26 @@ export const industriesC: IndustryPage[] = [
         a: "Local profile and review improvements can help within weeks. Service pages and content usually take a few months to build momentum. We report new client calls and bookings each month.",
       },
     ],
-    related: ["healthcare-seo", "pest-control-seo", "daycare-seo"],
+    related: ["medical-seo", "pest-control-seo", "daycare-seo"],
   },
   {
-    slug: "car-dealership-seo",
-    name: "Car Dealerships",
+    slug: "car-dealer-seo",
+    name: "Car Dealer",
     audience: "car dealerships",
-    title: "Car Dealership SEO | Best SEO Company",
+    title: "SEO for Car Dealers | Best SEO Company",
     metaDescription:
       "Car dealership SEO for new and used inventory. Indexable VDPs, model research pages and local rankings that bring in shoppers ready to test drive.",
-    primaryKeyword: "car dealership seo",
+    primaryKeyword: "seo for car dealers",
     secondaryKeywords: [
+      "car dealership seo",
       "automotive dealer seo",
       "auto dealer seo",
       "dealership seo company",
-      "seo for car dealers",
       "used car dealer seo",
     ],
-    h1: "Car Dealership SEO That Sells Inventory",
+    h1: "SEO for Car Dealers That Moves Inventory",
     intro:
-      "Car shoppers research online for weeks, then visit only a few dealers. We help dealerships get inventory, model pages and service pages in front of those shoppers. The work fits inside OEM program rules and your existing website platform.",
+      "Car shoppers research online for weeks, then visit only a few dealers. Our SEO for car dealers gets inventory, model pages and service pages in front of those shoppers. The work fits inside OEM program rules and your existing website platform.",
     color: "taupe",
     schemaType: "AutoDealer",
     challenges: [
@@ -734,7 +734,7 @@ export const industriesC: IndustryPage[] = [
         a: "Reply calmly with facts and offer to talk offline. Other drivers read your reply as much as the review. If a review breaks Google's policies, we can help you flag it.",
       },
     ],
-    related: ["car-dealership-seo", "car-detailing-seo", "locksmith-seo"],
+    related: ["car-dealer-seo", "car-detailing-seo", "locksmith-seo"],
   },
   {
     slug: "car-detailing-seo",
@@ -825,7 +825,7 @@ export const industriesC: IndustryPage[] = [
         a: "Profile updates and photos can help within a few weeks. Service and town pages usually build over a few months. Starting before spring gives you a stronger busy season.",
       },
     ],
-    related: ["auto-repair-seo", "car-dealership-seo", "carpet-cleaning-seo"],
+    related: ["auto-repair-seo", "car-dealer-seo", "carpet-cleaning-seo"],
   },
   {
     slug: "florist-seo",
@@ -1277,13 +1277,13 @@ export const industriesC: IndustryPage[] = [
         a: "Build a dedicated page for each airport with pickup details, shuttle info and directions. Reviews that mention the airport help too. Off-airport companies can rank well with clear, helpful pages.",
       },
     ],
-    related: ["car-dealership-seo", "limousine-seo", "hotel-seo"],
+    related: ["car-dealer-seo", "limousine-seo", "hotel-seo"],
   },
   {
     slug: "hotel-seo",
     name: "Hotels",
     audience: "independent hotels and small hotel groups",
-    title: "SEO Company for Hotels | Best SEO Company",
+    title: "SEO for Hotels: Grow Direct Bookings | Best SEO Company",
     metaDescription:
       "SEO company for hotels that want more direct bookings. Hotel schema, Google Hotels setup and local content that cut OTA dependence for independents.",
     primaryKeyword: "seo for hotels",
@@ -1291,12 +1291,12 @@ export const industriesC: IndustryPage[] = [
       "hotel seo",
       "seo company for hotels",
       "hotel seo services",
-      "hotel direct booking marketing",
+      "hotel website seo",
       "hotel seo agency",
     ],
-    h1: "Hotel SEO That Grows Direct Bookings",
+    h1: "SEO for Hotels That Grows Direct Bookings",
     intro:
-      "Most guests find a hotel through Google or an online travel agency. Every OTA booking costs you a commission. We help independent hotels and small groups rank on their own, show up in Google Hotels and move more guests to book direct.",
+      "Most guests find a hotel through Google or an online travel agency. Every OTA booking costs you a commission. Our SEO for hotels helps independent hotels and small groups rank on their own, show up in Google Hotels and move more guests to book direct.",
     color: "taupe",
     schemaType: "Hotel",
     challenges: [
