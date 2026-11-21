@@ -12,7 +12,7 @@ export function PolicyView({ page }: { page: PolicyPage }) {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHero crumbs={crumbs} eyebrow={`Last updated ${formatDate(page.updated)}`} h1={page.title} intro={page.intro} color="taupe" wide />
       <div className="policy">
-        <ArticleBody takeaways={[`Questions? Email hello@bestseocompany.us.`, `Last updated ${formatDate(page.updated)}.`]} sections={page.sections} />
+        <ArticleBody followCta={false} takeaways={[`Questions? Email hello@bestseocompany.us.`, `Last updated ${formatDate(page.updated)}.`]} sections={page.sections} />
       </div>
     </main>
   );

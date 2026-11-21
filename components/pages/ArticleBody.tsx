@@ -2,11 +2,12 @@ import Link from "next/link";
 import type { GuideSection } from "@/lib/pages/types";
 import { TocSpy } from "./TocSpy";
 import { Reveal } from "@/components/ui/Reveal";
+import { PreferredSourceCallout } from "@/components/ui/PreferredSource";
 
 export const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 /** Two-column article layout: sticky table of contents + takeaways, sections, tables and code. */
-export function ArticleBody({ takeaways, sections }: { takeaways: string[]; sections: GuideSection[] }) {
+export function ArticleBody({ takeaways, sections, followCta = true }: { takeaways: string[]; sections: GuideSection[]; followCta?: boolean }) {
   const toc = sections.map((s) => ({ id: anchor(s.heading), label: s.heading }));
   return (
     <div className="wrap g-body">
@@ -44,6 +45,7 @@ export function ArticleBody({ takeaways, sections }: { takeaways: string[]; sect
             )}
           </section>
         ))}
+        {followCta && <PreferredSourceCallout />}
       </article>
     </div>
   );

@@ -6,6 +6,7 @@ import { site } from "@/lib/content";
 import { LogoMark } from "@/components/ui/Logo";
 import { useReveal } from "@/hooks/useReveal";
 import { submitLead } from "@/lib/lead";
+import { PreferredSourceButton } from "@/components/ui/PreferredSource";
 
 const wordmark = ["b", "e", "s", "t", "s", "e", "o", ".", "u", "s"];
 
@@ -71,6 +72,10 @@ export function Footer({ columns }: { columns: FooterColumn[] }) {
             </div>
             <p role="status" className="ft-news-note">{note}</p>
           </form>
+          <div className="ft-ps">
+            <span className="ft-news-label">Follow us on Google</span>
+            <PreferredSourceButton placement="footer" />
+          </div>
         </div>
 
         <nav className="ft-cols" aria-label="Footer">
