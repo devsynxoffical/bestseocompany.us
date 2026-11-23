@@ -20,11 +20,11 @@ const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: "400", st
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Best SEO Company | US SEO Agency for Local & National Growth",
+    default: "Best SEO Company in the USA | First Results in 90 Days",
     template: "%s | Best SEO Company",
   },
   description: site.description,
-  keywords: ["SEO company", "SEO agency USA", "local SEO", "technical SEO", "link building", "Google Maps SEO", "SEO services"],
+  keywords: ["best SEO company", "SEO company", "SEO agency in USA"],
   openGraph: { type: "website", siteName: site.name, locale: "en_US" },
   twitter: { card: "summary_large_image" },
   applicationName: site.name,

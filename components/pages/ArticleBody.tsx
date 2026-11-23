@@ -4,6 +4,15 @@ import { TocSpy } from "./TocSpy";
 import { Reveal } from "@/components/ui/Reveal";
 import { PreferredSourceCallout } from "@/components/ui/PreferredSource";
 
+/** Renders [label](/internal-path) inside article text as internal links. Only site-relative paths are linked. */
+function rich(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\(\/[^)\s]*\))/g);
+  return parts.map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\((\/[^)\s]*)\)$/);
+    return m ? <Link key={i} href={m[2]}>{m[1]}</Link> : part;
+  });
+}
+
 export const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 /** Two-column article layout: sticky table of contents + takeaways, sections, tables and code. */
@@ -31,10 +40,10 @@ export function ArticleBody({ takeaways, sections, followCta = true }: { takeawa
               t.trim().startsWith("{") || t.includes('"@context"') ? (
                 <pre key={i} className="g-code"><code>{t}</code></pre>
               ) : (
-                <p key={i}>{t}</p>
+                <p key={i}>{rich(t)}</p>
               ),
             )}
-            {s.bullets && <ul>{s.bullets.map((b) => <li key={b}>{b}</li>)}</ul>}
+            {s.bullets && <ul>{s.bullets.map((b) => <li key={b}>{rich(b)}</li>)}</ul>}
             {s.table && (
               <div className="g-table">
                 <table>

@@ -166,6 +166,40 @@ export default async function ServicePageView({ params }: Params) {
         </div>
       </section>
 
+      {p.caseResult && (
+        <section className="block" style={{ paddingTop: 24 }}>
+          <div className="wrap">
+            <Reveal className="case-result">
+              <span className="label">Client result</span>
+              <b className="case-metric">{p.caseResult.metric}</b>
+              <h3>{p.caseResult.client}, {p.caseResult.location}</h3>
+              <p>{p.caseResult.summary}</p>
+              <span className="case-period">{p.caseResult.period}</span>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {p.localProof && (
+        <section className="block" style={{ paddingTop: 24 }}>
+          <div className="wrap">
+            <div className="sec-head">
+              <SplitText parts={["The proof in every report."]} />
+              <Reveal as="p">Each month you see these numbers, so you can judge the work by what it brings in, not by how busy we look.</Reveal>
+            </div>
+            <div className="proof-grid">
+              {p.localProof.map((x, i) => (
+                <Reveal key={x.title} delay={(i || undefined) as 1 | 2 | 3 | undefined} className="proof-card">
+                  <span className="proof-n" aria-hidden="true">0{i + 1}</span>
+                  <h3>{x.title}</h3>
+                  <p>{x.body}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <FaqAccordion faqs={p.faqs} heading={`${p.name} questions.`} />
       <RelatedLinks heading="Related services" items={related} />
       <LeadBand heading="See what this would do for your site." copy="Send us your website. We'll audit it and show you where this service would make the biggest difference." color={p.color} />

@@ -21,8 +21,8 @@ const rows: Array<[string, string, string, string]> = [
   ["Google Business Profile management", "✓", "✓", "✓"],
   ["Technical audit and fixes", "✓", "✓", "Unlimited"],
   ["New or optimized pages per month", "2", "6", "Custom"],
-  ["Digital PR and link building", "—", "✓", "✓"],
-  ["AI search (AEO/GEO) visibility tracking", "—", "—", "✓"],
+  ["Digital PR and link building", "–", "✓", "✓"],
+  ["AI search (AEO/GEO) visibility tracking", "–", "–", "✓"],
   ["Strategy calls", "Monthly", "Every two weeks", "Dedicated team"],
   ["Reporting", "Monthly one-page report", "Monthly report", "Monthly + quarterly roadmap"],
 ];

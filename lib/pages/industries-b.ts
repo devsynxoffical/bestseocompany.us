@@ -363,8 +363,18 @@ export const industriesB: IndustryPage[] = [
         q: "How long does law firm SEO take?",
         a: "Local profile improvements can show up within a couple of months. Competitive practice area rankings in large cities often take six to twelve months of steady work. Smaller markets usually move faster.",
       },
+      {
+        q: "How are SEO services for lawyers different from regular SEO?",
+        a: "Legal SEO has to follow state bar advertising rules, show real attorney expertise, and compete for very expensive searches. We build practice area and city pages written for how clients search, keep claims compliant, and track signed cases, not just form fills.",
+      },
     ],
     related: ["car-accident-lawyer-seo", "mass-tort-seo", "accountant-seo", "personal-injury-seo"],
+    localProof: [
+      { title: "Consultations by practice area", body: "Calls and form submissions from search, split by practice area so you see which pages bring cases." },
+      { title: "Map pack rank by city", body: "Where your firm shows for searches like \"car accident lawyer near me\" across the cities you serve." },
+      { title: "Practice pages on page one", body: "Which practice area and city pages rank in the top 10, and which competitor firms sit above them." },
+      { title: "Reviews and ratings", body: "New Google reviews each month, kept within bar rules on testimonials." },
+    ],
   },
   {
     slug: "med-spa-seo",
@@ -549,8 +559,18 @@ export const industriesB: IndustryPage[] = [
         q: "How fast can SEO bring in plumbing calls?",
         a: "Profile and review improvements can lift Maps visibility within weeks. Service and city pages usually take a few months to build steady rankings. Competitive metro areas take longer than smaller towns.",
       },
+      {
+        q: "What does SEO for plumbers include?",
+        a: "Google Business Profile optimization, service pages for each job type such as drain cleaning, water heaters and emergency repairs, city pages for the towns you serve, technical fixes, citations, a review process and call tracking so you can see which calls came from search.",
+      },
     ],
     related: ["hvac-seo", "roofing-seo", "home-services-seo", "electrician-seo"],
+    localProof: [
+      { title: "Calls from Google by town", body: "Tracked calls from your Google Business Profile and website, split by the suburbs and towns you serve." },
+      { title: "Emergency search visibility", body: "Your map pack position for \"emergency plumber near me\" and \"24 hour plumber\" on a geo-grid across your service area." },
+      { title: "Booked jobs from search", body: "Calls matched to booked jobs, so you see revenue from SEO, not just clicks." },
+      { title: "Review growth", body: "New reviews each month and your rating against the three plumbers above you in the map pack." },
+    ],
   },
   {
     slug: "carpet-cleaning-seo",

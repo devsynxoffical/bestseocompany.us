@@ -66,6 +66,10 @@ export const statement = {
 export const audiences = {
   rotating: ["plumbers", "dentists", "law firms", "roofers", "online stores", "SaaS teams"],
   industries: [
+    { name: "Contractors", href: "/industries/contractor-seo" },
+    { name: "Plumbers", href: "/industries/plumber-seo" },
+    { name: "Electricians", href: "/industries/electrician-seo" },
+    { name: "Chiropractors", href: "/industries/chiropractor-seo" },
     { name: "Home services", href: "/industries/home-services-seo" },
     { name: "Dental & medical", href: "/industries/dental-seo" },
     { name: "Law firms", href: "/industries/law-firm-seo" },
@@ -260,6 +264,14 @@ export const faqs = [
   {
     q: "Do you work with businesses outside the US?",
     a: "We focus on US businesses and US search markets, which is how we keep our local knowledge sharp.",
+  },
+  {
+    q: "What should I look for in an SEO agency in the USA?",
+    a: "Look for published prices, a written plan for your first 90 days, examples of pages they have ranked in your type of market, white-hat link building and plain reporting on leads, not just rankings. Ask who will actually run your account. With us it is a senior strategist, and we work only in US search markets.",
+  },
+  {
+    q: "What does your SEO agency do for US businesses?",
+    a: "Every plan covers technical SEO, on-page and content work, local SEO and Google Business Profile, and link building, weighted to what your market needs. Larger plans add digital PR, AI search visibility and multi-location work. You get one strategist and one monthly report.",
   },
   {
     q: "What happens in the free audit?",

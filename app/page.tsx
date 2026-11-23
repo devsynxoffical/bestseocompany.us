@@ -17,13 +17,14 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Pricing } from "@/components/sections/Pricing";
 import { Blog } from "@/components/sections/Blog";
 import { Faq } from "@/components/sections/Faq";
+import { UsAgency } from "@/components/sections/UsAgency";
 import { Cta } from "@/components/sections/Cta";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Best SEO Company | US SEO Agency for Local & National Growth",
-  description: "Best SEO Company is a US SEO agency for technical SEO, local SEO, content, link building and AI search. Free 40-point audit. Month-to-month after 90 days.",
+  title: "Best SEO Company in the USA | First Results in 90 Days",
+  description: "US SEO agency for local, technical and AI search. Free 40-point audit in 48 hours, plans from $1,500/mo, month to month after 90 days. Get your audit.",
   path: "/",
-  keywords: ["best seo company", "seo company", "seo agency usa", "local seo", "technical seo", "seo services"],
+  keywords: ["best seo company", "best seo company in the usa", "top seo company", "seo agency in usa", "seo company", "us seo agency"],
 });
 
 export default function HomePage() {
@@ -45,6 +46,7 @@ export default function HomePage() {
         <Process />
         <Testimonials />
         <Pricing />
+        <UsAgency />
         <Blog />
         <Faq />
         <Cta />

@@ -157,3 +157,35 @@ Removed secondary keywords that the report assigns to sister sites, so our pages
 
 **Validation:** build OK. A crawl of all 104 pages shows 0 problems (canonical, meta, JSON-LD, 1 H1). Pages with fewer than 3 in-content links: 17 → 4, and only site-map/privacy/terms/editorial remain, which is intended. Click depth is unchanged (max 2).
 **Measure:** URL Inspection on the 16 "Discovered" URLs, 7 days after the owner requests indexing.
+
+## Batch 5 · 2026-11-23 · Top 10 push (plan in 04-TOP10-PLAN.md)
+
+| Change | Page | Before | After | Reason |
+|---|---|---|---|---|
+| Title and meta description | / | "Best SEO Company \| US SEO Agency for Local & National Growth"; generic description | "Best SEO Company in the USA \| First Results in 90 Days"; the description now leads with the offer (free audit in 48h, from $1,500/mo, month to month) | CTR was 0.1% on 1,610 impressions |
+| New H2 section "An SEO agency in the USA, for US search" with 3 cards (services, industries, pricing) | / | none | added | "seo agency in usa" at position 10.6 |
+| 2 FAQs added to the FAQPage schema (7 total) | / | 5 | 7 | Same |
+| 4 industry chips added: contractors, plumbers, electricians, chiropractors | / | 12 | 16 | Phase 1: link P1 pages from the homepage |
+| Title, H1 and description now target "seo services in us" | /services | "SEO Services \| Local, Technical, AEO & More", H1 "Every way we grow your search traffic." | "SEO Services in the US \| Best SEO Company", H1 "SEO services in the US that grow your search traffic." | "seo services in us" at position 13.1 |
+| H2 sections "Which SEO service do you need?" and "How our SEO services work", plus 5 FAQs with FAQPage schema | /services | 337 words, no FAQ | about 900 words, 5 FAQs | Same |
+| 5th FAQ (target keyword wording) and a "Local proof you'll see every month" section | contractor, plumber, law-firm, chiropractor, dental, electrician | 4 FAQs, no proof section | 5 FAQs, 4 proof cards | Plan task 3. Proof describes what is reported; no invented results |
+| "The proof in every report" section | /services/small-business-seo, /services/ecommerce-seo | none | 4 proof cards | Same |
+| Optional `caseResult` slot on industry and service templates | templates | n/a | renders only when real data is added | No invented results |
+| Overlap fix: "seo pricing" removed from SEO Packages; title and H1 no longer say pricing | /services/seo-packages | "SEO Packages & Pricing for US Businesses" | "SEO Packages for US Businesses: What Each Includes" | /pricing owns "seo pricing" |
+| Overlap fix: "seo services" removed from homepage and layout keywords; the homepage links to /services with the anchor "SEO services in the US" | /, layout | homepage meta keywords included "seo services" | homepage targets brand terms + "seo agency in usa" | /services owns "seo services" |
+| Em dashes replaced with en dashes in the pricing table | /pricing | "—" | "–" | Brief rule: no em dashes |
+| New article "Plumber SEO Checklist: 21 Fixes That Bring More Calls" | /blog/plumber-seo-checklist | n/a | new | Phase 5; links to plumber, electrician, contractor, small business |
+| New article "How Long Does SEO Take for a Small Business?" | /blog/how-long-does-seo-take | n/a | new | Phase 5; links to contractor, dental, plumber, electrician, chiropractor, small business |
+| Articles support inline `[text](/path)` internal links | ArticleBody | none | site-relative only | Contextual links to money pages |
+| `seo-export` now includes core pages and reports secondary/primary overlaps | scripts/seo-export.mts | 91 rows, no overlap check | 98 rows, overlap check: 0 | Plan task 4 |
+| `docs/disavow.txt` template | docs | n/a | instructions, no domains | No backlink export available (OpenSEO had no credits) |
+| Sister-site footer links | Footer | already removed in batch 3 | confirmed 0 links to sister sites | Plan task 5 |
+
+**Validation:**
+- Build OK. Crawl of 106 sitemap URLs: 0 problems.
+- All 15 target pages:
+  - return 200
+  - have 1 H1 containing the keyword and the keyword in the title
+  - have valid JSON-LD and 5 FAQs (3 on the articles)
+- 0 em dashes in rendered text across all pages.
+- Keyword map: 0 duplicate primaries, 0 overlaps.

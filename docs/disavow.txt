@@ -1,0 +1,24 @@
+# Disavow candidates for https://www.bestseocompany.us
+# Prepared 2026-11-23. STATUS: TEMPLATE. No domains listed yet.
+#
+# Why it is empty: no backlink export was available when this file was made
+# (the OpenSEO backlink tool had no credits, and the Semrush referring-domain list was not in the repo).
+# Do not upload this file until real domains are added below.
+#
+# How to fill it (about 30 minutes):
+# 1. Semrush > Backlink Analytics > bestseocompany.us > Referring Domains > Export (CSV).
+# 2. Add a line "domain:example.com" for each clear spam domain only:
+#    - link farms and "dofollow backlinks cheap" / "link velocity" style sites
+#    - unrelated foreign-language spam (for example "avanzados enlaces de colocación" anchors)
+#    - sites whose anchors are adult, casino or pharma
+#    Keep real directories, real businesses and news sites, even if their Authority Score is low.
+# 3. Old-owner links: the review found links tied to a previous owner
+#    ("keywordkrusher.bestseocompany.us", "university of facebook" anchors).
+#    keywordkrusher.bestseocompany.us is a subdomain of this domain, so it cannot be disavowed.
+#    Instead: make sure it no longer resolves (remove its DNS record) or 301 it to https://www.bestseocompany.us/.
+#    Disavow the external domains that link with those old anchors.
+# 4. Upload: Google Search Console > Disavow links tool (https://search.google.com/search-console/disavow-links),
+#    choose the property https://www.bestseocompany.us/ (or the Domain property once it exists) and upload this file.
+#
+# Format: one entry per line, "domain:spamsite.com" or a full URL. Lines starting with # are comments.
+

@@ -28,6 +28,10 @@ export type IndustryPage = {
   compliance?: string;        // optional advertising/regulatory note (legal, medical, financial...)
   faqs: FAQ[];                // exactly 4
   related: string[];          // 3-4 related industry slugs
+  /** Optional: what local proof the client sees each month (geo-grid ranks, calls by area...). */
+  localProof?: TitledText[];
+  /** Optional: a REAL client result. Leave undefined until the owner supplies verified numbers. */
+  caseResult?: { client: string; location: string; metric: string; period: string; summary: string };
 };
 
 /** /services/[slug] — SEO service pages. */
@@ -48,6 +52,10 @@ export type ServicePage = {
   metrics: string[];          // exactly 4 KPIs we report on
   faqs: FAQ[];                // exactly 5
   related: string[];          // 3-4 related service slugs
+  /** Optional: the proof the client sees in each monthly report. */
+  localProof?: TitledText[];
+  /** Optional: a REAL client result. Leave undefined until the owner supplies verified numbers. */
+  caseResult?: { client: string; location: string; metric: string; period: string; summary: string };
 };
 
 /** /tools/[slug] — free tool pages. */

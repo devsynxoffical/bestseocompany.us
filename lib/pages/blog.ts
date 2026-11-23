@@ -2,6 +2,210 @@ import type { BlogPost } from "./types";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "plumber-seo-checklist",
+    title: "Plumber SEO Checklist: 21 Fixes That Bring More Calls",
+    seoTitle: "Plumber SEO Checklist: 21 Fixes for More Calls",
+    metaDescription:
+      "A plumber SEO checklist you can work through this month: Google Business Profile, service and city pages, reviews, technical fixes and call tracking.",
+    primaryKeyword: "plumber seo checklist",
+    excerpt:
+      "A practical checklist for plumbing companies: what to fix in your Google profile, on your website and in your reviews to get more calls from search.",
+    date: "2026-11-23",
+    tags: ["Local SEO", "Plumbers", "Checklist"],
+    readMinutes: 8,
+    answer:
+      "A plumber SEO checklist covers four areas. Complete and verify your Google Business Profile, build a page for each service and each town you serve, collect reviews from every customer, and fix technical basics like speed, mobile layout and indexing. Then track calls so you know which work brings booked jobs.",
+    keyTakeaways: [
+      "Your Google Business Profile drives most emergency calls, so complete every field and pick the right primary category.",
+      "One page per service and one page per main town beats a single long services page.",
+      "Ask every customer for a review with a direct link, and reply to every review.",
+      "Track calls from search so you can judge SEO by booked jobs, not rankings.",
+    ],
+    sections: [
+      {
+        heading: "Google Business Profile: the first 7 checks",
+        paragraphs: [
+          "Most people who search for a plumber in an emergency call straight from the map pack. Your Google Business Profile is the listing they see there, so it comes first on this checklist.",
+          "Work through these checks once, then review them every quarter. Google changes the profile fields from time to time, and competitors keep improving theirs.",
+        ],
+        bullets: [
+          "Primary category set to Plumber, with secondary categories only for work you really do, such as drainage service or water heater installation.",
+          "Service area set to the towns you actually cover. Hide your address if you don't serve customers at it.",
+          "Business name exactly as it appears on your truck and invoices, without extra keywords.",
+          "Opening hours that match reality, including 24-hour availability only if someone really answers.",
+          "Services list filled in with short descriptions for each job type.",
+          "Photos of your team, vans and real jobs, added every month.",
+          "A tracked phone number set as primary, with your main number as an additional number.",
+        ],
+      },
+      {
+        heading: "Website pages: the next 6 checks",
+        paragraphs: [
+          "Google needs a page that matches the search. Someone searching for water heater repair in a nearby town should land on a page about water heater repair that mentions that town, not on your homepage.",
+          "If you want the full approach behind these checks, our guide to [SEO for plumbers](/industries/plumber-seo) walks through how we plan pages, reviews and local signals for plumbing companies.",
+        ],
+        bullets: [
+          "One page for each service that brings real revenue: drain cleaning, water heaters, leak detection, sewer lines, emergency repairs.",
+          "One page for each main town or suburb you serve, with local details, not the same text with the town name swapped.",
+          "A clear phone number and call button at the top of every page on mobile.",
+          "Titles that name the service and the town, for example Emergency Plumber in Mesa, AZ.",
+          "LocalBusiness or Plumber schema on your contact page with the same name, phone and service area as your profile.",
+          "Internal links from each service page to the matching town pages and back.",
+        ],
+      },
+      {
+        heading: "Reviews: 4 checks",
+        paragraphs: [
+          "Reviews help you rank in the map pack and help people decide which plumber to call. A steady flow of recent reviews that mention the job and the town works better than a burst every few months.",
+        ],
+        bullets: [
+          "Ask every customer, not only the happy ones. Asking selectively is review gating and breaks Google's rules.",
+          "Send a direct review link by text right after the job, while the fix is still fresh.",
+          "Reply to every review within a few days, including the negative ones.",
+          "Never offer discounts or gifts for reviews. Google does not allow incentives.",
+        ],
+      },
+      {
+        heading: "Technical basics: 3 checks",
+        paragraphs: [
+          "Most plumbing customers search on a phone, often in a hurry. A slow or broken mobile page loses the call to the next result.",
+        ],
+        bullets: [
+          "Pages load fast on mobile. Test them with Google PageSpeed Insights or our free [SEO audit tool](/tools/seo-audit-tool).",
+          "Every service and town page is indexed. Check them in Google Search Console with the URL Inspection tool.",
+          "No duplicate pages, broken links or old pages from a previous website still showing in Google.",
+        ],
+      },
+      {
+        heading: "Tracking: the last check",
+        paragraphs: [
+          "Set up call tracking and connect it to your booking system or job software. Without it you can't tell whether SEO brought you ten calls or a hundred, or which pages brought the jobs worth the most.",
+          "Review the numbers once a month: calls from Google, booked jobs, and which towns and services they came from. Then put more effort into the pages that bring the best jobs.",
+        ],
+      },
+      {
+        heading: "When to bring in help",
+        paragraphs: [
+          "You can work through this checklist yourself in a few weekends. Where plumbers usually get stuck is writing a strong page for every service and town, and keeping reviews and photos flowing while running jobs.",
+          "If you would rather have it done for you, see our [SEO services for small business](/services/small-business-seo), or ask for a free audit of your site and profile. Electricians and other trades can use the same checklist, and we cover them in [SEO for electricians](/industries/electrician-seo) and [SEO for contractors](/industries/contractor-seo).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How long does plumber SEO take to work?",
+        a: "Google Business Profile and review improvements can show in the map pack within a few weeks. New service and town pages usually take three to six months to rank steadily, and busy metro areas take longer.",
+      },
+      {
+        q: "Should a plumber pay for Local Services Ads or SEO?",
+        a: "Both can work together. Local Services Ads bring leads right away at a cost per lead. SEO takes longer but keeps bringing calls without paying for each one. Strong reviews help both.",
+      },
+      {
+        q: "Do I need a separate page for every town?",
+        a: "You need one for each main town or area where you want more work, as long as each page has real local detail. Thin pages that only swap the town name can do more harm than good.",
+      },
+    ],
+    related: ["/industries/plumber-seo", "/services/local-seo", "/blog/get-more-google-reviews"],
+  },
+  {
+    slug: "how-long-does-seo-take",
+    title: "How Long Does SEO Take for a Small Business?",
+    seoTitle: "How Long Does SEO Take for a Small Business?",
+    metaDescription:
+      "How long SEO takes for a small business, stage by stage: what moves in weeks, what takes three to six months, and what slows results down.",
+    primaryKeyword: "how long does seo take",
+    excerpt:
+      "SEO is not instant, but it is not a mystery either. Here is what usually moves in the first weeks, what takes months, and what slows things down.",
+    date: "2026-11-23",
+    tags: ["SEO basics", "Small business"],
+    readMinutes: 7,
+    answer:
+      "For most small businesses, SEO shows first movement in 4 to 12 weeks and steady results in 3 to 6 months. Google Business Profile and technical fixes can work within weeks. New pages take months to build rankings, and competitive keywords or a new domain can take 6 to 12 months or more.",
+    keyTakeaways: [
+      "Fixes to your Google Business Profile and technical problems are the fastest wins.",
+      "New pages usually need three to six months to rank steadily.",
+      "A new domain, a competitive market and weak links all add time.",
+      "Judge progress by impressions, calls and leads month over month, not by one ranking.",
+    ],
+    sections: [
+      {
+        heading: "The short answer",
+        paragraphs: [
+          "Most small businesses see first signs of progress within one to three months and steady growth in calls and leads between months three and six. That range is wide because it depends on where you start, how competitive your market is and how much work goes in each month.",
+          "Google's own guidance to business owners says it often takes four months to a year to put SEO improvements in place and see the benefit. Local businesses in smaller markets are often at the faster end of that range. Anyone who promises page one in a few days is guessing or using tactics that put your site at risk.",
+        ],
+      },
+      {
+        heading: "What can move in the first weeks",
+        paragraphs: [
+          "Some changes affect results quickly because Google already knows your business and only needs to recrawl what changed.",
+        ],
+        bullets: [
+          "Google Business Profile fixes: categories, services, hours, photos and new reviews.",
+          "Technical fixes on pages Google already indexes: titles, broken pages, speed and mobile problems.",
+          "Better titles and descriptions on pages that already rank on page two, which can lift clicks fast.",
+        ],
+      },
+      {
+        heading: "What takes three to six months",
+        paragraphs: [
+          "New pages have to be found, crawled, indexed and then tested by Google against the pages that already rank. Each step takes time, and new pages often move around before they settle.",
+          "This is the stage where most of the lasting growth comes from: service pages, town pages and helpful articles that answer what your customers search. Local businesses usually see this first, because local results are less crowded than national ones. Our pages on [SEO for contractors](/industries/contractor-seo) and [SEO for dentists](/industries/dental-seo) show how this plays out in two very different markets.",
+        ],
+      },
+      {
+        heading: "What slows SEO down",
+        paragraphs: [
+          "A few things reliably add months. Knowing about them helps you set fair expectations.",
+        ],
+        bullets: [
+          "A brand-new domain with no history or links.",
+          "A competitive market, such as personal injury law in a big city or a national ecommerce category.",
+          "Technical problems that stop pages from being indexed.",
+          "Thin or copied content that gives Google no reason to rank you over others.",
+          "Stopping and starting the work instead of keeping a steady monthly rhythm.",
+        ],
+      },
+      {
+        heading: "A realistic timeline",
+        paragraphs: [
+          "This is the order of work we follow for small business clients. The months are typical, not guaranteed.",
+        ],
+        table: {
+          head: ["Stage", "When", "What you should see"],
+          rows: [
+            ["Audit and fixes", "Weeks 1 to 4", "Technical problems fixed, profile complete, pages indexed"],
+            ["New pages live", "Months 1 to 3", "More impressions in Search Console, first page-two rankings"],
+            ["Rankings settle", "Months 3 to 6", "Page-one rankings for local and long-tail searches, more calls"],
+            ["Compounding", "Months 6 to 12", "Harder keywords move up, leads grow month over month"],
+          ],
+        },
+      },
+      {
+        heading: "How to tell if it's working",
+        paragraphs: [
+          "Look at trends, not single days. In Google Search Console, impressions usually rise before clicks, and clicks rise before leads. If impressions are flat after three months of steady work, something is wrong and worth an audit.",
+          "If you want a plan built around your market, see our [SEO services for small business](/services/small-business-seo) or the industry pages for [plumbers](/industries/plumber-seo), [electricians](/industries/electrician-seo) and [chiropractors](/industries/chiropractor-seo).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can SEO work in 30 days?",
+        a: "Some quick wins can show in 30 days, mainly Google Business Profile changes and fixes to pages that already rank. Most new pages need longer to rank steadily.",
+      },
+      {
+        q: "Why is my new website not showing on Google yet?",
+        a: "New sites have to be discovered and indexed first. Submit your sitemap in Google Search Console, link new pages from your homepage and main pages, and check their status with URL Inspection.",
+      },
+      {
+        q: "Is SEO worth it if it takes months?",
+        a: "For most local businesses, yes. Once pages rank, they keep bringing calls without paying for each click, which lowers your cost per lead over time.",
+      },
+    ],
+    related: ["/services/small-business-seo", "/guides/seo-cost", "/industries/contractor-seo"],
+  },
+  {
     slug: "google-business-profile-checklist",
     title: "The Google Business Profile Optimization Checklist for Local Businesses",
     seoTitle: "Google Business Profile Checklist for Local Businesses",

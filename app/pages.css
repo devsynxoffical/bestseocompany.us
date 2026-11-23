@@ -500,3 +500,33 @@ body:has(.lead-band, main .cta) .ft-main{padding-top:64px}
 .ps-callout div{display:grid;gap:4px;max-width:46ch}
 .ps-callout b{font-family:var(--font-display);font-size:19px;letter-spacing:-.02em}
 .ps-callout p{font-size:15px;color:var(--ink-2)}
+
+/* ===== Services hub: picker, steps ===== */
+.pick-list{display:grid;gap:10px}
+@media(min-width:900px){.pick-list{grid-template-columns:repeat(2,1fr)}}
+.pick-row{display:grid;gap:4px;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:18px;padding:18px 20px;background:var(--white);transition:border-color .3s,transform .4s var(--ease)}
+.pick-row:hover{border-color:var(--ink);transform:translateY(-3px)}
+.pick-row span{color:var(--ink-2);font-size:15px}
+.pick-row b{font-family:var(--font-display);font-size:20px;letter-spacing:-.02em}
+.how-steps{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+@media(min-width:800px){.how-steps{grid-template-columns:repeat(4,1fr)}}
+.how-steps li{border:1px solid var(--line);border-radius:22px;padding:22px;display:grid;gap:8px;align-content:start;background:var(--white)}
+.how-steps .num{font-family:var(--font-display);font-weight:700;font-size:44px;letter-spacing:-.06em;line-height:.9;color:var(--ink)}
+.how-steps h3{font-family:var(--font-display);font-size:21px;letter-spacing:-.02em;margin:0}
+.how-steps p{color:var(--ink-2);margin:0;font-size:15px}
+.how-more{margin-top:20px;color:var(--ink-2)}
+.how-more a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+/* ===== Industry: local proof + client result ===== */
+.proof-grid{display:grid;gap:14px}
+@media(min-width:720px){.proof-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.proof-grid{grid-template-columns:repeat(4,1fr)}}
+.proof-card{border:1px solid var(--line);border-radius:22px;padding:22px;display:grid;gap:8px;align-content:start;background:var(--white)}
+.proof-n{font-family:var(--font-mono);font-size:13px;color:var(--ink-2)}
+.proof-card h3{font-family:var(--font-display);font-size:20px;letter-spacing:-.02em;margin:0}
+.proof-card p{color:var(--ink-2);margin:0;font-size:15px}
+.case-result{border:1.5px solid var(--ink);border-radius:28px;padding:clamp(24px,4vw,44px);background:var(--lime);display:grid;gap:8px}
+.case-metric{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);letter-spacing:-.05em;line-height:1}
+.case-result h3{margin:0;font-size:22px}
+.case-period{font-family:var(--font-mono);font-size:13px}
+.g-sec p a,.g-sec li a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}

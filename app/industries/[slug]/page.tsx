@@ -179,6 +179,42 @@ export default async function IndustryPageView({ params }: Params) {
         </div>
       </section>
 
+      {/* Real client result (only when the owner has supplied verified numbers) */}
+      {p.caseResult && (
+        <section className="block" style={{ paddingTop: 24 }}>
+          <div className="wrap">
+            <Reveal className="case-result">
+              <span className="label">Client result</span>
+              <b className="case-metric">{p.caseResult.metric}</b>
+              <h3>{p.caseResult.client}, {p.caseResult.location}</h3>
+              <p>{p.caseResult.summary}</p>
+              <span className="case-period">{p.caseResult.period}</span>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Local proof */}
+      {p.localProof && (
+        <section className="block" style={{ paddingTop: 24 }}>
+          <div className="wrap">
+            <div className="sec-head">
+              <SplitText parts={["Local proof you'll see every month."]} />
+              <Reveal as="p">Rankings alone don&apos;t pay the bills. Each month your report shows these numbers for your service area, so you can see what SEO brings in.</Reveal>
+            </div>
+            <div className="proof-grid">
+              {p.localProof.map((x, i) => (
+                <Reveal key={x.title} delay={(i || undefined) as 1 | 2 | 3 | undefined} className="proof-card">
+                  <span className="proof-n" aria-hidden="true">0{i + 1}</span>
+                  <h3>{x.title}</h3>
+                  <p>{x.body}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Timeline + trust */}
       <section className="block" style={{ paddingTop: 24 }}>
         <div className="wrap">

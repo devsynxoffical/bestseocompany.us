@@ -91,8 +91,18 @@ export const industriesD: IndustryPage[] = [
         q: "Do electricians need a blog?",
         a: "A few helpful articles on costs, panel upgrades and safety warning signs can rank well. Service and location pages usually matter more. We only write content your customers actually search for.",
       },
+      {
+        q: "What does SEO for electricians cost?",
+        a: "Most electricians start on our Starter plan at $1,500 a month for one service area. Electrical contractors working across several cities usually need the Growth plan at $3,500 a month. Every plan starts with a free audit and is month to month after 90 days.",
+      },
     ],
     related: ["home-services-seo", "hvac-seo", "plumber-seo"],
+    localProof: [
+      { title: "Service calls by town", body: "Tracked calls from Google, split by the towns you serve and by job type such as panel upgrades, EV chargers and repairs." },
+      { title: "Map pack rank on a geo-grid", body: "Where you show for \"electrician near me\" and \"emergency electrician\" across your service area." },
+      { title: "Service pages on page one", body: "Which service pages rank in the top 10, from panel upgrades to generator installs." },
+      { title: "Review growth", body: "New reviews each month and the jobs they mention." },
+    ],
   },
 
   // 2. Landscaping
@@ -278,8 +288,18 @@ export const industriesD: IndustryPage[] = [
         q: "We don't have many project photos. Where do we start?",
         a: "Start with your current jobs. We give your crew a simple checklist for before, during and after photos. Even phone photos with good notes make strong project pages.",
       },
+      {
+        q: "What does SEO for contractors cost?",
+        a: "Most contractors start on our Starter plan at $1,500 a month for one service area, or Growth at $3,500 a month for several cities or a busy niche. Every plan starts with a free audit, and after the first 90 days it is month to month.",
+      },
     ],
     related: ["home-services-seo", "roofing-seo", "architect-seo"],
+    localProof: [
+      { title: "Project leads by service and city", body: "Quote requests and calls from search, split by service (remodels, additions, new builds) and by the towns you work in." },
+      { title: "Map pack rank on a geo-grid", body: "Where you show for searches like \"general contractor near me\" across a grid of points in your service area, not just at your office." },
+      { title: "Project pages that rank", body: "Which project and service pages reach page one for your city, with photos and scope details that win bigger jobs." },
+      { title: "Reviews by job type", body: "New Google reviews each month and which services they mention, since reviews that name the job help both rankings and trust." },
+    ],
   },
 
   // 4. Personal Injury

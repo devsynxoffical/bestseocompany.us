@@ -4,18 +4,17 @@ export const services: ServicePage[] = [
   {
     slug: "seo-packages",
     name: "SEO Packages",
-    title: "SEO Packages & Pricing for US Businesses",
+    title: "SEO Packages for US Businesses: What Each Includes",
     metaDescription:
       "Compare our SEO packages: Starter at $1,500/mo, Growth at $3,500/mo, and custom Scale plans. See what each includes and how to spot a weak SEO package.",
     primaryKeyword: "seo packages",
     secondaryKeywords: [
-      "seo pricing",
-      "seo packages and pricing",
       "monthly seo packages",
+      "seo package deliverables",
       "affordable seo packages",
       "seo plans for small business",
     ],
-    h1: "SEO Packages With Clear, Public Pricing",
+    h1: "SEO Packages With Clear Deliverables",
     intro:
       "We publish our prices so you can judge fit before a sales call. Every plan starts with a free 40-point audit, runs on a 90-day start term, and then goes month-to-month. You get a plain-English report every month.",
     color: "lav",
@@ -408,6 +407,12 @@ export const services: ServicePage[] = [
       },
     ],
     related: ["shopify-seo", "technical-seo", "link-building", "enterprise-seo"],
+    localProof: [
+      { title: "Organic revenue and orders", body: "Revenue and orders from organic search in your analytics, split by category so you see which pages sell." },
+      { title: "Category and product rankings", body: "Top 10 rankings for your category and best-selling product pages, the searches closest to a purchase." },
+      { title: "Indexed pages that matter", body: "How many of your category and product pages Google has indexed, and filter or duplicate pages we kept out of the index." },
+      { title: "Shopping and AI visibility", body: "Whether your products show in free Google Shopping listings and AI answers for the searches you target." },
+    ],
   },
   {
     slug: "google-business-profile-seo",
@@ -1122,6 +1127,12 @@ export const services: ServicePage[] = [
       },
     ],
     related: ["local-seo", "seo-packages", "google-business-profile-seo"],
+    localProof: [
+      { title: "Calls and form leads from search", body: "Every call and form submission from Google, tracked to the page or profile that brought it, so you know what your budget buys." },
+      { title: "Your local map pack position", body: "Where you show in Google Maps for your main service in your town, checked across a grid of points, not just at your address." },
+      { title: "Pages that reached page one", body: "Which of your service and city pages rank in the top 10 for the searches that matter to a small business your size." },
+      { title: "Cost per lead from SEO", body: "Your monthly fee divided by the leads SEO brought in, so you can compare it with ads and directories." },
+    ],
   },
   {
     slug: "enterprise-seo",

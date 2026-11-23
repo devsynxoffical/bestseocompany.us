@@ -181,8 +181,18 @@ export const industriesC: IndustryPage[] = [
         q: "Do I need a blog?",
         a: "You need useful content, which may or may not look like a blog. A few strong condition and FAQ pages often do more than weekly posts. We focus on topics patients actually search.",
       },
+      {
+        q: "What does chiropractor SEO include?",
+        a: "Google Business Profile optimization, pages for the conditions and treatments patients search for such as back pain, sciatica and sports injuries, city pages, technical fixes, citations and a review process, with booked appointments tracked back to search.",
+      },
     ],
     related: ["medical-seo", "med-spa-seo", "gym-seo"],
+    localProof: [
+      { title: "New patient bookings from search", body: "Online bookings and calls from Google, tracked back to the page or profile that brought them." },
+      { title: "Map pack rank on a geo-grid", body: "Where your clinic shows for \"chiropractor near me\" across a grid of points around your office." },
+      { title: "Condition pages that rank", body: "Which condition and treatment pages reach page one, such as back pain or sciatica care in your city." },
+      { title: "Review growth", body: "New reviews each month, gathered without breaking Google's rules or patient privacy." },
+    ],
   },
   {
     slug: "dental-seo",
@@ -274,8 +284,18 @@ export const industriesC: IndustryPage[] = [
         q: "How long does dental SEO take?",
         a: "Profile and on-page fixes can help within weeks. Competitive treatment terms like implants often take several months. We report monthly on calls, bookings and rankings so you can see progress.",
       },
+      {
+        q: "What does local SEO for dentists include?",
+        a: "Local SEO for dentists covers your Google Business Profile, a page for each treatment such as implants, Invisalign and emergency dentistry, location pages, citations in dental and health directories, review generation and appointment tracking, all kept within patient privacy rules.",
+      },
     ],
     related: ["orthodontist-seo", "medical-seo", "plastic-surgeon-seo", "veterinary-seo"],
+    localProof: [
+      { title: "New patient calls and bookings", body: "Calls and online bookings from Google, split by treatment so you see which services fill the chair." },
+      { title: "Map pack rank on a geo-grid", body: "Where your practice shows for \"dentist near me\" and \"emergency dentist\" across the neighborhoods around you." },
+      { title: "High-value treatment pages", body: "Rankings for implant, Invisalign and cosmetic pages, which bring the highest-value patients." },
+      { title: "Reviews and rating", body: "New reviews each month and your rating against nearby practices." },
+    ],
   },
   {
     slug: "plastic-surgeon-seo",
