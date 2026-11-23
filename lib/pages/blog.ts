@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
         a: "Common causes are keywords in the business name, ineligible addresses such as virtual offices, duplicate listings and showing an address for a service-area business. Fix the issue, gather proof of your business, and submit a reinstatement request.",
       },
     ],
-    related: ["/services/google-business-profile-seo", "/services/local-seo", "/blog/get-more-google-reviews"],
+    related: ["/services/google-business-profile-seo", "/services/local-seo", "/blog/get-more-google-reviews", "/blog/local-citations-guide"],
   },
   {
     slug: "ai-overviews-local-businesses",
@@ -333,7 +333,7 @@ export const blogPosts: BlogPost[] = [
         a: "It can help at the margins, especially against similar competitors, but relevance and content quality matter much more. Passing scores mainly improve user experience and conversions.",
       },
     ],
-    related: ["/services/technical-seo", "/tools/seo-audit-tool", "/guides/how-to-improve-seo"],
+    related: ["/services/technical-seo", "/tools/seo-audit-tool", "/guides/how-to-improve-seo", "/blog/seo-site-migration-checklist"],
   },
   {
     slug: "service-pages-that-rank",
@@ -445,7 +445,7 @@ export const blogPosts: BlogPost[] = [
         a: "Only if you can make each page genuinely useful with local details, projects or reviews. A strong service page plus a clear service area section is often better than many thin city pages.",
       },
     ],
-    related: ["/guides/best-seo-strategy", "/industries/home-services-seo", "/blog/local-business-schema"],
+    related: ["/guides/best-seo-strategy", "/industries/home-services-seo", "/blog/local-business-schema", "/blog/core-web-vitals-inp"],
   },
   {
     slug: "get-more-google-reviews",
@@ -554,7 +554,7 @@ export const blogPosts: BlogPost[] = [
         a: "Only if it breaks Google's policies, such as spam, off-topic content, harassment or a conflict of interest. You can report it from your profile. Honest negative reviews usually stay, so a thoughtful reply is your best tool.",
       },
     ],
-    related: ["/services/google-business-profile-seo", "/industries/medical-seo", "/blog/google-business-profile-checklist"],
+    related: ["/services/google-business-profile-seo", "/industries/medical-seo", "/blog/google-business-profile-checklist", "/blog/ai-overviews-local-businesses"],
   },
   {
     slug: "local-citations-guide",

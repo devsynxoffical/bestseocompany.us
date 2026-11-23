@@ -364,7 +364,7 @@ export const industriesB: IndustryPage[] = [
         a: "Local profile improvements can show up within a couple of months. Competitive practice area rankings in large cities often take six to twelve months of steady work. Smaller markets usually move faster.",
       },
     ],
-    related: ["car-accident-lawyer-seo", "mass-tort-seo", "accountant-seo"],
+    related: ["car-accident-lawyer-seo", "mass-tort-seo", "accountant-seo", "personal-injury-seo"],
   },
   {
     slug: "med-spa-seo",
@@ -550,7 +550,7 @@ export const industriesB: IndustryPage[] = [
         a: "Profile and review improvements can lift Maps visibility within weeks. Service and city pages usually take a few months to build steady rankings. Competitive metro areas take longer than smaller towns.",
       },
     ],
-    related: ["hvac-seo", "roofing-seo", "home-services-seo"],
+    related: ["hvac-seo", "roofing-seo", "home-services-seo", "electrician-seo"],
   },
   {
     slug: "carpet-cleaning-seo",
@@ -822,7 +822,7 @@ export const industriesB: IndustryPage[] = [
         a: "Set your service area accurately, build pages for your main towns using real local projects and collect reviews from customers there. Thin pages that just swap a city name won't help.",
       },
     ],
-    related: ["pool-company-seo", "roofing-seo", "painting-contractor-seo"],
+    related: ["pool-company-seo", "roofing-seo", "painting-contractor-seo", "landscaping-seo"],
   },
   {
     slug: "pool-company-seo",
@@ -913,7 +913,7 @@ export const industriesB: IndustryPage[] = [
         a: "Yes. Service, renovation and new construction attract different buyers with different searches. Separate pages let each one rank and convert on its own.",
       },
     ],
-    related: ["fence-company-seo", "home-services-seo", "solar-seo"],
+    related: ["fence-company-seo", "home-services-seo", "solar-seo", "landscaping-seo"],
   },
   {
     slug: "pest-control-seo",

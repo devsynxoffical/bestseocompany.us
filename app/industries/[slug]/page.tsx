@@ -64,7 +64,7 @@ export default async function IndustryPageView({ params }: Params) {
         actions={
           <>
             <MagneticLink href="#audit" arrow>Get a free {p.name.toLowerCase()} SEO audit</MagneticLink>
-            <Link href="/#pricing" className="btn ghost">See pricing</Link>
+            <Link href="/pricing" className="btn ghost">See pricing</Link>
           </>
         }
         aside={<SerpVisual searches={p.searches} business={`Your ${p.name} business`} />}

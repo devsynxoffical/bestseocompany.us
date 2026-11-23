@@ -134,7 +134,7 @@ export const guides1: GuidePage[] = [
       "/guides/how-to-improve-seo",
       "/guides/seo-cost",
       "/services/technical-seo",
-      "/tools/seo-audit-tool",
+      "/guides/best-seo-agency-usa",
     ],
   },
 
@@ -569,7 +569,7 @@ export const guides1: GuidePage[] = [
       "/services/answer-engine-optimization",
       "/services/generative-engine-optimization",
       "/guides/choose-seo-agency-for-aeo",
-      "/services/seo-packages",
+      "/blog/ai-overviews-local-businesses",
     ],
   },
 

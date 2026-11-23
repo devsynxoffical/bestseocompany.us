@@ -139,3 +139,21 @@ Removed secondary keywords that the report assigns to sister sites, so our pages
 
 ### Not done here (needs access we don't have)
 - **Report step 5:** review the 29,800 backlinks from 79 referring domains. This needs Semrush (Backlink Audit) or Search Console → Links. Disavow only links that are clearly paid or spam networks; Google ignores most low-quality links on its own.
+
+## Batch 4 · 2026-11-23 · Internal links (from 03-TECHNICAL-AUDIT.md)
+
+**Why:** 16 key pages were "Discovered – currently not indexed" in Google and 13 pages had fewer than 3 links from page text. Google uses in-content links from already indexed pages to decide what to crawl next.
+
+| Change | Where | Before → after (in-content links in) |
+|---|---|---|
+| "See pricing" buttons and the nav entry pointed to `/#pricing` (a homepage anchor). They now point to the real `/pricing` page. | `app/services/[slug]`, `app/industries/[slug]`, `lib/content.ts` | `/pricing`: 1 → 66 |
+| TrustStrip cards link to `/pricing` ("See plans and pricing") and `/about` ("Meet the team"). | `components/pages/TrustStrip.tsx` (all industry and service pages) | `/about`: 1 → 66 |
+| Lead band adds "Prefer to talk first? Contact our team". | `components/pages/LeadBand.tsx` | `/contact`: 1 → 94 |
+| Related industries: plumber, HVAC and home services → electrician. Roofing and painting → contractor. Law firm and car accident → personal injury. Fence and pool → landscaping. Medical and dental → veterinary. | `lib/pages/industries-a/b/c.ts` | electrician 2 → 5, contractor 3 → 5, personal injury 2 → 4, landscaping 2 → 4, veterinary 2 → 4 |
+| Related services: SEO packages and link building → white-label. Ecommerce → enterprise. | `lib/pages/services.ts` | white-label 2 → 4, enterprise 7 → 8 |
+| Guides "Read next": what-is-seo → best-seo-agency-usa. best-seo-strategy → ai-seo-services. seo-keyword-research → what-is-seo. how-to-improve-seo → core-web-vitals-inp. track-seo-rankings → seo-site-migration-checklist. ai-seo-services → ai-overviews-local-businesses. Each swap replaces a link to a page that already has 60+ links. | `lib/pages/guides-1/2/3.ts` | best-seo-agency-usa 3 → 4, ai-seo-services 3 → 4, what-is-seo 2 → 3 |
+| Blog "Read next": GBP checklist → local citations. Service pages → CWV/INP. CWV/INP → migration checklist. Google reviews → AI overviews. | `lib/pages/blog.ts` | every blog post now has ≥ 3 |
+| A related grid with 4 cards uses 2 columns from 800px and 4 columns from 1100px, so no card sits alone. | `app/pages.css` | layout only |
+
+**Validation:** build OK. A crawl of all 104 pages shows 0 problems (canonical, meta, JSON-LD, 1 H1). Pages with fewer than 3 in-content links: 17 → 4, and only site-map/privacy/terms/editorial remain, which is intended. Click depth is unchanged (max 2).
+**Measure:** URL Inspection on the 16 "Discovered" URLs, 7 days after the owner requests indexing.

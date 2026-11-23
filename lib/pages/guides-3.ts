@@ -119,7 +119,7 @@ export const guides3: GuidePage[] = [
       "/tools/seo-rank-checker",
       "/guides/best-seo-tools",
       "/guides/seo-keyword-research",
-      "/services/local-seo",
+      "/blog/seo-site-migration-checklist",
     ],
   },
   {
@@ -229,7 +229,7 @@ export const guides3: GuidePage[] = [
       "/guides/best-seo-tools",
       "/guides/best-seo-strategy",
       "/guides/track-seo-rankings",
-      "/services/local-seo",
+      "/guides/what-is-seo",
     ],
   },
   {

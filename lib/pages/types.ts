@@ -27,7 +27,7 @@ export type IndustryPage = {
   quickWins: string[];        // exactly 5 concrete tactics
   compliance?: string;        // optional advertising/regulatory note (legal, medical, financial...)
   faqs: FAQ[];                // exactly 4
-  related: string[];          // 3 related industry slugs
+  related: string[];          // 3-4 related industry slugs
 };
 
 /** /services/[slug] — SEO service pages. */
@@ -47,7 +47,7 @@ export type ServicePage = {
   process: TitledText[];      // exactly 4 ordered steps
   metrics: string[];          // exactly 4 KPIs we report on
   faqs: FAQ[];                // exactly 5
-  related: string[];          // 3 related service slugs
+  related: string[];          // 3-4 related service slugs
 };
 
 /** /tools/[slug] — free tool pages. */
@@ -108,7 +108,7 @@ export type BlogPost = {
   keyTakeaways: string[];     // exactly 4
   sections: GuideSection[];   // 5-7
   faqs: FAQ[];                // 3
-  related: string[];          // 3 internal paths
+  related: string[];          // 3-4 internal paths
 };
 
 /** Long-form legal / policy pages. */

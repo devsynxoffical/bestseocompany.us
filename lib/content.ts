@@ -24,7 +24,7 @@ export const nav = [
   { label: "Free tools", href: "/tools" },
   { label: "Guides", href: "/guides" },
   { label: "Results", href: "/#results" },
-  { label: "Pricing", href: "/#pricing" },
+  { label: "Pricing", href: "/pricing" },
 ];
 
 export const hero = {

@@ -56,7 +56,7 @@ export default async function ServicePageView({ params }: Params) {
         actions={
           <>
             <MagneticLink href="#audit" arrow>Get a free audit</MagneticLink>
-            <Link href="/#pricing" className="btn ghost">See pricing</Link>
+            <Link href="/pricing" className="btn ghost">See pricing</Link>
           </>
         }
         aside={

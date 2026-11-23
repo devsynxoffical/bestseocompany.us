@@ -93,7 +93,7 @@ export const industriesA: IndustryPage[] = [
         a: "Yes, through the pages you choose to build. Content aimed at serious injuries, commercial trucks and rideshare crashes attracts different callers than general \"fender bender\" content. We focus on the case types that fit your firm's intake criteria.",
       },
     ],
-    related: ["law-firm-seo", "mass-tort-seo", "auto-repair-seo"],
+    related: ["law-firm-seo", "mass-tort-seo", "auto-repair-seo", "personal-injury-seo"],
   },
 
   // 2. Mass tort
@@ -661,7 +661,7 @@ export const industriesA: IndustryPage[] = [
         a: "Some content helps, especially on costs, materials and insurance claims. Project pages and service pages usually matter more. We create content homeowners actually search for.",
       },
     ],
-    related: ["home-services-seo", "solar-seo", "hvac-seo"],
+    related: ["home-services-seo", "solar-seo", "hvac-seo", "contractor-seo"],
   },
 
   // 8. HVAC
@@ -756,7 +756,7 @@ export const industriesA: IndustryPage[] = [
         a: "We track calls, form fills and booked jobs from organic and map traffic. Rankings matter, but booked work is the real number. Our monthly report shows both.",
       },
     ],
-    related: ["home-services-seo", "plumber-seo", "roofing-seo"],
+    related: ["home-services-seo", "plumber-seo", "roofing-seo", "electrician-seo"],
   },
 
   // 9. Solar
@@ -946,7 +946,7 @@ export const industriesA: IndustryPage[] = [
         a: "Map pack and long-tail improvements often show within a few months. More competitive terms in larger cities take longer. We report calls and booked jobs monthly.",
       },
     ],
-    related: ["plumber-seo", "hvac-seo", "roofing-seo"],
+    related: ["plumber-seo", "hvac-seo", "roofing-seo", "electrician-seo"],
   },
 
   // 11. Healthcare
@@ -1041,7 +1041,7 @@ export const industriesA: IndustryPage[] = [
         a: "Local searches and provider profiles often improve within a few months. Competitive conditions and specialties in big cities take longer. We track appointment requests to measure real results.",
       },
     ],
-    related: ["dental-seo", "chiropractor-seo", "med-spa-seo"],
+    related: ["dental-seo", "chiropractor-seo", "med-spa-seo", "veterinary-seo"],
   },
 
   // 12. Wedding photographer

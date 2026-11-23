@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { submitLead } from "@/lib/lead";
 import { Reveal } from "@/components/ui/Reveal";
@@ -44,6 +45,7 @@ export function LeadBand({ heading, copy, color = "lime" }: { heading: string; c
             <input className="hp" tabIndex={-1} autoComplete="off" aria-hidden="true" value={trap} onChange={(e) => setTrap(e.target.value)} name="company_url" />
             <button className="btn" type="submit" disabled={busy || done}>{done ? "Request sent ✓" : busy ? "Sending…" : "Get my free audit"} {!done && <span className="arrow" aria-hidden="true">↗</span>}</button>
             <p className="lead-note" role="status">{note}</p>
+            {!done && <p className="lead-alt">Prefer to talk first? <Link href="/contact">Contact our team</Link></p>}
           </form>
         </Reveal>
       </div>

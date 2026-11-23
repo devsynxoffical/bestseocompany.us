@@ -90,7 +90,7 @@ export const industriesC: IndustryPage[] = [
         a: "Google Business Profile fixes can show results within a few weeks. New service and town pages usually take a few months to settle in. Starting before your busy season gives you the best payoff.",
       },
     ],
-    related: ["roofing-seo", "home-services-seo", "fence-company-seo"],
+    related: ["roofing-seo", "home-services-seo", "fence-company-seo", "contractor-seo"],
   },
   {
     slug: "chiropractor-seo",
@@ -275,7 +275,7 @@ export const industriesC: IndustryPage[] = [
         a: "Profile and on-page fixes can help within weeks. Competitive treatment terms like implants often take several months. We report monthly on calls, bookings and rankings so you can see progress.",
       },
     ],
-    related: ["orthodontist-seo", "medical-seo", "plastic-surgeon-seo"],
+    related: ["orthodontist-seo", "medical-seo", "plastic-surgeon-seo", "veterinary-seo"],
   },
   {
     slug: "plastic-surgeon-seo",

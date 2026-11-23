@@ -101,7 +101,7 @@ export const services: ServicePage[] = [
         a: "A single-location local business usually starts with Starter. Companies serving several cities or needing content and links fit Growth. Stores, SaaS products, and large sites usually need a custom Scale plan.",
       },
     ],
-    related: ["small-business-seo", "local-seo", "enterprise-seo"],
+    related: ["small-business-seo", "local-seo", "enterprise-seo", "white-label-seo"],
   },
   {
     slug: "multi-location-seo",
@@ -407,7 +407,7 @@ export const services: ServicePage[] = [
         a: "Most stores need a custom Scale plan because catalog size and platform drive the work. Smaller stores with a short catalog may fit Growth.",
       },
     ],
-    related: ["shopify-seo", "technical-seo", "link-building"],
+    related: ["shopify-seo", "technical-seo", "link-building", "enterprise-seo"],
   },
   {
     slug: "google-business-profile-seo",
@@ -1325,7 +1325,7 @@ export const services: ServicePage[] = [
         a: "Usually not. Google ignores most spammy links on its own. A disavow file mainly makes sense if you have a manual action or know of a past paid link scheme.",
       },
     ],
-    related: ["generative-engine-optimization", "google-seo", "ecommerce-seo"],
+    related: ["generative-engine-optimization", "google-seo", "ecommerce-seo", "white-label-seo"],
   },
   {
     slug: "shopify-seo",

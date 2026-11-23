@@ -245,7 +245,7 @@ export const guides2: GuidePage[] = [
         a: "Mostly no. The same clear, well-structured and trustworthy content that ranks in search is what AI answers tend to cite. Add direct answers, schema and consistent business details to make your content easier to quote.",
       },
     ],
-    related: ["/guides/how-to-improve-seo", "/guides/seo-keyword-research", "/guides/choose-seo-agency-for-aeo", "/services/technical-seo"],
+    related: ["/guides/how-to-improve-seo", "/guides/seo-keyword-research", "/guides/choose-seo-agency-for-aeo", "/guides/ai-seo-services"],
   },
   {
     slug: "best-seo-tools",
@@ -482,6 +482,6 @@ export const guides2: GuidePage[] = [
         a: "You can handle a lot without code, including titles, content updates, internal links, reviews and your Google Business Profile. For crawl issues, site speed and structured data, you may need a developer or a technical SEO specialist.",
       },
     ],
-    related: ["/guides/best-seo-strategy", "/services/technical-seo", "/services/local-seo", "/tools/seo-audit-tool"],
+    related: ["/guides/best-seo-strategy", "/services/technical-seo", "/blog/core-web-vitals-inp", "/tools/seo-audit-tool"],
   },
 ];
