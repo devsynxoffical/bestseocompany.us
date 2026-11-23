@@ -1,17 +1,9 @@
 import Link from "next/link";
+import { rich } from "@/components/ui/Rich";
 import type { GuideSection } from "@/lib/pages/types";
 import { TocSpy } from "./TocSpy";
 import { Reveal } from "@/components/ui/Reveal";
 import { PreferredSourceCallout } from "@/components/ui/PreferredSource";
-
-/** Renders [label](/internal-path) inside article text as internal links. Only site-relative paths are linked. */
-function rich(text: string) {
-  const parts = text.split(/(\[[^\]]+\]\(\/[^)\s]*\))/g);
-  return parts.map((part, i) => {
-    const m = part.match(/^\[([^\]]+)\]\((\/[^)\s]*)\)$/);
-    return m ? <Link key={i} href={m[2]}>{m[1]}</Link> : part;
-  });
-}
 
 export const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 

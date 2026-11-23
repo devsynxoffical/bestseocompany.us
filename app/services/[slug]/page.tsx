@@ -9,6 +9,7 @@ import { PageHero } from "@/components/pages/PageHero";
 import { FaqAccordion } from "@/components/pages/FaqAccordion";
 import { RelatedLinks } from "@/components/pages/RelatedLinks";
 import { LeadBand } from "@/components/pages/LeadBand";
+import { rich } from "@/components/ui/Rich";
 import { Reveal } from "@/components/ui/Reveal";
 import { SplitText } from "@/components/ui/SplitText";
 import { MagneticLink } from "@/components/ui/MagneticLink";
@@ -82,7 +83,13 @@ export default async function ServicePageView({ params }: Params) {
           <div>
             <Reveal as="span" variant="left" className="label eyebrow">What it is</Reveal>
             <SplitText parts={[`${p.name}, explained.`]} />
-            {p.whatItIs.map((t) => <Reveal as="p" key={t.slice(0, 20)} className="lead-p">{t}</Reveal>)}
+            {p.whatItIs.map((t) => <Reveal as="p" key={t.slice(0, 20)} className="lead-p">{rich(t)}</Reveal>)}
+            {p.explainNote && (
+              <>
+                <Reveal as="h3" className="note-h">{p.explainNote.heading}</Reveal>
+                <Reveal as="p" className="lead-p">{rich(p.explainNote.body)}</Reveal>
+              </>
+            )}
           </div>
           <Reveal className="who-box" variant="right">
             <b>Who it's for</b>
@@ -109,6 +116,12 @@ export default async function ServicePageView({ params }: Params) {
               </Reveal>
             ))}
           </div>
+          {p.costNote && (
+            <Reveal className="cost-note">
+              <h3>{p.costNote.heading}</h3>
+              <p>{rich(p.costNote.body)}</p>
+            </Reveal>
+          )}
         </div>
       </section>
 
@@ -131,7 +144,7 @@ export default async function ServicePageView({ params }: Params) {
             <div>
               <Reveal as="span" variant="left" className="label eyebrow">See it on the map</Reveal>
               <SplitText parts={["Rank across your whole service area."]} />
-              <Reveal as="p" className="lead-p">The map pack changes from one neighborhood to the next. We measure your position on a grid of points and fix the gaps. Toggle the example to see the difference.</Reveal>
+              <Reveal as="p" className="lead-p">{p.serviceAreaCopy ? rich(p.serviceAreaCopy) : "The map pack changes from one neighborhood to the next. We measure your position on a grid of points and fix the gaps. Toggle the example to see the difference."}</Reveal>
             </div>
             <Reveal variant="scale"><RankGrid business="your business" query="service near me" /></Reveal>
           </div>
@@ -160,7 +173,7 @@ export default async function ServicePageView({ params }: Params) {
         <div className="wrap">
           <div className="sec-head">
             <SplitText parts={["Your first six months."]} />
-            <Reveal as="p">What we work on at each stage, and the outcome you should expect.</Reveal>
+            <Reveal as="p">{p.timelineCopy ? rich(p.timelineCopy) : "What we work on at each stage, and the outcome you should expect."}</Reveal>
           </div>
           <Reveal><Timeline /></Reveal>
         </div>

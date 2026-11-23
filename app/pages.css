@@ -530,3 +530,10 @@ body:has(.lead-band, main .cta) .ft-main{padding-top:64px}
 .case-result h3{margin:0;font-size:22px}
 .case-period{font-family:var(--font-mono);font-size:13px}
 .g-sec p a,.g-sec li a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+/* ===== Page-specific copy blocks (content file 23 Nov) ===== */
+.lead-p a,.sec-head p a,.cost-note a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.note-h{font-family:var(--font-display);font-size:22px;letter-spacing:-.02em;margin:18px 0 0}
+.cost-note{margin-top:18px;border:1px solid var(--line);border-radius:22px;padding:22px 24px;background:var(--white);display:grid;gap:6px}
+.cost-note h3{font-family:var(--font-display);font-size:22px;letter-spacing:-.02em;margin:0}
+.cost-note p{margin:0;color:var(--ink-2)}

@@ -189,3 +189,38 @@ Removed secondary keywords that the report assigns to sister sites, so our pages
   - have valid JSON-LD and 5 FAQs (3 on the articles)
 - 0 em dashes in rendered text across all pages.
 - Keyword map: 0 duplicate primaries, 0 overlaps.
+
+## Batch 6 · 2026-11-23 · Unique content for 5 pages (CLAUDE_CODE_CONTENT_bestseocompany.md)
+
+**7-day note:** all 5 pages were edited earlier today in batch 4 (related links) and batch 5 (5th FAQ, proof sections). The content file names these pages, so the full copy was applied.
+- The batch 5 FAQs are replaced by the file's FAQs.
+- The batch 5 proof sections stay. The file allows them.
+
+**No UI change:** same components, layout, section order and item counts. Only text changed. Where the file gave 5 playbook or process steps and the page has 4 slots, the last two steps share one card.
+
+| Page | Title before → after | Description | H1 | Copy replaced | FAQs |
+|---|---|---|---|---|---|
+| /services/small-business-seo | "SEO Services for Small Business \| Best SEO Company" → "SEO Services for Small Business \| Bestseocompany.us" (51) | new (146) | "SEO Services for Small Business Budgets" | explained, 6 deliverables, cost paragraph (new), service area, 4 steps, six-month intro | 5 → 6 |
+| /services/local-seo | "Local SEO for Small Business \| Best SEO Company" → "Local SEO for Small Business That Brings Calls" (46) | new (154) | unchanged text | explained, "Why local SEO matters" paragraph (new), 6 deliverables, service area, 5 steps in 4 cards | 5 → 6 |
+| /industries/contractor-seo | "SEO for Contractors & Construction Companies" → "SEO for Contractors and Construction Companies" (46) | new (149) | unchanged | challenges intro, map pack, 6 searches, playbook (5 in 4), 5 quick wins, included | 5 → 6 |
+| /industries/plumber-seo | "SEO for Plumbers: More Booked Calls \| Best SEO Company" → "SEO for Plumbers: More Service Calls From Google" (48) | new (132) | unchanged | same sections as contractor | 5 → 5 (new set) |
+| /industries/law-firm-seo | "SEO Services for Lawyers & Law Firms \| Best SEO Company" → "SEO Services for Lawyers That Bring Real Cases" (46) | new (134) | unchanged | same sections as contractor | 5 → 6 |
+
+**In-text links:**
+- **small-business-seo** → local-seo, contractor, plumber, law-firm
+- **contractor-seo** → local-seo, roofing ("roofers"), plumber, small-business
+- **local-seo** → small-business, plumber, contractor, law-firm
+- **plumber-seo** → local-seo, contractor, small-business
+- **law-firm-seo** → personal-injury ("SEO for personal injury lawyers"), local-seo, small-business
+
+**Code:**
+- New optional text fields:
+  - industry pages: `challengesIntro`, `mapPackCopy`, `includedCopy`
+  - service pages: `explainNote`, `costNote`, `serviceAreaCopy`, `timelineCopy`
+- Pages without these fields render exactly as before.
+- `[label](/path)` link support moved to `components/ui/Rich.tsx` and is shared with the articles.
+
+**Validation:**
+- Build OK. Crawl of 106 URLs: 0 problems.
+- Each page: 1 H1, title under 60, description under 155, FAQPage JSON-LD identical to the visible questions and answers, no horizontal overflow at 390px.
+- 0 em dashes. Keyword map: 0 duplicates, 0 overlaps.

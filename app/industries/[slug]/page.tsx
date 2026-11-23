@@ -10,6 +10,7 @@ import { SerpVisual } from "@/components/pages/SerpVisual";
 import { FaqAccordion } from "@/components/pages/FaqAccordion";
 import { RelatedLinks } from "@/components/pages/RelatedLinks";
 import { LeadBand } from "@/components/pages/LeadBand";
+import { rich } from "@/components/ui/Rich";
 import { Reveal } from "@/components/ui/Reveal";
 import { SplitText } from "@/components/ui/SplitText";
 import { MagneticLink } from "@/components/ui/MagneticLink";
@@ -75,7 +76,7 @@ export default async function IndustryPageView({ params }: Params) {
         <div className="wrap">
           <div className="sec-head">
             <SplitText parts={[`Why ${p.audience} find SEO hard.`]} />
-            <Reveal as="p">Every industry has its own search problems. These are the ones we solve first for {p.audience}.</Reveal>
+            <Reveal as="p">{p.challengesIntro ? rich(p.challengesIntro) : <>Every industry has its own search problems. These are the ones we solve first for {p.audience}.</>}</Reveal>
           </div>
           <div className="cards4">
             {p.challenges.map((c, i) => (
@@ -95,7 +96,7 @@ export default async function IndustryPageView({ params }: Params) {
             <Reveal as="span" variant="left" className="label eyebrow">See it on the map</Reveal>
             <SplitText parts={["Win the map pack across your whole area."]} />
             <Reveal as="p" className="lead-p">
-              Ranking first next door to your office isn&apos;t enough. Customers search from every neighborhood you serve, and the map pack changes block by block. We track your position across a grid of points, then work on the areas where you&apos;re invisible.
+              {p.mapPackCopy ? rich(p.mapPackCopy) : <>Ranking first next door to your office isn&apos;t enough. Customers search from every neighborhood you serve, and the map pack changes block by block. We track your position across a grid of points, then work on the areas where you&apos;re invisible.</>}
             </Reveal>
             <Reveal as="p" className="lead-p">Toggle the example to see what a stronger local presence looks like for {p.audience}.</Reveal>
           </div>
@@ -232,7 +233,7 @@ export default async function IndustryPageView({ params }: Params) {
         <div className="wrap">
           <div className="sec-head">
             <SplitText parts={[`What's included for ${p.audience}.`]} />
-            <Reveal as="p">Every plan is built from these services, weighted to what moves the needle in your market.</Reveal>
+            <Reveal as="p">{p.includedCopy ? rich(p.includedCopy) : "Every plan is built from these services, weighted to what moves the needle in your market."}</Reveal>
           </div>
           <div className="svc-row">
             {coreServices.map((s, i) => (

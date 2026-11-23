@@ -207,24 +207,23 @@ export const services: ServicePage[] = [
   {
     slug: "local-seo",
     name: "Local SEO",
-    title: "Local SEO for Small Business | Best SEO Company",
-    metaDescription:
-      "Local SEO services for US businesses: Google Business Profile, local pages, citations, and reviews that help you show up when nearby customers search.",
+    title: "Local SEO for Small Business That Brings Calls",
+    metaDescription: "Local SEO for small business: Google Business Profile, map pack rankings, reviews, citations and local pages. Learn what local SEO costs and how it works.",
     primaryKeyword: "local seo for small business",
     secondaryKeywords: [
-      "local seo services",
-      "local seo",
-      "local seo company",
-      "local search optimization",
-      "map pack seo",
+      "how to improve local seo for small businesses",
+      "how much does local seo cost",
+      "why local seo matters for small businesses",
+      "best local seo services for small business",
+      "local seo services"
     ],
     h1: "Local SEO for Small Business That Brings Calls",
     intro:
       "When someone nearby searches for what you sell, you want to appear in the map pack and the results below it. Our local SEO for small business focuses on the signals that drive those results and the calls that follow.",
     color: "taupe",
     whatItIs: [
-      "Local SEO helps a business appear in searches with local intent, such as \"plumber near me\" or \"dentist in Austin\". Google weighs three main things for local results. Relevance is how well your business matches the search. Distance is how far you are from the searcher. Prominence is how well known and trusted your business is, based on reviews, links, and mentions.",
-      "You can't change where a searcher stands, so we work on relevance and prominence. That means a complete Google Business Profile, strong service and city pages on your website, consistent listings, and a steady flow of genuine reviews. We also track how you show up across your service area, since local rankings change from one neighborhood to the next.",
+      "Local SEO helps your business appear when people nearby search for your services, especially in the Google map pack.",
+      "It combines your Google Business Profile, reviews, local citations, location pages and website signals that show Google where you work and what you do. It is the core of our [SEO services for small business](/services/small-business-seo)."
     ],
     whoFor: [
       "Home service businesses like plumbers, roofers, and HVAC companies",
@@ -234,47 +233,47 @@ export const services: ServicePage[] = [
     ],
     deliverables: [
       {
-        title: "Google Business Profile optimization",
-        body: "Categories, services, hours, photos, products, and posts set up and kept current.",
+        title: "Google Business Profile",
+        body: "Profile optimization and weekly posts."
       },
       {
-        title: "Service and city pages",
-        body: "Useful pages for your main services and the areas you serve, written for the people who will read them.",
+        title: "Reviews",
+        body: "Review strategy and reply templates."
       },
       {
-        title: "Citation building and cleanup",
-        body: "Consistent listings on major directories and industry sites, with duplicates and errors fixed.",
+        title: "Local citations",
+        body: "Listings in trusted directories."
       },
       {
-        title: "Review strategy",
-        body: "A simple process to ask for reviews and respond to them, following Google's review policies.",
+        title: "Location pages",
+        body: "Location and service area pages."
       },
       {
-        title: "Local link building",
-        body: "Links and mentions from local news, chambers, sponsors, and community sites.",
+        title: "Local links",
+        body: "Local link building."
       },
       {
-        title: "Local rank tracking",
-        body: "Map pack and organic tracking across your service area so you can see where you are visible.",
-      },
+        title: "Map pack report",
+        body: "Monthly map pack ranking report."
+      }
     ],
     process: [
       {
-        title: "Local audit",
-        body: "We review your profile, site, listings, reviews, and local competitors to find the biggest gaps.",
+        title: "Audit",
+        body: "Local audit and competitor check."
       },
       {
-        title: "Foundation fixes",
-        body: "We fix profile issues, NAP mismatches, and missing or weak service and location pages.",
+        title: "Fix the profile",
+        body: "Profile, categories and services fixed. Citations cleaned and added."
       },
       {
-        title: "Build prominence",
-        body: "We grow reviews, local links, and citations, and post updates to your profile.",
+        title: "Build",
+        body: "Location pages and local content built."
       },
       {
-        title: "Track and refine",
-        body: "We watch rankings and leads by area each month and shift effort to where it pays off.",
-      },
+        title: "Grow",
+        body: "Reviews and local links grown every month."
+      }
     ],
     metrics: [
       "Map pack rankings across your service area",
@@ -284,27 +283,36 @@ export const services: ServicePage[] = [
     ],
     faqs: [
       {
+        q: "What is local SEO for small businesses?",
+        a: "It is the work of helping a small business rank in Google Maps and local search results through its Google Business Profile, reviews, citations and location-focused website content."
+      },
+      {
+        q: "How can a small business improve local SEO?",
+        a: "Complete and update the Google Business Profile, collect reviews, keep name, address and phone consistent everywhere, create location pages and earn local links."
+      },
+      {
+        q: "How much does local SEO cost?",
+        a: "Local SEO is usually a monthly service. Price depends on the number of locations, competition and the amount of content and citation work needed."
+      },
+      {
         q: "How long does local SEO take?",
-        a: "Profile and listing fixes can show effects within weeks. Building reviews and local links takes longer. Most businesses should judge progress over several months.",
+        a: "Profile and citation fixes can help within weeks. Strong map pack positions in competitive areas usually take three to six months."
       },
       {
-        q: "Do I need a website for local SEO?",
-        a: "You can appear in the map pack with only a Google Business Profile. A good website gives Google more information to trust and gives customers a place to learn more. It usually helps both rankings and conversions.",
+        q: "What is the Google map pack?",
+        a: "It is the group of three local business listings shown with a map at the top of many local searches. Most local clicks go to these three results."
       },
       {
-        q: "Can you get me into the top three map results?",
-        a: "No one can promise a specific map position. Distance from the searcher plays a large role and is outside anyone's control. We work to improve the factors you can change and report honestly on where you appear.",
-      },
-      {
-        q: "Should I buy reviews or offer rewards for them?",
-        a: "No. Fake reviews and incentivized reviews break Google's policies and can lead to removed reviews or a suspended profile. Ask real customers and make it easy for them to leave feedback.",
-      },
-      {
-        q: "Which plan includes local SEO?",
-        a: "Starter at $1,500 per month is built for a single-location local business. Businesses targeting several cities usually fit Growth.",
-      },
+        q: "Do reviews help local SEO?",
+        a: "Yes. The number, quality and freshness of reviews, and how you respond to them, all affect local rankings and trust."
+      }
     ],
     related: ["google-business-profile-seo", "multi-location-seo", "small-business-seo"],
+    explainNote: {
+      heading: "Why local SEO matters for small businesses",
+      body: "Most local searches lead to a call or visit within a day. If you are not in the top three map results, many customers will never see you. Local SEO puts you where buying decisions happen."
+    },
+    serviceAreaCopy: "Rankings in Google Maps change block by block. We track your position across a grid of your service area and build pages and signals for the places where you are weak, so you show up beyond your office location. It works the same way for [plumbers](/industries/plumber-seo), [contractors](/industries/contractor-seo) and [law firms](/industries/law-firm-seo).",
   },
   {
     slug: "ecommerce-seo",
@@ -1029,24 +1037,23 @@ export const services: ServicePage[] = [
   {
     slug: "small-business-seo",
     name: "Small Business SEO",
-    title: "SEO Services for Small Business | Best SEO Company",
-    metaDescription:
-      "Small business SEO services with clear priorities for a limited budget. Learn what to do yourself, when to hire help, and what our Starter plan includes.",
+    title: "SEO Services for Small Business | Bestseocompany.us",
+    metaDescription: "SEO services for small business budgets: local rankings, Google Business Profile, on-page fixes and content that brings calls. See what SEO costs.",
     primaryKeyword: "seo services for small business",
     secondaryKeywords: [
-      "small business seo services",
-      "small business seo",
-      "affordable seo services",
+      "how much does seo cost for a small business",
+      "is seo worth it for small business",
+      "how to do seo for small business",
       "seo for small business",
-      "small business seo company",
+      "affordable seo services"
     ],
     h1: "SEO Services for Small Business Budgets",
     intro:
       "Small businesses can't do everything at once. Our SEO services for small business focus your budget on the few things that bring in customers first, then build from there.",
     color: "taupe",
     whatItIs: [
-      "Small business SEO is about doing the right things in the right order. For most local businesses, that starts with a complete Google Business Profile, a fast and clear website, pages for each main service, and steady reviews. These basics often matter more than advanced tactics.",
-      "Some of this you can do yourself. You can fill out your profile, ask customers for reviews, and write about your services in your own words. Hiring help makes sense when time is short, when technical problems block progress, or when competitors keep outranking you. Our Starter plan at $1,500 per month covers the core local work for a single location.",
+      "Small business SEO helps local and niche businesses show up when customers search for what they sell. It covers your website, your Google Business Profile, reviews, local citations and content.",
+      "The goal is simple: more calls, form fills and visits from people already looking for you. If most of your customers come from nearby, start with [local SEO](/services/local-seo)."
     ],
     whoFor: [
       "Owner-operated businesses with a single location",
@@ -1056,47 +1063,47 @@ export const services: ServicePage[] = [
     ],
     deliverables: [
       {
-        title: "Priority action plan",
-        body: "A short list of the highest-value tasks for your business, based on the free 40-point audit.",
+        title: "Keyword plan",
+        body: "The searches your customers use, with volume and difficulty."
       },
       {
-        title: "Google Business Profile setup",
-        body: "A complete, accurate profile with the right categories, services, photos, and posts.",
+        title: "On-page fixes",
+        body: "Titles, headings, speed and mobile issues."
       },
       {
-        title: "Service page improvements",
-        body: "Clear pages for each main service with the details customers ask about.",
+        title: "Google Business Profile",
+        body: "Categories, services, photos and posts."
       },
       {
-        title: "Basic technical fixes",
-        body: "Speed, mobile, titles, and indexing issues fixed so Google can read your site.",
+        title: "Content",
+        body: "Service and location pages that answer real questions."
       },
       {
-        title: "Citation cleanup",
-        body: "Accurate listings on key directories with matching name, address, and phone.",
+        title: "Links and citations",
+        body: "Clean listings in trusted directories."
       },
       {
-        title: "Simple monthly report",
-        body: "A short, plain-English update on calls, traffic, rankings, and what we did.",
-      },
+        title: "Monthly report",
+        body: "Rankings, traffic, calls and what comes next."
+      }
     ],
     process: [
       {
-        title: "Free audit",
-        body: "We review your site and profile and tell you what matters most.",
+        title: "Audit",
+        body: "Technical, content, local and competitor review."
       },
       {
-        title: "Fix the basics",
-        body: "We handle profile, technical, and on-page fixes in the first weeks.",
+        title: "Fix",
+        body: "The issues that block rankings first."
       },
       {
-        title: "Build steadily",
-        body: "We add reviews, local links, and better pages each month.",
+        title: "Build",
+        body: "Pages, profile updates and citations."
       },
       {
-        title: "Report and refocus",
-        body: "We share results monthly and adjust priorities to your budget.",
-      },
+        title: "Grow",
+        body: "New content and links every month."
+      }
     ],
     metrics: [
       "Phone calls and form leads from search",
@@ -1106,25 +1113,29 @@ export const services: ServicePage[] = [
     ],
     faqs: [
       {
-        q: "Can I do SEO myself?",
-        a: "Yes, many basics are doable on your own. Complete your Google Business Profile, ask for reviews, and make sure each service has a clear page. Hire help when time runs short or technical issues get in the way.",
+        q: "What is SEO for small businesses?",
+        a: "It is the work of helping a small business appear in Google search and Maps for the services it offers, through website improvements, local listings, reviews and content."
       },
       {
-        q: "How much should a small business spend on SEO?",
-        a: "It depends on your market and goals. Our Starter plan is $1,500 per month for a single-location business. Yearly billing takes 15% off.",
+        q: "Is SEO worth it for a small business?",
+        a: "For most small businesses, yes. SEO brings in customers who are already searching, and results keep working after the work is done, unlike ads that stop when you stop paying."
       },
       {
-        q: "What should a small business do first?",
-        a: "Start with your Google Business Profile and the pages for your main services. These usually drive the most direct leads for local businesses.",
+        q: "How much does SEO cost for a small business?",
+        a: "Most small businesses pay a monthly retainer based on competition, number of locations and content needs. Compare plans by the deliverables included each month."
       },
       {
-        q: "Are cheap SEO services worth it?",
-        a: "Be careful with very low-cost offers. They often rely on automated links or vague tasks that don't move results and can cause harm. Ask for a written list of monthly work.",
+        q: "How long does small business SEO take to work?",
+        a: "Quick wins can appear in the first weeks, but meaningful growth in rankings and calls usually takes three to six months."
       },
       {
-        q: "Am I locked into a contract?",
-        a: "Plans start with a 90-day term and then go month-to-month. You can cancel after that.",
+        q: "Can I do SEO for my small business myself?",
+        a: "You can handle basics such as your Google Business Profile, reviews and clear service pages. Technical fixes, content strategy and link building are where an SEO company saves time."
       },
+      {
+        q: "What is the difference between SEO and local SEO?",
+        a: "SEO covers all organic search rankings. Local SEO focuses on location-based searches and Google Maps, which matter most for businesses that serve a specific area."
+      }
     ],
     related: ["local-seo", "seo-packages", "google-business-profile-seo"],
     localProof: [
@@ -1133,6 +1144,12 @@ export const services: ServicePage[] = [
       { title: "Pages that reached page one", body: "Which of your service and city pages rank in the top 10 for the searches that matter to a small business your size." },
       { title: "Cost per lead from SEO", body: "Your monthly fee divided by the leads SEO brought in, so you can compare it with ads and directories." },
     ],
+    costNote: {
+      heading: "How much does SEO cost for a small business?",
+      body: "Small business SEO is usually a monthly retainer. The price depends on how competitive your industry is, how many locations you serve and how much content is needed. Ask for a clear list of monthly deliverables, not just a price."
+    },
+    serviceAreaCopy: "Most small businesses serve more than one town. We build a page for each main service and each key area, with unique content, so you can rank in every place you work, not only next to your office. See how this works for [contractors](/industries/contractor-seo), [plumbers](/industries/plumber-seo) and [law firms](/industries/law-firm-seo).",
+    timelineCopy: "Month one is the audit and quick fixes. Months two and three focus on pages, your Google Business Profile and citations. From month four, rankings and calls usually start to climb, and we expand content and links around what is working.",
   },
   {
     slug: "enterprise-seo",

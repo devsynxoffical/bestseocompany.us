@@ -202,16 +202,15 @@ export const industriesD: IndustryPage[] = [
     slug: "contractor-seo",
     name: "Contractor",
     audience: "general contractors and construction companies",
-    title: "SEO for Contractors & Construction Companies",
-    metaDescription:
-      "SEO for contractors and construction companies. Rank for remodels, additions and commercial builds with project pages, local SEO and a stronger profile.",
+    title: "SEO for Contractors and Construction Companies",
+    metaDescription: "SEO for contractors and construction companies. Rank for the jobs you want, win the map pack across your service area and get more project inquiries.",
     primaryKeyword: "seo for contractors",
     secondaryKeywords: [
       "seo for construction companies",
-      "contractor seo",
+      "construction seo",
+      "best seo for contractors",
       "general contractor seo",
-      "construction company seo",
-      "remodeling contractor seo",
+      "contractor seo services"
     ],
     h1: "SEO for Contractors Who Build for a Living",
     intro:
@@ -237,61 +236,83 @@ export const industriesD: IndustryPage[] = [
       },
     ],
     searches: [
-      { query: "general contractor near me", intent: "Local" },
-      { query: "kitchen remodel contractor", intent: "Service" },
-      { query: "cost to build a home addition", intent: "Cost" },
-      { query: "design build firm vs general contractor", intent: "Comparison" },
-      { query: "commercial construction company", intent: "Commercial" },
-      { query: "how to choose a remodeling contractor", intent: "Research" },
+      {
+        query: "general contractor near me",
+        intent: "Local"
+      },
+      {
+        query: "home remodeling contractor",
+        intent: "Service"
+      },
+      {
+        query: "commercial construction company",
+        intent: "Commercial"
+      },
+      {
+        query: "kitchen remodel contractor",
+        intent: "Service"
+      },
+      {
+        query: "room addition contractor",
+        intent: "Service"
+      },
+      {
+        query: "licensed contractor in [city]",
+        intent: "Local"
+      }
     ],
     playbook: [
       {
-        title: "Service pages by project type",
-        body: "We build pages for each type of work you want, such as kitchens, baths, additions, basements, custom homes, tenant improvements or ground-up commercial. Each one covers scope, timeline, permitting and what affects cost.",
+        title: "Service pages",
+        body: "Service pages for each project type, such as remodels, additions and commercial builds."
       },
       {
-        title: "Project portfolio that ranks",
-        body: "We turn finished jobs into project pages with photos, scope, materials, duration and location. They rank for local searches and give buyers proof that you have done work like theirs.",
+        title: "Project pages",
+        body: "Project pages with photos, scope and location."
       },
       {
-        title: "Google Business Profile and reviews",
-        body: "We choose the right primary category, such as \"General contractor\" or \"Remodeler\", list services, set your service area and post project updates. We set up review requests at project closeout.",
+        title: "Location pages",
+        body: "Location pages for every key service area."
       },
       {
-        title: "Trade and local links",
-        body: "We earn links from supplier and manufacturer pages, builder associations, local news coverage of notable projects and community sponsorships. We also clean up citations across directories.",
-      },
+        title: "Reviews and links",
+        body: "Reviews from completed projects, and links from suppliers, associations and local news."
+      }
     ],
     quickWins: [
-      "Show your license number and insurance details on your contact and about pages.",
-      "Write up your last five finished projects with photos, scope and the town.",
-      "Split remodeling and new construction into separate service pages.",
-      "Ask clients for Google reviews that mention the type of project.",
-      "Add a short \"How we work\" page that walks through your process from bid to closeout.",
+      "Add your license number and insurance to every page footer.",
+      "Upload 10 project photos to your Google Business Profile.",
+      "Create one page per main project type.",
+      "Ask your last five clients for a Google review.",
+      "List your company in your local builders association directory."
     ],
     compliance:
       "Most states require contractor licenses or registration, and some require the license number on advertising and websites. Home improvement work often has extra consumer protection rules. We display your license details and keep claims about timelines, warranties and pricing accurate.",
     faqs: [
       {
-        q: "How long does SEO for contractors take?",
-        a: "Profile and review gains can show in the map pack within a few months. Ranking service and project pages in a competitive metro usually takes longer. We start with the pages tied to the work you want most.",
+        q: "What is SEO for contractors?",
+        a: "It is the process of helping contractors and construction companies rank in Google search and Maps for the projects they want, using local optimization, service pages, project pages and reviews."
       },
       {
-        q: "Is SEO for construction companies different from remodeler SEO?",
-        a: "Yes. Commercial construction relies more on project portfolios, capabilities pages and industry terms. Remodelers rely more on the map pack, reviews and cost content. We build to fit the way your buyers search.",
+        q: "Does SEO work for construction companies?",
+        a: "Yes. Clients research contractors online before calling, and ranking for project and location searches brings in high-value inquiries without paying per lead."
       },
       {
-        q: "Should we stay on Houzz and Angi?",
-        a: "Many contractors keep a profile there while their own rankings grow. A complete Houzz profile can also support your SEO. Over time, more of your calls should come straight from your site.",
+        q: "What keywords should contractors target?",
+        a: "Project and location searches such as \"kitchen remodel contractor in [city]\", \"general contractor near me\" and \"commercial construction company [city]\"."
       },
       {
-        q: "We don't have many project photos. Where do we start?",
-        a: "Start with your current jobs. We give your crew a simple checklist for before, during and after photos. Even phone photos with good notes make strong project pages.",
+        q: "How long does contractor SEO take?",
+        a: "Local rankings often improve within a few months. Competitive project keywords in larger cities can take six months or more."
       },
       {
-        q: "What does SEO for contractors cost?",
-        a: "Most contractors start on our Starter plan at $1,500 a month for one service area, or Growth at $3,500 a month for several cities or a busy niche. Every plan starts with a free audit, and after the first 90 days it is month to month.",
+        q: "How do contractors get more reviews?",
+        a: "Ask at project completion, send a direct review link by text and email and respond to every review. Steady reviews help rankings and trust."
       },
+      {
+        q: "What is the best SEO for contractors?",
+        a: "A plan that combines local SEO, project-specific pages, strong project photos, reviews and clean links from industry sources."
+      }
     ],
     related: ["home-services-seo", "roofing-seo", "architect-seo"],
     localProof: [
@@ -300,6 +321,9 @@ export const industriesD: IndustryPage[] = [
       { title: "Project pages that rank", body: "Which project and service pages reach page one for your city, with photos and scope details that win bigger jobs." },
       { title: "Reviews by job type", body: "New Google reviews each month and which services they mention, since reviews that name the job help both rankings and trust." },
     ],
+    challengesIntro: "Contractors compete with directories, lead marketplaces and large national brands for the same searches. Jobs are high-value but infrequent, customers compare several companies and many contractor websites show few projects and little detail. Construction SEO has to prove trust and expertise, not just mention keywords.",
+    mapPackCopy: "Most contractor inquiries start with \"near me\" searches. We optimize your Google Business Profile with the right categories, project photos and service areas, and build location pages for the towns you work in, so you appear in the map pack across your whole region. This is the same [local SEO](/services/local-seo) approach we use for trades like [roofers](/industries/roofing-seo) and [plumbers](/industries/plumber-seo).",
+    includedCopy: "Keyword research by project type, technical fixes, Google Business Profile management, service and location pages, project case pages, citations in construction directories, review strategy and a monthly report on rankings, calls and form fills. Smaller firms can start with our [SEO services for small business](/services/small-business-seo).",
   },
 
   // 4. Personal Injury

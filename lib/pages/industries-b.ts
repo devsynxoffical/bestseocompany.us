@@ -277,16 +277,15 @@ export const industriesB: IndustryPage[] = [
     slug: "law-firm-seo",
     name: "Law Firms",
     audience: "law firms and attorneys",
-    title: "SEO Services for Lawyers & Law Firms | Best SEO Company",
-    metaDescription:
-      "Law firm SEO for attorneys who want more signed cases. Practice area pages, local Maps rankings and bar-compliant content that earns trust. Free audit.",
+    title: "SEO Services for Lawyers That Bring Real Cases",
+    metaDescription: "SEO services for lawyers and law firms: practice area pages, local rankings, reviews and trust signals that bring real case inquiries.",
     primaryKeyword: "seo services for lawyers",
     secondaryKeywords: [
+      "best seo agency for lawyers",
       "law firm seo",
       "attorney seo",
-      "lawyer seo",
       "seo for lawyers",
-      "legal seo",
+      "legal seo"
     ],
     h1: "SEO Services for Lawyers That Bring Real Cases",
     intro:
@@ -312,61 +311,83 @@ export const industriesB: IndustryPage[] = [
       },
     ],
     searches: [
-      { query: "divorce lawyer near me", intent: "Local" },
-      { query: "estate planning attorney free consultation", intent: "Commercial" },
-      { query: "how much does a dui lawyer cost", intent: "Cost" },
-      { query: "do i need a lawyer for a small business contract", intent: "Research" },
-      { query: "best employment lawyer in chicago", intent: "Comparison" },
-      { query: "criminal defense attorney available now", intent: "Emergency" },
+      {
+        query: "lawyer near me",
+        intent: "Local"
+      },
+      {
+        query: "personal injury lawyer [city]",
+        intent: "Local"
+      },
+      {
+        query: "divorce attorney near me",
+        intent: "Local"
+      },
+      {
+        query: "criminal defense lawyer",
+        intent: "Service"
+      },
+      {
+        query: "estate planning attorney",
+        intent: "Service"
+      },
+      {
+        query: "free consultation lawyer",
+        intent: "Commercial"
+      }
     ],
     playbook: [
       {
-        title: "Build deep practice area pages",
-        body: "Each practice area and major case type gets its own page explaining the process, timelines, costs and what to bring to a consultation. These are the pages that turn searches into calls.",
+        title: "Practice area pages",
+        body: "A detailed page for each practice area."
       },
       {
-        title: "Win the local map pack",
-        body: "We tune your Google Business Profile for each office, with accurate categories, practice area services and a steady review process. Office-specific pages back up each listing.",
+        title: "Attorney bios",
+        body: "Attorney bio pages with credentials and bar admissions."
       },
       {
-        title: "Show attorney expertise",
-        body: "We build out attorney bios with bar admissions, education and experience. Articles carry an attorney author or reviewer, which supports trust with both clients and Google.",
+        title: "Location pages",
+        body: "Location pages for each office and service city."
       },
       {
-        title: "Earn legal and local authority",
-        body: "We pursue links through bar association listings, local news commentary, community involvement and well-managed legal directory profiles. We avoid link schemes that put the firm at risk.",
-      },
+        title: "Guides and links",
+        body: "Helpful legal guides that answer common questions, and links from legal directories, bar associations and local media."
+      }
     ],
     quickWins: [
-      "Split a single \"practice areas\" page into one page per major case type.",
-      "Add bar admissions and a short professional history to every attorney bio.",
-      "Claim and complete your Avvo, Justia and state bar directory profiles with matching details.",
-      "Add a clear consultation booking option and phone number to every practice page.",
-      "Write an FAQ section on each practice page using questions your intake team hears most.",
+      "Add bar admissions and credentials to every attorney bio.",
+      "Give each practice area its own page.",
+      "Claim your profiles on major legal directories.",
+      "Make the free consultation offer easy to find.",
+      "Reply professionally to every Google review."
     ],
     compliance:
       "Attorney advertising is governed by state bar rules, most of which follow ABA Model Rule 7.1, which bars false or misleading communications about a lawyer's services. Many states also restrict claims of specialization, past-result statements and testimonials, and some require disclaimers or filing of ads. We write conservatively and recommend your firm review content against your state's rules before publishing.",
     faqs: [
       {
-        q: "Is attorney SEO different from SEO for other businesses?",
-        a: "The basics are the same, but legal SEO carries extra weight on expertise, authorship and accuracy. Bar advertising rules also shape what you can say. Competition is usually much stiffer than in other local industries.",
+        q: "What is law firm SEO?",
+        a: "It is the process of helping law firms rank in Google search and Maps for their practice areas and locations, through strong practice pages, attorney credentials, reviews and local authority."
       },
       {
-        q: "Should we still pay for legal directory listings?",
-        a: "Free profiles on major directories are worth claiming and keeping accurate. Paid upgrades depend on your market and practice area. We look at whether a directory actually sends calls before recommending spend.",
+        q: "Does SEO work for lawyers?",
+        a: "Yes. Most people search online before choosing a lawyer, and ranking for practice area and location searches brings in case inquiries without paying per click."
       },
       {
-        q: "Can you write about case results?",
-        a: "That depends on your state's rules. Some states allow past results with disclaimers, and others restrict them. We follow your guidance and your state's rules on this.",
+        q: "How much does SEO cost for a law firm?",
+        a: "Law firm SEO usually costs more than other industries because competition is high. Price depends on practice areas, cities and content needs."
+      },
+      {
+        q: "What makes the best SEO agency for lawyers?",
+        a: "Experience with legal SEO, respect for bar advertising rules, clear deliverables, transparent reporting and a focus on case inquiries, not just traffic."
       },
       {
         q: "How long does law firm SEO take?",
-        a: "Local profile improvements can show up within a couple of months. Competitive practice area rankings in large cities often take six to twelve months of steady work. Smaller markets usually move faster.",
+        a: "Local and niche practice areas can improve in a few months. Competitive areas like personal injury in large cities often take six to twelve months."
       },
       {
-        q: "How are SEO services for lawyers different from regular SEO?",
-        a: "Legal SEO has to follow state bar advertising rules, show real attorney expertise, and compete for very expensive searches. We build practice area and city pages written for how clients search, keep claims compliant, and track signed cases, not just form fills.",
-      },
+        q: "Are legal directories good for SEO?",
+        a: "Trusted legal directories provide citations, links and referral traffic. They work best alongside a strong website and Google Business Profile."
+      }
     ],
     related: ["car-accident-lawyer-seo", "mass-tort-seo", "accountant-seo", "personal-injury-seo"],
     localProof: [
@@ -375,6 +396,9 @@ export const industriesB: IndustryPage[] = [
       { title: "Practice pages on page one", body: "Which practice area and city pages rank in the top 10, and which competitor firms sit above them." },
       { title: "Reviews and ratings", body: "New Google reviews each month, kept within bar rules on testimonials." },
     ],
+    challengesIntro: "Legal search is among the most competitive on Google. Large directories and big firms dominate many results, and Google holds legal content to a high standard for trust and expertise. Law firm SEO needs strong practice area pages, attorney credentials and local authority.",
+    mapPackCopy: "People searching for a lawyer often pick from the map pack. We optimize your Google Business Profile for each practice area, add attorney photos and office details, and build pages for the cities and courts you serve, using the same [local SEO](/services/local-seo) system behind all our local work.",
+    includedCopy: "Practice area keyword research, technical fixes, Google Business Profile management, practice and location pages, legal content, legal directory citations, review strategy and a monthly report on rankings and case inquiries. All content respects state bar advertising rules. Injury firms should also see [SEO for personal injury lawyers](/industries/personal-injury-seo), and solo practices can start with our [SEO services for small business](/services/small-business-seo).",
   },
   {
     slug: "med-spa-seo",
@@ -473,16 +497,14 @@ export const industriesB: IndustryPage[] = [
     slug: "plumber-seo",
     name: "Plumbers",
     audience: "plumbing companies",
-    title: "SEO for Plumbers: More Booked Calls | Best SEO Company",
-    metaDescription:
-      "Plumber SEO that puts your company in the Google Maps pack for emergency and service calls. Service pages, reviews and local rankings. Free 40-point audit.",
+    title: "SEO for Plumbers: More Service Calls From Google",
+    metaDescription: "SEO for plumbers that brings emergency and service calls. Map pack rankings, service pages and reviews built for plumbing companies.",
     primaryKeyword: "seo for plumbers",
     secondaryKeywords: [
       "plumber seo",
+      "plumbing seo services",
       "plumbing seo",
-      "plumbing company seo",
-      "local seo for plumbers",
-      "emergency plumber seo",
+      "local seo for plumbers"
     ],
     h1: "SEO for Plumbers Who Want More Service Calls",
     intro:
@@ -508,61 +530,79 @@ export const industriesB: IndustryPage[] = [
       },
     ],
     searches: [
-      { query: "emergency plumber near me", intent: "Emergency" },
-      { query: "24 hour plumber", intent: "Emergency" },
-      { query: "water heater replacement cost", intent: "Cost" },
-      { query: "tankless vs tank water heater", intent: "Comparison" },
-      { query: "drain cleaning near me", intent: "Local" },
-      { query: "sewer line repair company", intent: "Commercial" },
+      {
+        query: "plumber near me",
+        intent: "Local"
+      },
+      {
+        query: "emergency plumber",
+        intent: "Emergency"
+      },
+      {
+        query: "water heater repair",
+        intent: "Service"
+      },
+      {
+        query: "drain cleaning",
+        intent: "Service"
+      },
+      {
+        query: "leak detection",
+        intent: "Service"
+      },
+      {
+        query: "sewer line repair",
+        intent: "Service"
+      }
     ],
     playbook: [
       {
-        title: "Tighten the Google Business Profile",
-        body: "We set \"Plumber\" as the primary category, define your real service area, list every service and keep hours accurate, including after-hours availability. Photos of trucks and real jobs help too.",
+        title: "Service pages",
+        body: "A page for each service, such as water heaters, drains and leaks."
       },
       {
-        title: "Build high-value service pages",
-        body: "We create pages for water heaters, drain cleaning, sewer repair, repiping and other profitable jobs. Each one explains the problem, process and typical cost factors.",
+        title: "Emergency page",
+        body: "An emergency service page with 24/7 messaging."
       },
       {
-        title: "Add city pages that aren't thin",
-        body: "For the towns you serve most, we build pages with local details like common pipe types, permit notes and recent jobs. Copy-paste city pages with swapped names don't work.",
+        title: "Service area pages",
+        body: "Service area pages for each town."
       },
       {
-        title: "Grow reviews after every job",
-        body: "We set up a simple text or email request your techs can send when a job closes. Reviews that mention the service and town help both rankings and conversions.",
-      },
+        title: "Mobile and reviews",
+        body: "Fast mobile site with tap-to-call, and review requests after every job."
+      }
     ],
     quickWins: [
-      "Put a click-to-call phone number in the header of every page on mobile.",
-      "Add \"24/7\" or your real emergency hours to your Google Business Profile and site.",
-      "Create a dedicated water heater replacement page with brands you install.",
-      "Ask techs to snap job photos and add them to your profile each week.",
-      "Make sure your business name, address and phone match exactly across Yelp, BBB and Angi.",
+      "Add \"emergency plumber\" to your services if you offer it.",
+      "Make your phone number tap-to-call on every page.",
+      "Upload photos from your last 10 jobs to Google.",
+      "Create a water heater page with clear pricing guidance.",
+      "Ask every customer for a review by text on the same day."
     ],
     compliance:
       "Most states and many cities license plumbers. Show your license number on your site and profile where required, and don't advertise work like gas line or backflow testing unless your license covers it.",
     faqs: [
       {
-        q: "Can I rank in towns where I don't have an office?",
-        a: "Yes, through your service area settings, strong city pages and reviews from customers in those towns. Map pack rankings are harder far from your address, but organic results can still show you. We never recommend fake addresses.",
+        q: "What is SEO for plumbers?",
+        a: "It is the process of helping plumbing companies rank in Google search and Maps for services like emergency plumbing, water heater repair and drain cleaning in their service area."
       },
       {
-        q: "Should I keep paying for Local Services Ads?",
-        a: "If they're bringing in booked jobs at a good cost, yes. SEO and Local Services Ads work well together, and strong reviews help both. Over time SEO can reduce how much you rely on paid leads.",
+        q: "How do plumbers get more calls from Google?",
+        a: "Rank in the map pack with a strong Google Business Profile, have a fast mobile site with tap-to-call, build a page for each service and collect reviews after every job."
       },
       {
-        q: "Do I need a page for every service?",
-        a: "Every service that brings in good revenue should have its own page. Small one-off tasks can live together. Start with the jobs you most want more of.",
+        q: "How much does plumbing SEO cost?",
+        a: "Plumbing SEO is usually a monthly service. Cost depends on the size of your service area and the competition in your city."
       },
       {
-        q: "How fast can SEO bring in plumbing calls?",
-        a: "Profile and review improvements can lift Maps visibility within weeks. Service and city pages usually take a few months to build steady rankings. Competitive metro areas take longer than smaller towns.",
+        q: "Is SEO or Google Ads better for plumbers?",
+        a: "Ads bring calls immediately, while SEO builds lower-cost calls over time. Many plumbers use ads for emergencies and SEO for long-term growth."
       },
       {
-        q: "What does SEO for plumbers include?",
-        a: "Google Business Profile optimization, service pages for each job type such as drain cleaning, water heaters and emergency repairs, city pages for the towns you serve, technical fixes, citations, a review process and call tracking so you can see which calls came from search.",
-      },
+        q: "How long does SEO take for plumbers?",
+        a: "Local improvements can show within weeks. Strong positions for competitive services usually take three to six months."
+      }
     ],
     related: ["hvac-seo", "roofing-seo", "home-services-seo", "electrician-seo"],
     localProof: [
@@ -571,6 +611,9 @@ export const industriesB: IndustryPage[] = [
       { title: "Booked jobs from search", body: "Calls matched to booked jobs, so you see revenue from SEO, not just clicks." },
       { title: "Review growth", body: "New reviews each month and your rating against the three plumbers above you in the map pack." },
     ],
+    challengesIntro: "Plumbing searches are urgent and local. Homeowners call one of the first three businesses they see in Google Maps. Lead marketplaces, ads and large franchises take much of the page, so plumbing SEO has to win the map pack and convert the visitor in seconds.",
+    mapPackCopy: "We optimize your Google Business Profile for every plumbing service you offer, add real job photos, publish weekly posts and build service area pages, so you appear for \"plumber near me\" across all the neighborhoods you serve. It is the same [local SEO](/services/local-seo) system we use for [contractors](/industries/contractor-seo).",
+    includedCopy: "Plumbing keyword research, Google Business Profile management, service and area pages, technical fixes, citations in home service directories, review strategy and a monthly report on calls and rankings. Smaller shops can start with our [SEO services for small business](/services/small-business-seo).",
   },
   {
     slug: "carpet-cleaning-seo",

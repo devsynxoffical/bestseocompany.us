@@ -30,6 +30,10 @@ export type IndustryPage = {
   related: string[];          // 3-4 related industry slugs
   /** Optional: what local proof the client sees each month (geo-grid ranks, calls by area...). */
   localProof?: TitledText[];
+  /** Optional page-specific copy that replaces shared template text. Supports [label](/path) links. */
+  challengesIntro?: string;   // "Why ... find SEO hard." section intro
+  mapPackCopy?: string;       // "Win the map pack across your whole area." first paragraph
+  includedCopy?: string;      // "What's included for ..." section intro
   /** Optional: a REAL client result. Leave undefined until the owner supplies verified numbers. */
   caseResult?: { client: string; location: string; metric: string; period: string; summary: string };
 };
@@ -54,6 +58,11 @@ export type ServicePage = {
   related: string[];          // 3-4 related service slugs
   /** Optional: the proof the client sees in each monthly report. */
   localProof?: TitledText[];
+  /** Optional page-specific copy that replaces shared template text. Supports [label](/path) links. */
+  explainNote?: { heading: string; body: string }; // extra paragraph under "<Name>, explained."
+  costNote?: { heading: string; body: string };    // extra paragraph under "What you get."
+  serviceAreaCopy?: string;   // "Rank across your whole service area." paragraph
+  timelineCopy?: string;      // "Your first six months." intro
   /** Optional: a REAL client result. Leave undefined until the owner supplies verified numbers. */
   caseResult?: { client: string; location: string; metric: string; period: string; summary: string };
 };
