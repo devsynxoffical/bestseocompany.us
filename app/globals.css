@@ -606,13 +606,19 @@ footer{padding-block:72px 40px}
 /* ===== Hero: built live by SEO agents ===== */
 :root{--sel:#3D6BFF;--sel-soft:rgba(61,107,255,.22)}
 /* Pre-build state. html.hero-build is set before paint by an inline script. */
-/* Only decorative layers wait for the agents; headline, intro and form stay visible for LCP. */
-html.hero-build .hero:not(.built) [data-build="pill"]:not(.on),
-html.hero-build .hero:not(.built) [data-build^="stk"]:not(.on){opacity:0}
+/* Desktop only (the inline script skips the build below 1024px, so mobile LCP stays fast).
+   Agents draw each layer: headline letters are typed, the intro is typed, the form fades in. */
+html.hero-build .hero:not(.built) [data-build]:not(.on){opacity:0}
+html.hero-build .hero:not(.built) [data-build^="r"]:not(.on){opacity:1}
 html.hero-build .hero:not(.built) .hero-top,
 html.hero-build .hero:not(.built) .hero-grid{animation:none}
-html.hero-build .hero:not(.built) [data-build="pill"].on{animation:fadeUp .5s var(--ease) both}
+html.hero-build .hero:not(.built) [data-build="pill"].on,
+html.hero-build .hero:not(.built) [data-build="form"].on{animation:fadeUp .5s var(--ease) both}
+html.hero-build .hero:not(.built) [data-build="copy"].on{opacity:1}
 html.hero-build .hero:not(.built) h1 .row>span{animation:none}
+html.hero-build .hero:not(.built) h1 .tl{opacity:0}
+html.hero-build .hero:not(.built) h1 .row.on .tl{animation:typeIn .14s steps(1,end) both;animation-delay:calc(var(--n) * 55ms)}
+@keyframes typeIn{from{opacity:0}to{opacity:1}}
 html.hero-build .hero:not(.built) .hl::before{animation:none;transform:rotate(-1.5deg) scaleX(0)}
 html.hero-build .hero:not(.built) .hl.on::before{animation:mark .6s var(--ease) both}
 html.hero-build .hero:not(.built) .serp{animation:none;transform:translateY(-.06em) scale(0)}
@@ -620,6 +626,7 @@ html.hero-build .hero:not(.built) .serp.on{animation:pop .6s var(--ease) both}
 html.hero-build .hero:not(.built) .sticker{animation:none;transition:translate .65s cubic-bezier(.5,0,.2,1),opacity .25s}
 /* Once built, keep everything still (don't replay the plain load animations). */
 html.hero-build .hero.built h1 .row>span,
+html.hero-build .hero.built h1 .tl,
 html.hero-build .hero.built .hl::before,
 html.hero-build .hero.built .serp,
 html.hero-build .hero.built .hero-top,
@@ -697,3 +704,5 @@ html.hero-build .hero.built .sticker{animation:none}
 .gsc-kpis dd{margin:0;font-family:var(--font-display);font-size:clamp(24px,2.4vw,30px);letter-spacing:-.03em}
 .gsc-note{margin:0;font-size:14.5px;color:var(--ink-2)}
 .gsc-more{margin-top:26px;display:flex;justify-content:center}
+
+.hero h1 .tl{font-style:normal}

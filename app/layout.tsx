@@ -45,7 +45,7 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const heroBuildScript = `try{if(location.pathname==='/'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var d=document.documentElement;d.classList.add('hero-build');setTimeout(function(){if(!d.dataset.heroReady)d.classList.remove('hero-build')},8000)}}catch(e){}`;
+const heroBuildScript = `try{if(location.pathname==='/'&&innerWidth>=1024&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var d=document.documentElement;d.classList.add('hero-build');setTimeout(function(){if(!d.dataset.heroReady)d.classList.remove('hero-build')},8000)}}catch(e){}`;
 
 const svcLink = (slug: string, label: string) => ({ href: `/services/${slug}`, label });
 const indLink = (slug: string, label: string) => ({ href: `/industries/${slug}`, label });

@@ -40,6 +40,13 @@ type AgentName = (typeof AGENTS)[number]["name"];
 
 const EASE = "cubic-bezier(.5,0,.2,1)";
 
+/** Splits text into letters (kept as real text for SEO) so the build can type them one by one. */
+const LETTER_MS = 55;
+function typeLetters(text: string, base = 0) {
+  return [...text].map((ch, i) => (ch === " " ? " " : <i key={i} className="tl" style={{ ["--n" as string]: base + i }}>{ch}</i>));
+}
+const ROW_LETTERS = [8, 7, 8]; // "Rank" + "with", "Best SEO", "Company."
+
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -144,9 +151,14 @@ export function Hero() {
     // 2. Headline rows, drawn by two agents taking turns
     rows.forEach((r, i) => {
       if (!r) return;
-      const ms = 700 + i * 430;
-      grow(`r${i}`, r, ms, 560, i % 2 ? "Indexer" : "Crawler");
+      const ms = 700 + i * 520;
+      const agent: AgentName = i % 2 ? "Indexer" : "Crawler";
+      grow(`r${i}`, r, ms, 560, agent);
       reveal(`r${i}`, ms + 600);
+      // The agent types the row: it sweeps left to right while the letters appear.
+      const typeDur = ROW_LETTERS[i] * LETTER_MS + 120;
+      move(agent, r.x + 6, r.y + r.h * 0.62, ms + 590, 220);
+      move(agent, r.x + r.w - 6, r.y + r.h * 0.62, ms + 620, typeDur);
     });
 
     // 3. Ranker clicks the highlight, then the #1 badge
@@ -157,8 +169,12 @@ export function Hero() {
     if (copy) {
       grow("copy", copy, 2150, 520, "Writer");
       reveal("copy", 2700);
-      // The paragraph stays fully visible (it's the mobile LCP element); Writer just reads along it.
-      move("Writer", copy.x + copy.w * 0.82, copy.y + copy.h - 6, 2720, 1400);
+      // Desktop only (mobile skips the build and shows the hero at once for fast LCP): Writer types the paragraph.
+      const len = hero.copy.length, typeStart = 2720, typeDur = 1400;
+      at(typeStart, () => setTyped(0));
+      for (let k = 1; k <= 28; k++) at(typeStart + (typeDur * k) / 28, () => setTyped(Math.round((len * k) / 28)));
+      at(typeStart + typeDur + 60, () => setTyped(null));
+      move("Writer", copy.x + copy.w * 0.82, copy.y + copy.h - 6, typeStart, typeDur);
     }
 
     // 5. Form, assembled by a swarm
@@ -291,13 +307,13 @@ export function Hero() {
         </div>
         <h1>
           <span className={cx("row", on.r0 && "on")} data-build="r0">
-            <span>Rank <span className={cx("serp", on.serp && "on")}>#1</span> with</span>
+            <span>{typeLetters("Rank")} <span className={cx("serp", on.serp && "on")}>#1</span> {typeLetters("with", 4)}</span>
           </span>{" "}
           <span className={cx("row", on.r1 && "on")} data-build="r1">
-            <span><span className={cx("hl", on.hl && "on")}>Best SEO</span></span>
+            <span><span className={cx("hl", on.hl && "on")}>{typeLetters("Best SEO")}</span></span>
           </span>{" "}
           <span className={cx("row", on.r2 && "on")} data-build="r2">
-            <span>Company.</span>
+            <span>{typeLetters("Company.")}</span>
           </span>
         </h1>
         <div className="hero-grid">

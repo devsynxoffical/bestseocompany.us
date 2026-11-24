@@ -439,3 +439,22 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
   - **Local business:** fork and knife, house, wrench, bed, cloud
 - 20 new icons were added to `components/layout/MenuIcon.tsx`, and `lib/pages/menu.ts` assigns them.
 - **Validation:** build OK. The panel fits at 1080px and 1366px with nothing cut off.
+
+## Batch 16 · 2026-11-24 · Hero: agents type the headline letter by letter again (owner request)
+
+- **Why:** batch 1 (19 Nov) showed the headline, intro and form at once to cut mobile LCP from 7.1s. The owner wants the original effect back, where the cursor agents write the hero.
+- **Desktop (1024px and wider):**
+  - Each headline line is typed letter by letter ("Rank … with", "Best SEO", "Company.") while its agent cursor sweeps across it.
+  - Then the "#1" badge pops, the lime highlight draws, the Writer agent types the intro paragraph and the form is assembled.
+  - Skip and Replay work as before.
+- **Mobile (under 1024px) and reduced motion:** no build. The hero shows at once, so mobile LCP stays fast. Measured 1.54s with 4× CPU and slow 4G; Google ranks on mobile.
+- **SEO:** the letters are real text in the H1. Its text content is still "Rank #1 with Best SEO Company."
+- **Files:**
+  - `components/sections/Hero.tsx`: `typeLetters()`, the typing schedule and the intro typing.
+  - `app/globals.css`: build-state rules and `typeIn`.
+  - `app/layout.tsx`: the build script requires `innerWidth>=1024`.
+- **Validation:** sampled in Chromium:
+  - at 1.9s the letters "Rankwi" were visible
+  - at 2.4s "RankwithBestS"
+  - at 3.0s the full headline, with the intro typing
+  - at 6.5s everything was done
