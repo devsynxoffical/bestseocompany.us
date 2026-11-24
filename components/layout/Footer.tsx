@@ -8,7 +8,11 @@ import { useReveal } from "@/hooks/useReveal";
 import { submitLead } from "@/lib/lead";
 import { PreferredSourceButton } from "@/components/ui/PreferredSource";
 
-const wordmark = ["b", "e", "s", "t", "s", "e", "o", ".", "u", "s"];
+// Two-line wordmark: "best" / "seo.us". `k` keeps the letter-by-letter reveal order across both lines.
+const wordLines: { ch: string; cls?: string }[][] = [
+  [..."best"].map((ch) => ({ ch, cls: "w-a" })),
+  [...[..."seo"].map((ch) => ({ ch, cls: "w-b" })), { ch: ".", cls: "dot" }, ...[..."us"].map((ch) => ({ ch, cls: "w-c" }))],
+];
 
 export type FooterLink = { href: string; label: string };
 export type FooterColumn = { title: string; links: FooterLink[]; more?: FooterLink };
@@ -17,7 +21,7 @@ const trust = ["Month-to-month after 90 days", "White-hat only", "US-based team"
 
 /** Site footer: call-to-action band, link columns, newsletter, wordmark and legal bar. */
 export function Footer({ columns }: { columns: FooterColumn[] }) {
-  const [note, setNote] = useState("One practical SEO email a month. Unsubscribe anytime.");
+  const [note, setNote] = useState("No spam. Unsubscribe anytime.");
   const [email, setEmail] = useState("");
   const [busy, setBusy] = useState(false);
   const markRef = useReveal<HTMLDivElement>();
@@ -52,7 +56,7 @@ export function Footer({ columns }: { columns: FooterColumn[] }) {
         </div>
       </div>
 
-      {/* Links */}
+      {/* Brand + links */}
       <div className="wrap ft-main">
         <div className="ft-brand">
           <Link href="/" className="ft-logo" aria-label="Best SEO Company home">
@@ -64,16 +68,8 @@ export function Footer({ columns }: { columns: FooterColumn[] }) {
             <div><dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
             <div><dt>Hours</dt><dd>{site.hours}</dd></div>
           </dl>
-          <form className="ft-news" onSubmit={onSubmit} noValidate>
-            <label htmlFor="newsEmail" className="ft-news-label">SEO tips, monthly</label>
-            <div className="ft-news-row">
-              <input id="newsEmail" type="email" placeholder="you@company.com" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-              <button type="submit" disabled={busy}>{busy ? "…" : "Join"}</button>
-            </div>
-            <p role="status" className="ft-news-note">{note}</p>
-          </form>
           <div className="ft-ps">
-            <span className="ft-news-label">Follow us on Google</span>
+            <span className="ft-label">Follow us on Google</span>
             <PreferredSourceButton placement="footer" />
           </div>
         </div>
@@ -84,19 +80,43 @@ export function Footer({ columns }: { columns: FooterColumn[] }) {
               <h3>{col.title}</h3>
               <ul>
                 {col.links.map((l) => <li key={l.href}><Link href={l.href}>{l.label}</Link></li>)}
-                {col.more && <li><Link href={col.more.href} className="ft-more">{col.more.label} <span aria-hidden="true">→</span></Link></li>}
+                {col.more && <li className="ft-more-li"><Link href={col.more.href} className="ft-more">{col.more.label} <span aria-hidden="true">→</span></Link></li>}
               </ul>
             </div>
           ))}
         </nav>
       </div>
 
-      {/* Wordmark */}
+      {/* Newsletter strip */}
       <div className="wrap">
+        <form className="ft-news" onSubmit={onSubmit} noValidate>
+          <div className="ft-news-copy">
+            <label htmlFor="newsEmail" className="ft-label">SEO tips, monthly</label>
+            <b>One practical SEO email a month.</b>
+            <p role="status" className="ft-news-note">{note}</p>
+          </div>
+          <div className="ft-news-row">
+            <input id="newsEmail" type="email" placeholder="you@company.com" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <button type="submit" disabled={busy}>{busy ? "…" : "Subscribe"}</button>
+          </div>
+        </form>
+      </div>
+
+      {/* Wordmark + closing call to action */}
+      <div className="wrap ft-bottom">
         <div className="wordmark ft-mark" ref={markRef} aria-hidden="true">
-          {wordmark.map((ch, k) => (
-            <i key={k} className={ch === "." ? "dot" : undefined} style={{ ["--k" as string]: k }}>{ch}</i>
+          {wordLines.map((line, li) => (
+            <span key={li} className="ft-mark-line">
+              {line.map((l, j) => {
+                const k = li === 0 ? j : wordLines[0].length + j;
+                return <i key={j} className={l.cls} style={{ ["--k" as string]: k }}>{l.ch}</i>;
+              })}
+            </span>
           ))}
+        </div>
+        <div className="ft-close">
+          <p>Rank #1 with Best SEO Company. Start with a free 40-point audit and a clear plan for your first 90 days.</p>
+          <Link href="/free-seo-audit" className="ft-close-btn">Get my free audit <span aria-hidden="true">↗</span></Link>
         </div>
       </div>
 

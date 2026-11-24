@@ -322,3 +322,19 @@ The intro text now says "Click any window to pause and look closer." The compone
 - **Edge fade:** the kit's dark edge strips are removed and replaced with a transparent mask, so the colors show through at both sides.
 
 **Validation:** build OK. No overflow at 390px or 1366px. Click to pause still works.
+
+## Batch 11 · 2026-11-24 · Footer redesign (owner request)
+
+| Area | Before | After |
+|---|---|---|
+| Layout | The left column stacked logo, contact, newsletter and the Google button, running far taller than the link columns | Brand column (logo, tagline, email, hours, Google button) beside 5 link columns of similar height |
+| Link columns | Plain headings, bright links | Headings with a divider line, muted links that brighten on hover, lime "All ..." links |
+| Newsletter | Small field squeezed into the left column | Full-width strip: "One practical SEO email a month." beside the email field and a lime Subscribe button. Fits on mobile. |
+| Wordmark | "bestseo.us" on one line in near-invisible dark gray | Two lines, "best" / "seo.us", tinted lavender, pink and green with a lime dot; each letter lights up on hover |
+| Right of wordmark | empty | Closing line "Rank #1 with Best SEO Company..." and a "Get my free audit" button |
+| Legal bar | unchanged | unchanged, with more space above |
+
+The CTA band at the top of the footer, all links, the newsletter form handler and the Google preferred source button behave exactly as before.
+**Validation:**
+- Build OK. Crawl: 0 problems.
+- No overflow at 390px, 820px and 1366px. Checked on / and /pricing.
