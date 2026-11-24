@@ -458,3 +458,13 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
   - at 2.4s "RankwithBestS"
   - at 3.0s the full headline, with the intro typing
   - at 6.5s everything was done
+
+## Batch 17 · 2026-11-24 · Fix squashed count-up numbers (owner report)
+
+- **Bug:** the CountUp number renders inside a `<span>`, and two label rules also matched it:
+  - `.stat span{font-size:15px}`
+  - `.kpi span{font-size:11px}`
+
+  The numbers dropped to 15px and 11px but kept the tight letter-spacing sized for 64px and 44px, so the digits overlapped ("350+", "12 yrs", "94%", "48h", plus the dashboard KPIs 48,210 / 1,284 / 4.2 / 612).
+- **Fix:** both label rules now apply only to the direct label (`.stat>span`, `.kpi>span`), and `.stat b span` inherits the number's size.
+- **Validation:** every count-up on the homepage now matches its parent size (64px, 64px and 43.5px at 1280px wide; 40px at 390px wide).

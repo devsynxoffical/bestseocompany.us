@@ -160,7 +160,8 @@ section.block{padding-block:100px}
 .stat{background:var(--paper);padding:28px 24px;display:grid;gap:6px;transition:background .3s}
 .stat:hover{background:#FAFAFA}
 .stat b{font-family:var(--font-display);font-size:clamp(40px,5vw,64px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
-.stat span{color:var(--ink-2);font-size:15px}
+.stat>span{color:var(--ink-2);font-size:15px}
+.stat b span{font-size:inherit;color:inherit;letter-spacing:inherit}
 
 /* WE HELP ROTATOR + INDUSTRIES */
 .help h2{font-size:clamp(40px,7vw,104px);letter-spacing:-.055em;line-height:.95}
@@ -265,7 +266,7 @@ section.block{padding-block:100px}
 .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 @media(min-width:800px){.kpis{grid-template-columns:repeat(4,1fr)}}
 .kpi{background:#1D1D1B;border-radius:18px;padding:18px;display:grid;gap:4px}
-.kpi span{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9C9A93}
+.kpi>span{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9C9A93}
 .kpi b{font-family:var(--font-display);font-size:clamp(28px,3.4vw,44px);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
 .kpi small{color:var(--lime);font-family:var(--font-mono);font-size:12px}
 .bars{display:flex;align-items:end;gap:clamp(4px,1vw,10px);height:220px;padding-top:10px;border-bottom:1px solid #333330}
