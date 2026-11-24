@@ -312,6 +312,14 @@ export const industriesD: IndustryPage[] = [
       {
         q: "What is the best SEO for contractors?",
         a: "A plan that combines local SEO, project-specific pages, strong project photos, reviews and clean links from industry sources."
+      },
+      {
+        q: "What should contractors expect in the first 90 days of SEO?",
+        a: "Month one is an audit plus fixes to your website and Google Business Profile. Months two and three add project, service and location pages, citations and a review process. Most contractors see better map pack visibility and more impressions within 90 days, while steady inquiry growth usually builds from month four."
+      },
+      {
+        q: "Is there a contractor SEO checklist?",
+        a: "Yes. Start with license and insurance details on every page, one page per project type, project photos on your Google Business Profile, a review request after every job and listings in local builder directories. Our Plumber SEO Checklist covers the same local steps in 21 fixes and works for most trades."
       }
     ],
     related: ["home-services-seo", "roofing-seo", "architect-seo"],

@@ -3,6 +3,7 @@ import { guidePages, industryPages, servicePages, toolPages } from "@/lib/pages"
 import { blogPosts } from "@/lib/pages/blog-index";
 import { industryCategories } from "@/lib/pages/categories";
 import type { GuideSection } from "@/lib/pages/types";
+import { gscResults, RESULTS_DISCLOSURE } from "@/lib/results";
 
 const u = (p: string) => `${site.url}${p}`;
 const first = (s: string) => s.split(". ")[0].replace(/\.$/, "") + ".";
@@ -18,10 +19,21 @@ export function buildLlmsTxt() {
     "- Services: technical SEO, local SEO and Google Business Profile, content, link building and digital PR, e-commerce and Shopify SEO, answer engine optimization (AEO) and generative engine optimization (GEO)",
     `- Pricing: ${plans.map((p) => `${p.name} ${p.monthly ? `$${p.monthly.toLocaleString("en-US")}/month` : "custom"}`).join(", ")}; month to month after a 90-day starting term; 15% off when billed yearly`,
     "- Free offers: 40-point SEO audit and a live single-page SEO audit tool",
+    `- Published results: ${gscResults.length} Google Search Console reports (${u("/results")}). ${RESULTS_DISCLOSURE}`,
     `- Contact: ${site.email}`,
     "",
   );
-  lines.push("## Company", `- [About](${u("/about")}): who we are and how we work`, `- [Pricing](${u("/pricing")}): plans and comparison`, `- [Free SEO audit](${u("/free-seo-audit")}): what the 40-point audit covers`, `- [Contact](${u("/contact")})`, `- [Editorial policy](${u("/editorial-policy")}): how we research and write`, "");
+  lines.push("## Company", `- [About](${u("/about")}): who we are and how we work`, `- [Pricing](${u("/pricing")}): plans from $1,500 a month, what each includes, and how much SEO costs`, `- [Results](${u("/results")}): real Google Search Console reports from client projects`, `- [Free SEO audit](${u("/free-seo-audit")}): what the 40-point audit covers`, `- [Contact](${u("/contact")})`, `- [Editorial policy](${u("/editorial-policy")}): how we research and write`, "");
+  lines.push(
+    "## Common questions",
+    `- How much does SEO cost? See ${u("/pricing")} and ${u("/guides/seo-cost")}`,
+    `- How long does SEO take? See ${u("/blog/how-long-does-seo-take")}`,
+    `- Is SEO worth it for a small business? See ${u("/services/small-business-seo")}`,
+    `- How much does local SEO cost? See ${u("/services/local-seo")}`,
+    `- SEO for plumbers: ${u("/industries/plumber-seo")} and the 21-fix checklist ${u("/blog/plumber-seo-checklist")}`,
+    `- SEO for contractors: ${u("/industries/contractor-seo")}`,
+    "",
+  );
   lines.push("## Services", ...servicePages.map((p) => `- [${p.name}](${u(`/services/${p.slug}`)}): ${first(p.intro)}`), "");
   lines.push("## Industries");
   for (const c of industryCategories) {

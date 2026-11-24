@@ -602,6 +602,14 @@ export const industriesB: IndustryPage[] = [
       {
         q: "How long does SEO take for plumbers?",
         a: "Local improvements can show within weeks. Strong positions for competitive services usually take three to six months."
+      },
+      {
+        q: "Is there a plumber SEO checklist I can follow?",
+        a: "Yes. Our Plumber SEO Checklist covers 21 fixes in five areas: Google Business Profile, service and town pages, reviews, technical basics and call tracking. Most plumbers can work through it in a few weekends."
+      },
+      {
+        q: "What is the best SEO company for plumbers?",
+        a: "Look for a company that shows plumbing or home service results, focuses on map pack rankings and booked calls, publishes its prices and works month to month. Ask how they track calls back to search. Our plumbing plans start at $1,500 a month with a free 40-point audit."
       }
     ],
     related: ["hvac-seo", "roofing-seo", "home-services-seo", "electrician-seo"],

@@ -104,6 +104,14 @@ export const blogPosts: BlogPost[] = [
         q: "Do I need a separate page for every town?",
         a: "You need one for each main town or area where you want more work, as long as each page has real local detail. Thin pages that only swap the town name can do more harm than good.",
       },
+      {
+        q: "How much does SEO cost for a plumber?",
+        a: "Plumbing SEO is usually a monthly service. Single-location plans commonly run about $1,000 to $2,500 a month in the US. Our plans start at $1,500 a month for one service area.",
+      },
+      {
+        q: "Which checklist item should a plumber do first?",
+        a: "Start with your Google Business Profile: the right primary category, a real service area, accurate hours and a tracked phone number. It drives most emergency calls and changes can show within weeks.",
+      }
     ],
     related: ["/industries/plumber-seo", "/services/local-seo", "/blog/get-more-google-reviews"],
   },
@@ -202,6 +210,14 @@ export const blogPosts: BlogPost[] = [
         q: "Is SEO worth it if it takes months?",
         a: "For most local businesses, yes. Once pages rank, they keep bringing calls without paying for each click, which lowers your cost per lead over time.",
       },
+      {
+        q: "How long does local SEO take?",
+        a: "Google Business Profile, review and citation fixes can improve map pack visibility within a few weeks. Strong map pack positions in competitive areas usually take three to six months of steady work.",
+      },
+      {
+        q: "How long does SEO take for a new website?",
+        a: "A brand-new domain usually takes longer: often six to twelve months to rank for competitive terms. Getting pages indexed, earning first links and publishing helpful pages early shortens that time.",
+      }
     ],
     related: ["/services/small-business-seo", "/guides/seo-cost", "/industries/contractor-seo"],
   },

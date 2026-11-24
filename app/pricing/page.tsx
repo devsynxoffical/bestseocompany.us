@@ -28,6 +28,9 @@ const rows: Array<[string, string, string, string]> = [
 ];
 
 const faqs = [
+  { q: "How much does SEO cost?", a: "Most US businesses pay for SEO as a monthly retainer. Single-location local SEO commonly runs about $1,000 to $2,500 a month, and growing regional or online businesses about $2,500 to $5,000. Our plans are $1,500 a month (Starter), $3,500 a month (Growth) and custom pricing for Scale." },
+  { q: "How much do SEO companies charge?", a: "Most SEO companies charge a monthly retainer rather than an hourly rate. Expect roughly $1,000 to $5,000 a month depending on competition, locations and how much content and link building is included. Ask every company for a written list of monthly deliverables so you can compare like for like." },
+  { q: "What is included in each SEO plan?", a: "Starter ($1,500 a month) covers one location: Google Business Profile management, technical fixes, 2 optimized pages a month and a monthly report. Growth ($3,500 a month) adds 6 content pieces a month, digital PR and link building, and strategy calls every two weeks. Scale is custom, with a dedicated team." },
   { q: "Is there a contract?", a: "Every plan starts with a 90-day term so the work has time to show results. After that it's month to month, and you can cancel with 30 days' notice." },
   { q: "How does the yearly discount work?", a: `Pay yearly and the monthly rate drops by ${Math.round(yearlyDiscount * 100)}%. It's the same work and the same reporting, billed annually.` },
   { q: "Are there setup fees?", a: "No. The free audit and onboarding are included. If your site needs a large one-off project, like a migration or rebuild, we quote it separately before any work starts." },

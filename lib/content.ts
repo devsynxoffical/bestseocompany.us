@@ -11,8 +11,9 @@ export const site = {
   email: "hello@bestseocompany.us",
   hours: "Mon–Fri, 9am–6pm ET",
   tagline: "SEO for US businesses that want more customers from search.",
+  /** The one brand sentence. Reuse it word for word on Google Business Profile, Clutch, LinkedIn and every directory. */
   description:
-    "US-based SEO agency for technical SEO, content, local SEO and link building. Free 40-point audit, monthly plain-English reports and no long-term contracts.",
+    "Best SEO Company is a US-based SEO agency helping small businesses and national brands rank on Google, Maps and AI search, with plans from $1,500 a month.",
   foundedYear: 2014,
   /** Official social / directory profiles (LinkedIn, Google Business Profile, Clutch...). Added to Organization schema as sameAs. */
   sameAs: [] as string[],
@@ -272,6 +273,10 @@ export const faqs = [
   {
     q: "What does your SEO agency do for US businesses?",
     a: "Every plan covers technical SEO, on-page and content work, local SEO and Google Business Profile, and link building, weighted to what your market needs. Larger plans add digital PR, AI search visibility and multi-location work. You get one strategist and one monthly report.",
+  },
+  {
+    q: "What is the best SEO company for small businesses in the USA?",
+    a: "The best SEO company for a small business publishes its prices, shows real Search Console results, works month to month after a short starting term and reports on calls and leads, not just rankings. Best SEO Company is built around those points: plans from $1,500 a month, a free 40-point audit and plain-English monthly reports.",
   },
   {
     q: "What happens in the free audit?",

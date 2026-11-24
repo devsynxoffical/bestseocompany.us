@@ -292,7 +292,7 @@ export const services: ServicePage[] = [
       },
       {
         q: "How much does local SEO cost?",
-        a: "Local SEO is usually a monthly service. Price depends on the number of locations, competition and the amount of content and citation work needed."
+        a: "Local SEO is usually a monthly service. Price depends on the number of locations, competition and the amount of content and citation work needed. For one location it commonly runs about $1,000 to $2,500 a month in the US. Our local plans start at $1,500 a month, and multi-city plans at $3,500."
       },
       {
         q: "How long does local SEO take?",
@@ -1122,7 +1122,7 @@ export const services: ServicePage[] = [
       },
       {
         q: "How much does SEO cost for a small business?",
-        a: "Most small businesses pay a monthly retainer based on competition, number of locations and content needs. Compare plans by the deliverables included each month."
+        a: "Most small businesses pay a monthly retainer based on competition, number of locations and content needs. Single-location SEO in the US commonly runs about $1,000 to $2,500 a month. Our plans start at $1,500 a month for one location and $3,500 a month for several cities. Compare plans by the deliverables included each month."
       },
       {
         q: "How long does small business SEO take to work?",

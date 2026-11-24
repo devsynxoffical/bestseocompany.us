@@ -468,3 +468,30 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
   The numbers dropped to 15px and 11px but kept the tight letter-spacing sized for 64px and 44px, so the digits overlapped ("350+", "12 yrs", "94%", "48h", plus the dashboard KPIs 48,210 / 1,284 / 4.2 / 612).
 - **Fix:** both label rules now apply only to the direct label (`.stat>span`, `.kpi>span`), and `.stat b span` inherits the number's size.
 - **Validation:** every count-up on the homepage now matches its parent size (64px, 64px and 43.5px at 1280px wide; 40px at 390px wide).
+
+## Batch 18 · 2026-11-24 · AEO and GEO, week 1 (plan in 05-AEO-GEO-PLAN.md)
+
+**7-day rule:** every target page was edited on 23 Nov, so only titles, meta and FAQs changed today. Content blocks are scheduled for 1 Dec (listed in 05).
+
+| Change | Page | Before → after |
+|---|---|---|
+| FAQ "What is the best SEO company for small businesses in the USA?" | / (FAQPage schema) | 7 → 8 FAQs |
+| FAQs "How much does SEO cost?", "How much do SEO companies charge?", "What is included in each SEO plan?" (real plan prices and published market ranges only) | /pricing | 5 → 8 FAQs |
+| Cost FAQ now states real prices ($1,000 to $2,500 market range; our $1,500 and $3,500 plans) | /services/small-business-seo, /services/local-seo | FAQ text updated |
+| FAQs "first 90 days" and "contractor SEO checklist" | /industries/contractor-seo | 6 → 8 FAQs |
+| FAQs "plumber SEO checklist" and "best SEO company for plumbers" | /industries/plumber-seo | 5 → 7 FAQs |
+| FAQs on local SEO timing and new websites | /blog/how-long-does-seo-take | 3 → 5 FAQs |
+| FAQs on plumber SEO cost and the first fix | /blog/plumber-seo-checklist | 3 → 5 FAQs |
+| One brand sentence (154 characters) | site meta, Organization schema, llms.txt, RSS, manifest | replaced the old description |
+| llms.txt: published results line, /results link, pricing summary and a "Common questions" map to the answering pages | /llms.txt | added |
+| IndexNow key file | /4fd23f9947164d549d3eecb6147d4e4d.txt | new |
+
+**Validation:**
+- Build OK. Crawl: 0 problems. Keyword map: 0 duplicates, 0 overlaps.
+- Each changed page has:
+  - 1 H1, a title under 60 and a description of 155 or under
+  - FAQPage JSON-LD identical to the visible Q&A
+  - no overflow at 390px
+- No em dashes.
+
+**IndexNow:** the first submission created the key. Bing returned "no key file" because the file isn't live yet. Resubmit after the Hostinger deploy.
