@@ -495,3 +495,5 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
 - No em dashes.
 
 **IndexNow:** the first submission created the key. Bing returned "no key file" because the file isn't live yet. Resubmit after the Hostinger deploy.
+
+**IndexNow update (24 Nov, after deploy):** the key file is live on www.bestseocompany.us. Submitted 9 URLs: /, /pricing, /services/small-business-seo, /services/local-seo, /industries/contractor-seo, /industries/plumber-seo, /blog/how-long-does-seo-take, /blog/plumber-seo-checklist and /llms.txt. Status: submitted (Bing and the other IndexNow engines verify the key file first).

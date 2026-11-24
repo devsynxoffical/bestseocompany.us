@@ -46,7 +46,7 @@
 | Organization schema with name, logo, phone and sameAs | Name and logo done. **Owner:** send the phone number and the LinkedIn, Clutch, Google Business Profile and YouTube URLs (`site.sameAs` in `lib/content.ts`) |
 | "Updated" date under guide H1s | Done (already live) |
 | Named author with bio on guides | **Owner:** name, role and a 2-line bio of the SEO lead |
-| IndexNow | Key file `/4fd23f9947164d549d3eecb6147d4e4d.txt` added. Resubmit the 9 changed URLs after the Hostinger deploy |
+| IndexNow | Key file live. 9 changed URLs submitted on 24 Nov after the deploy. Submit new or changed URLs after each future deploy |
 | Disavow | **Owner:** fill `docs/disavow.txt` from the Semrush export and upload it in Search Console |
 
 **The one brand sentence:**
