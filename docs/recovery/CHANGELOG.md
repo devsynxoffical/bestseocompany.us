@@ -310,3 +310,15 @@ The intro text now says "Click any window to pause and look closer." The compone
 **Validation:**
 - Tested in Chromium with the outcomes above.
 - Build OK.
+
+## Batch 10 · 2026-11-24 · Proof loop: button position and site colors (owner request)
+
+- **Button:** "See our results" now sits on its own line under the three trust points, left-aligned with them. It was floating to the far right.
+- **Colors:** the dark RankEmpire styling is replaced by the site palette:
+  - background: white with lavender, pink, lime and taupe glows
+  - cards: framed in lavender, pink, lime and taupe in rotation, with black borders and white tags
+  - text: black; the heading accent "on a loop." has a lime highlight
+  - button: black pill, like the site's other buttons
+- **Edge fade:** the kit's dark edge strips are removed and replaced with a transparent mask, so the colors show through at both sides.
+
+**Validation:** build OK. No overflow at 390px or 1366px. Click to pause still works.

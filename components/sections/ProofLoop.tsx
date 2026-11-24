@@ -13,15 +13,15 @@ import Link from "next/link";
 type Item = { tilt: "t-n2" | "t-n1" | "t-p1" | "t-p2"; color: string; tag: string; image: string; caption: string; alt: string };
 
 const ITEMS: Item[] = [
-  { tilt: "t-n2", color: "#ec4e3b", tag: "Website review", image: "/proof/pf-anastasia.webp", caption: "Landing page walkthrough", alt: "Recorded client call reviewing a landing page on screen share" },
-  { tilt: "t-p2", color: "#2b55e8", tag: "Strategy session", image: "/proof/pf-ann.webp", caption: "One-to-one strategy call", alt: "Recorded video call between a strategist and a client" },
-  { tilt: "t-n1", color: "#e37a38", tag: "Report review", image: "/proof/pf-analytics.webp", caption: "Performance report walkthrough", alt: "Screen share of a performance report during a client call" },
-  { tilt: "t-p1", color: "#4a9f5f", tag: "Group call", image: "/proof/pf-george.webp", caption: "Client team planning call", alt: "Recorded group video call with a client team" },
-  { tilt: "t-n2", color: "#8c2fe2", tag: "Client check-in", image: "/proof/pf-edgar_jeermei.webp", caption: "Monthly check-in", alt: "Two clients on a recorded video call giving a thumbs up" },
-  { tilt: "t-p2", color: "#e0a800", tag: "Onboarding call", image: "/proof/pf-guilia.webp", caption: "New client onboarding", alt: "Recorded onboarding video call with a client" },
-  { tilt: "t-n1", color: "#ec4e3b", tag: "Client call", image: "/proof/pf-ig_shot.webp", caption: "Progress update", alt: "Client smiling on a recorded video call" },
-  { tilt: "t-p1", color: "#2b55e8", tag: "Audience review", image: "/proof/pf-owne.webp", caption: "Audience insights walkthrough", alt: "Screen share of an audience insights report during a group call" },
-  { tilt: "t-n2", color: "#e37a38", tag: "Planning call", image: "/proof/pf-sina.webp", caption: "Next-month planning", alt: "Recorded planning call with two clients" },
+  { tilt: "t-n2", color: "var(--lav)", tag: "Website review", image: "/proof/pf-anastasia.webp", caption: "Landing page walkthrough", alt: "Recorded client call reviewing a landing page on screen share" },
+  { tilt: "t-p2", color: "var(--pink)", tag: "Strategy session", image: "/proof/pf-ann.webp", caption: "One-to-one strategy call", alt: "Recorded video call between a strategist and a client" },
+  { tilt: "t-n1", color: "var(--lime)", tag: "Report review", image: "/proof/pf-analytics.webp", caption: "Performance report walkthrough", alt: "Screen share of a performance report during a client call" },
+  { tilt: "t-p1", color: "var(--taupe)", tag: "Group call", image: "/proof/pf-george.webp", caption: "Client team planning call", alt: "Recorded group video call with a client team" },
+  { tilt: "t-n2", color: "var(--lav)", tag: "Client check-in", image: "/proof/pf-edgar_jeermei.webp", caption: "Monthly check-in", alt: "Two clients on a recorded video call giving a thumbs up" },
+  { tilt: "t-p2", color: "var(--pink)", tag: "Onboarding call", image: "/proof/pf-guilia.webp", caption: "New client onboarding", alt: "Recorded onboarding video call with a client" },
+  { tilt: "t-n1", color: "var(--lime)", tag: "Client call", image: "/proof/pf-ig_shot.webp", caption: "Progress update", alt: "Client smiling on a recorded video call" },
+  { tilt: "t-p1", color: "var(--taupe)", tag: "Audience review", image: "/proof/pf-owne.webp", caption: "Audience insights walkthrough", alt: "Screen share of an audience insights report during a group call" },
+  { tilt: "t-n2", color: "var(--lav)", tag: "Planning call", image: "/proof/pf-sina.webp", caption: "Next-month planning", alt: "Recorded planning call with two clients" },
 ];
 
 function Card({ it, dup, on, toggle }: { it: Item; dup: boolean; on: boolean; toggle?: () => void }) {
@@ -85,9 +85,11 @@ export function ProofLoop() {
         </div>
       </div>
       <div className="pmq-wrap pmq-ft">
-        <span>{ITEMS.length} recorded sessions</span>
-        <span>Real client calls</span>
-        <span>Published with permission</span>
+        <div className="pmq-pts">
+          <span>{ITEMS.length} recorded sessions</span>
+          <span>Real client calls</span>
+          <span>Published with permission</span>
+        </div>
         <Link className="pmq-btn" href="/results">
           See our results
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>

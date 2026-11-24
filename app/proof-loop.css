@@ -37,10 +37,11 @@
 .pw-g{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.14),transparent 60%);pointer-events:none}
 .pw-f{display:flex;justify-content:space-between;align-items:center;padding:9px 4px 0;font-size:11.5px}
 .pw-f span{color:#cbd5e1}.pw-f b{color:#fff;font-size:12px}
-.pmq-ft{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-top:30px;font-size:13px;color:var(--pmq-muted)}
+.pmq-ft{display:flex;flex-direction:column;align-items:flex-start;gap:20px;margin-top:30px;font-size:13px;color:var(--pmq-muted)}
+.pmq-pts{display:flex;flex-wrap:wrap;gap:10px 22px}
 .pmq-ft span{display:inline-flex;align-items:center;gap:8px}
 .pmq-ft span::before{content:"";width:6px;height:6px;border-radius:50%;background:#4a9f5f}
-.pmq-btn{margin-left:auto;display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 14px;border-radius:10px;background:#fff;color:#0b0b0e;font-weight:600;font-size:14px;text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.pmq-btn{margin-left:0;display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 14px;border-radius:10px;background:#fff;color:#0b0b0e;font-weight:600;font-size:14px;text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
 .pmq-btn svg{width:16px;height:16px}
 @media (prefers-reduced-motion:reduce){.pmq-track{animation:none!important}.pmq-tw{overflow-x:auto}}
 @media (max-width:760px){.pmq-hd{flex-direction:column;align-items:flex-start}.pmq-btn{margin-left:0}}
@@ -53,3 +54,35 @@ section.pmq{content-visibility:auto;contain-intrinsic-size:auto 900px}
 .pw-s img{background:#0f0f12}
 body:has(main > .pmq:last-child) footer.ft{margin-top:0}
 .pw{cursor:pointer}.pw:focus-visible{outline:2px solid #fff;outline-offset:4px;border-radius:20px}
+
+/* ===== bestseocompany.us theme: light band in the site palette (lavender, pink, lime, taupe) ===== */
+.pmq{--pmq-bg:var(--paper);--pmq-muted:var(--ink-2);background:var(--paper);color:var(--ink);border-top:1px solid var(--line)}
+.pmq-glow{background:
+  radial-gradient(ellipse 45% 60% at 8% 20%,color-mix(in srgb,var(--lav) 55%,transparent),transparent 70%),
+  radial-gradient(ellipse 40% 55% at 92% 15%,color-mix(in srgb,var(--pink) 55%,transparent),transparent 70%),
+  radial-gradient(ellipse 45% 55% at 85% 95%,color-mix(in srgb,var(--lime) 50%,transparent),transparent 70%),
+  radial-gradient(ellipse 40% 50% at 15% 95%,color-mix(in srgb,var(--taupe) 70%,transparent),transparent 70%)}
+.pmq-eyb{background:var(--white);border:1.5px solid var(--ink);color:var(--ink)}
+.pmq-eyb i{background:var(--red);box-shadow:0 0 0 3px color-mix(in srgb,var(--red) 25%,transparent)}
+.pmq-hd h2{color:var(--ink)}
+.pmq-hd h2 em{color:var(--ink);background:var(--lime);border-radius:12px;padding:0 .16em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.pmq-hd p{color:var(--ink-2)}
+.pw-c{background:var(--c);border:1.5px solid var(--ink);box-shadow:0 14px 34px rgba(17,17,17,.14);backdrop-filter:none}
+.pw:hover .pw-c,.pw.is-on .pw-c{border-color:var(--ink);box-shadow:0 22px 48px rgba(17,17,17,.22),6px 6px 0 var(--ink)}
+.pw-h .dots i{background:var(--white);border:1.5px solid var(--ink);opacity:1}
+.pw-h .dots i:nth-child(2),.pw-h .dots i:nth-child(3){background:var(--white)}
+.pw-tag{background:var(--white);border:1.5px solid var(--ink);color:var(--ink)}
+.pw-tag i{background:var(--ink)}
+.pw-s{border:1.5px solid var(--ink);background:var(--ink)}
+.pw-s img{background:var(--ink)}
+.pw-f span{color:var(--ink)}.pw-f b{color:var(--ink)}
+.pmq-ft{color:var(--ink-2)}
+.pmq-ft span::before{width:8px;height:8px;border:1.5px solid var(--ink);background:var(--lav)}
+.pmq-pts span:nth-child(2)::before{background:var(--pink)}
+.pmq-pts span:nth-child(3)::before{background:var(--lime)}
+.pmq-btn{background:var(--ink);color:var(--white);border-radius:999px;height:46px;padding:0 20px;transition:transform .3s var(--ease),background .3s}
+.pmq-btn:hover{background:#2a2a2a;transform:translateY(-2px)}
+.pw:focus-visible{outline-color:var(--ink)}
+.pmq-v{display:none}
+.pmq-tw{-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+@media (max-width:760px){.pmq-tw{-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}}
