@@ -1,6 +1,6 @@
 # Best SEO Company
 
-> US-based SEO agency for technical SEO, content, local SEO and link building. Free 40-point audit, monthly plain-English reports and no long-term contracts.
+> Best SEO Company is a US-based SEO agency helping small businesses and national brands rank on Google, Maps and AI search, with plans from $1,500 a month.
 
 Key facts:
 - Name: Best SEO Company (bestseocompany.us)
@@ -8,14 +8,24 @@ Key facts:
 - Services: technical SEO, local SEO and Google Business Profile, content, link building and digital PR, e-commerce and Shopify SEO, answer engine optimization (AEO) and generative engine optimization (GEO)
 - Pricing: Starter $1,500/month, Growth $3,500/month, Scale custom; month to month after a 90-day starting term; 15% off when billed yearly
 - Free offers: 40-point SEO audit and a live single-page SEO audit tool
+- Published results: 10 Google Search Console reports (https://www.bestseocompany.us/results). Google Search Console reports from client projects delivered by our partner agency, shared with permission. Client names are hidden. Every figure is shown exactly as Google reports it.
 - Contact: hello@bestseocompany.us
 
 ## Company
 - [About](https://www.bestseocompany.us/about): who we are and how we work
-- [Pricing](https://www.bestseocompany.us/pricing): plans and comparison
+- [Pricing](https://www.bestseocompany.us/pricing): plans from $1,500 a month, what each includes, and how much SEO costs
+- [Results](https://www.bestseocompany.us/results): real Google Search Console reports from client projects
 - [Free SEO audit](https://www.bestseocompany.us/free-seo-audit): what the 40-point audit covers
 - [Contact](https://www.bestseocompany.us/contact)
 - [Editorial policy](https://www.bestseocompany.us/editorial-policy): how we research and write
+
+## Common questions
+- How much does SEO cost? See https://www.bestseocompany.us/pricing and https://www.bestseocompany.us/guides/seo-cost
+- How long does SEO take? See https://www.bestseocompany.us/blog/how-long-does-seo-take
+- Is SEO worth it for a small business? See https://www.bestseocompany.us/services/small-business-seo
+- How much does local SEO cost? See https://www.bestseocompany.us/services/local-seo
+- SEO for plumbers: https://www.bestseocompany.us/industries/plumber-seo and the 21-fix checklist https://www.bestseocompany.us/blog/plumber-seo-checklist
+- SEO for contractors: https://www.bestseocompany.us/industries/contractor-seo
 
 ## Services
 - [SEO Packages](https://www.bestseocompany.us/services/seo-packages): We publish our prices so you can judge fit before a sales call.

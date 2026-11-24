@@ -1,6 +1,6 @@
 # Best SEO Company
 
-> US-based SEO agency for technical SEO, content, local SEO and link building. Free 40-point audit, monthly plain-English reports and no long-term contracts.
+> Best SEO Company is a US-based SEO agency helping small businesses and national brands rank on Google, Maps and AI search, with plans from $1,500 a month.
 
 Key facts:
 - Name: Best SEO Company (bestseocompany.us)
@@ -8,14 +8,24 @@ Key facts:
 - Services: technical SEO, local SEO and Google Business Profile, content, link building and digital PR, e-commerce and Shopify SEO, answer engine optimization (AEO) and generative engine optimization (GEO)
 - Pricing: Starter $1,500/month, Growth $3,500/month, Scale custom; month to month after a 90-day starting term; 15% off when billed yearly
 - Free offers: 40-point SEO audit and a live single-page SEO audit tool
+- Published results: 10 Google Search Console reports (https://www.bestseocompany.us/results). Google Search Console reports from client projects delivered by our partner agency, shared with permission. Client names are hidden. Every figure is shown exactly as Google reports it.
 - Contact: hello@bestseocompany.us
 
 ## Company
 - [About](https://www.bestseocompany.us/about): who we are and how we work
-- [Pricing](https://www.bestseocompany.us/pricing): plans and comparison
+- [Pricing](https://www.bestseocompany.us/pricing): plans from $1,500 a month, what each includes, and how much SEO costs
+- [Results](https://www.bestseocompany.us/results): real Google Search Console reports from client projects
 - [Free SEO audit](https://www.bestseocompany.us/free-seo-audit): what the 40-point audit covers
 - [Contact](https://www.bestseocompany.us/contact)
 - [Editorial policy](https://www.bestseocompany.us/editorial-policy): how we research and write
+
+## Common questions
+- How much does SEO cost? See https://www.bestseocompany.us/pricing and https://www.bestseocompany.us/guides/seo-cost
+- How long does SEO take? See https://www.bestseocompany.us/blog/how-long-does-seo-take
+- Is SEO worth it for a small business? See https://www.bestseocompany.us/services/small-business-seo
+- How much does local SEO cost? See https://www.bestseocompany.us/services/local-seo
+- SEO for plumbers: https://www.bestseocompany.us/industries/plumber-seo and the 21-fix checklist https://www.bestseocompany.us/blog/plumber-seo-checklist
+- SEO for contractors: https://www.bestseocompany.us/industries/contractor-seo
 
 ## Services
 - [SEO Packages](https://www.bestseocompany.us/services/seo-packages): We publish our prices so you can judge fit before a sales call.
@@ -1491,6 +1501,8 @@ If you would rather have it done for you, see our [SEO services for small busine
 **How long does plumber SEO take to work?** Google Business Profile and review improvements can show in the map pack within a few weeks. New service and town pages usually take three to six months to rank steadily, and busy metro areas take longer.
 **Should a plumber pay for Local Services Ads or SEO?** Both can work together. Local Services Ads bring leads right away at a cost per lead. SEO takes longer but keeps bringing calls without paying for each one. Strong reviews help both.
 **Do I need a separate page for every town?** You need one for each main town or area where you want more work, as long as each page has real local detail. Thin pages that only swap the town name can do more harm than good.
+**How much does SEO cost for a plumber?** Plumbing SEO is usually a monthly service. Single-location plans commonly run about $1,000 to $2,500 a month in the US. Our plans start at $1,500 a month for one service area.
+**Which checklist item should a plumber do first?** Start with your Google Business Profile: the right primary category, a real service area, accurate hours and a tracked phone number. It drives most emergency calls and changes can show within weeks.
 
 ---
 
@@ -1555,6 +1567,8 @@ If you want a plan built around your market, see our [SEO services for small bus
 **Can SEO work in 30 days?** Some quick wins can show in 30 days, mainly Google Business Profile changes and fixes to pages that already rank. Most new pages need longer to rank steadily.
 **Why is my new website not showing on Google yet?** New sites have to be discovered and indexed first. Submit your sitemap in Google Search Console, link new pages from your homepage and main pages, and check their status with URL Inspection.
 **Is SEO worth it if it takes months?** For most local businesses, yes. Once pages rank, they keep bringing calls without paying for each click, which lowers your cost per lead over time.
+**How long does local SEO take?** Google Business Profile, review and citation fixes can improve map pack visibility within a few weeks. Strong map pack positions in competitive areas usually take three to six months of steady work.
+**How long does SEO take for a new website?** A brand-new domain usually takes longer: often six to twelve months to rank for competitive terms. Getting pages indexed, earning first links and publishing helpful pages early shortens that time.
 
 ---
 
@@ -2332,7 +2346,7 @@ Deliverables:
 
 **What is local SEO for small businesses?** It is the work of helping a small business rank in Google Maps and local search results through its Google Business Profile, reviews, citations and location-focused website content.
 **How can a small business improve local SEO?** Complete and update the Google Business Profile, collect reviews, keep name, address and phone consistent everywhere, create location pages and earn local links.
-**How much does local SEO cost?** Local SEO is usually a monthly service. Price depends on the number of locations, competition and the amount of content and citation work needed.
+**How much does local SEO cost?** Local SEO is usually a monthly service. Price depends on the number of locations, competition and the amount of content and citation work needed. For one location it commonly runs about $1,000 to $2,500 a month in the US. Our local plans start at $1,500 a month, and multi-city plans at $3,500.
 **How long does local SEO take?** Profile and citation fixes can help within weeks. Strong map pack positions in competitive areas usually take three to six months.
 **What is the Google map pack?** It is the group of three local business listings shown with a map at the top of many local searches. Most local clicks go to these three results.
 **Do reviews help local SEO?** Yes. The number, quality and freshness of reviews, and how you respond to them, all affect local rankings and trust.
@@ -2525,7 +2539,7 @@ Deliverables:
 
 **What is SEO for small businesses?** It is the work of helping a small business appear in Google search and Maps for the services it offers, through website improvements, local listings, reviews and content.
 **Is SEO worth it for a small business?** For most small businesses, yes. SEO brings in customers who are already searching, and results keep working after the work is done, unlike ads that stop when you stop paying.
-**How much does SEO cost for a small business?** Most small businesses pay a monthly retainer based on competition, number of locations and content needs. Compare plans by the deliverables included each month.
+**How much does SEO cost for a small business?** Most small businesses pay a monthly retainer based on competition, number of locations and content needs. Single-location SEO in the US commonly runs about $1,000 to $2,500 a month. Our plans start at $1,500 a month for one location and $3,500 a month for several cities. Compare plans by the deliverables included each month.
 **How long does small business SEO take to work?** Quick wins can appear in the first weeks, but meaningful growth in rankings and calls usually takes three to six months.
 **Can I do SEO for my small business myself?** You can handle basics such as your Google Business Profile, reviews and clear service pages. Technical fixes, content strategy and link building are where an SEO company saves time.
 **What is the difference between SEO and local SEO?** SEO covers all organic search rankings. Local SEO focuses on location-based searches and Google Maps, which matter most for businesses that serve a specific area.
@@ -3164,6 +3178,8 @@ Compliance note: Most states and many cities license plumbers. Show your license
 **How much does plumbing SEO cost?** Plumbing SEO is usually a monthly service. Cost depends on the size of your service area and the competition in your city.
 **Is SEO or Google Ads better for plumbers?** Ads bring calls immediately, while SEO builds lower-cost calls over time. Many plumbers use ads for emergencies and SEO for long-term growth.
 **How long does SEO take for plumbers?** Local improvements can show within weeks. Strong positions for competitive services usually take three to six months.
+**Is there a plumber SEO checklist I can follow?** Yes. Our Plumber SEO Checklist covers 21 fixes in five areas: Google Business Profile, service and town pages, reviews, technical basics and call tracking. Most plumbers can work through it in a few weekends.
+**What is the best SEO company for plumbers?** Look for a company that shows plumbing or home service results, focuses on map pack rankings and booked calls, publishes its prices and works month to month. Ask how they track calls back to search. Our plumbing plans start at $1,500 a month with a free 40-point audit.
 
 ---
 
@@ -3839,6 +3855,8 @@ Compliance note: Most states require contractor licenses or registration, and so
 **How long does contractor SEO take?** Local rankings often improve within a few months. Competitive project keywords in larger cities can take six months or more.
 **How do contractors get more reviews?** Ask at project completion, send a direct review link by text and email and respond to every review. Steady reviews help rankings and trust.
 **What is the best SEO for contractors?** A plan that combines local SEO, project-specific pages, strong project photos, reviews and clean links from industry sources.
+**What should contractors expect in the first 90 days of SEO?** Month one is an audit plus fixes to your website and Google Business Profile. Months two and three add project, service and location pages, citations and a review process. Most contractors see better map pack visibility and more impressions within 90 days, while steady inquiry growth usually builds from month four.
+**Is there a contractor SEO checklist?** Yes. Start with license and insurance details on every page, one page per project type, project photos on your Google Business Profile, a review request after every job and listings in local builder directories. Our Plumber SEO Checklist covers the same local steps in 21 fixes and works for most trades.
 
 ---
 
