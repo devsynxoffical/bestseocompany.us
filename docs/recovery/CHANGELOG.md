@@ -297,3 +297,16 @@ The figures are unchanged and come from `lib/results.ts`, exactly as Google show
   - Build OK. Crawl: 0 problems.
   - No horizontal overflow at 390px or 1366px.
   - Section order checked: blog, FAQ, CTA, proof loop, then the footer.
+
+## Batch 9 · 2026-11-24 · Proof loop: pause on click, not hover (owner request)
+
+| Before | After |
+|---|---|
+| The row stopped whenever the cursor was over the section | The row keeps scrolling on hover |
+| No other way to pause | Clicking a card pauses the row and lifts that card. Clicking the same card again, or anywhere outside the row, resumes it. Another card can be clicked while paused. |
+| Keyboard focus paused it | Each card is a focusable button: Enter or Space pauses and resumes, with a focus outline |
+
+The intro text now says "Click any window to pause and look closer." The component became a small client component; the CSS changed only for the pause rule and the lifted-card state.
+**Validation:**
+- Tested in Chromium with the outcomes above.
+- Build OK.

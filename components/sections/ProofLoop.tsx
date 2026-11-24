@@ -1,10 +1,13 @@
-import type { CSSProperties } from "react";
+"use client";
+
+import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import Link from "next/link";
 
 /**
  * Proof loop (kit from RankEmpire): an endless, CSS-only row of tilted "app window"
- * cards with screenshots of recorded client calls. Hover or keyboard focus pauses it;
- * reduced motion turns it into a scrollable row. The second group is a decorative copy.
+ * cards with screenshots of recorded client calls. It keeps scrolling on hover; clicking
+ * (or Enter/Space on) a card pauses it and lifts that card. Clicking the same card again or
+ * anywhere outside the row resumes it. Reduced motion turns it into a scrollable row. The second group is a decorative copy.
  * Captions describe what each screenshot shows. Do not label these as SEO results.
  */
 type Item = { tilt: "t-n2" | "t-n1" | "t-p1" | "t-p2"; color: string; tag: string; image: string; caption: string; alt: string };
@@ -21,9 +24,17 @@ const ITEMS: Item[] = [
   { tilt: "t-n2", color: "#e37a38", tag: "Planning call", image: "/proof/pf-sina.webp", caption: "Next-month planning", alt: "Recorded planning call with two clients" },
 ];
 
-function Card({ it, dup }: { it: Item; dup: boolean }) {
+function Card({ it, dup, on, toggle }: { it: Item; dup: boolean; on: boolean; toggle?: () => void }) {
+  const onKey = (e: KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle?.(); }
+  };
   return (
-    <div className={`pw ${it.tilt}`} style={{ "--c": it.color } as CSSProperties}>
+    <div
+      className={`pw ${it.tilt}${on ? " is-on" : ""}`}
+      style={{ "--c": it.color } as CSSProperties}
+      onClick={toggle}
+      {...(dup ? {} : { role: "button", tabIndex: 0, "aria-pressed": on, "aria-label": `${on ? "Resume" : "Pause"} the slider on: ${it.caption}`, onKeyDown: onKey })}
+    >
       <div className="pw-c">
         <div className="pw-h">
           <span className="dots" aria-hidden="true"><i /><i /><i /></span>
@@ -40,6 +51,21 @@ function Card({ it, dup }: { it: Item; dup: boolean }) {
 }
 
 export function ProofLoop() {
+  // Key of the clicked card ("" = scrolling). Both copies of a card share the same key.
+  const [active, setActive] = useState("");
+  const trackRef = useRef<HTMLDivElement>(null);
+  const toggle = (key: string) => () => setActive((cur) => (cur === key ? "" : key));
+
+  // A click anywhere outside the row resumes scrolling.
+  useEffect(() => {
+    if (!active) return;
+    const onDown = (e: PointerEvent) => {
+      if (trackRef.current && !trackRef.current.contains(e.target as Node)) setActive("");
+    };
+    document.addEventListener("pointerdown", onDown);
+    return () => document.removeEventListener("pointerdown", onDown);
+  }, [active]);
+
   return (
     <section className="pmq" id="client-sessions" aria-labelledby="pmq-h">
       <div className="pmq-glow" aria-hidden="true" />
@@ -48,14 +74,14 @@ export function ProofLoop() {
           <span className="pmq-eyb"><i aria-hidden="true" />Proof loop</span>
           <h2 id="pmq-h">Inside our client sessions, <em>on a loop.</em></h2>
         </div>
-        <p>Recorded calls from real client work by our partner team, published with permission. Hover any window to pause and look closer.</p>
+        <p>Recorded calls from real client work by our partner team, published with permission. Click any window to pause and look closer.</p>
       </div>
       <div className="pmq-tw">
         <div className="pmq-v l" aria-hidden="true" />
         <div className="pmq-v r" aria-hidden="true" />
-        <div className="pmq-track" style={{ "--spd": `${ITEMS.length * 7.5}s` } as CSSProperties}>
-          <div className="pmq-g">{ITEMS.map((it) => <Card key={it.image} it={it} dup={false} />)}</div>
-          <div className="pmq-g" aria-hidden="true">{ITEMS.map((it) => <Card key={`d${it.image}`} it={it} dup />)}</div>
+        <div ref={trackRef} className={`pmq-track${active ? " is-paused" : ""}`} style={{ "--spd": `${ITEMS.length * 7.5}s` } as CSSProperties}>
+          <div className="pmq-g">{ITEMS.map((it) => <Card key={it.image} it={it} dup={false} on={active === it.image} toggle={toggle(it.image)} />)}</div>
+          <div className="pmq-g" aria-hidden="true">{ITEMS.map((it) => <Card key={`d${it.image}`} it={it} dup on={active === it.image} toggle={toggle(it.image)} />)}</div>
         </div>
       </div>
       <div className="pmq-wrap pmq-ft">
