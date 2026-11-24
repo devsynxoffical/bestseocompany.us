@@ -7,6 +7,7 @@ import type { MenuItem } from "@/lib/pages/menu";
 import { Logo } from "@/components/ui/Logo";
 import { MagneticLink } from "@/components/ui/MagneticLink";
 import { cx } from "@/lib/utils";
+import { MenuIcon } from "./MenuIcon";
 
 /**
  * Sticky header with mega-menu dropdowns (hover, click or keyboard) on desktop
@@ -68,7 +69,7 @@ export function Header({ menu }: { menu: MenuItem[] }) {
         <nav className="nav-links" aria-label="Main">
           <ul className="nav-list">
             {menu.map((item, i) => (
-              <li key={item.label} className="nav-item" onMouseEnter={() => item.columns && enter(i)} onMouseLeave={() => item.columns && leave()}>
+              <li key={item.label} className={cx("nav-item", item.size && item.size !== "lg" && "nav-item-rel")} onMouseEnter={() => item.columns && enter(i)} onMouseLeave={() => item.columns && leave()}>
                 {item.columns ? (
                   <button
                     type="button"
@@ -84,33 +85,45 @@ export function Header({ menu }: { menu: MenuItem[] }) {
                   <Link href={item.href} className={cx("nav-trigger", isActive(item.href) && "active")} aria-current={isActive(item.href) ? "page" : undefined}>{item.label}</Link>
                 )}
                 {item.columns && (
-                  <div id={`mega-${i}`} className={cx("mega", open === i && "open", !item.feature && item.columns.length === 1 && "mega-sm")} hidden={open !== i}>
+                  <div id={`mega-${i}`} className={cx("mega", `mega-${item.size ?? "lg"}`, open === i && "open")} hidden={open !== i}>
                     <div className="mega-inner">
-                      <div className="mega-cols" style={{ ["--cols" as string]: item.columns.length }}>
-                        {item.columns.map((col) => (
-                          <div key={col.title} className="mega-col">
-                            <span className="mega-title">{col.title}</span>
-                            <ul>
-                              {col.links.map((l) => (
-                                <li key={l.href}>
-                                  <Link href={l.href} className="mega-link">
-                                    <b>{l.label}</b>
-                                    {l.desc && <span>{l.desc}</span>}
-                                  </Link>
-                                </li>
-                              ))}
-                              {col.more && <li><Link href={col.more.href} className="mega-more">{col.more.label} →</Link></li>}
-                            </ul>
-                          </div>
-                        ))}
+                      <div className="mega-body">
+                        <div className="mega-cols" style={{ ["--cols" as string]: item.columns.length }}>
+                          {item.columns.map((col) => (
+                            <div key={col.title} className="mega-col" style={{ ["--tc" as string]: col.tone ?? "var(--lav)" }}>
+                              <span className="mega-title"><i aria-hidden="true" />{col.title}</span>
+                              <ul>
+                                {col.links.map((l) => (
+                                  <li key={l.href}>
+                                    <Link href={l.href} className={cx("mega-link", !l.desc && "plain")}>
+                                      {l.icon && <span className="mega-ic"><MenuIcon name={l.icon} /></span>}
+                                      <span className="mega-txt">
+                                        <b>{l.label}</b>
+                                        {l.desc && <span>{l.desc}</span>}
+                                      </span>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                        {item.feature && (
+                          <Link href={item.feature.href} className="mega-feature" style={{ ["--tc" as string]: item.feature.tone }}>
+                            <span className="mega-title">{item.feature.eyebrow}</span>
+                            <b>{item.feature.title}</b>
+                            <span>{item.feature.copy}</span>
+                            <span className="mega-cta">{item.feature.cta} <span aria-hidden="true">↗</span></span>
+                          </Link>
+                        )}
                       </div>
-                      {item.feature && (
-                        <Link href={item.feature.href} className="mega-feature" style={{ ["--tc" as string]: item.feature.tone }}>
-                          <span className="mega-title">{item.feature.eyebrow}</span>
-                          <b>{item.feature.title}</b>
-                          <span>{item.feature.copy}</span>
-                          <span className="mega-cta">{item.feature.cta} <span aria-hidden="true">↗</span></span>
-                        </Link>
+                      {item.footer && (
+                        <div className="mega-foot">
+                          <span>{item.footer.text}</span>
+                          <span className="mega-foot-links">
+                            {item.footer.links.map((l) => <Link key={l.href} href={l.href}>{l.label} <span aria-hidden="true">→</span></Link>)}
+                          </span>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -143,9 +156,9 @@ export function Header({ menu }: { menu: MenuItem[] }) {
                           <div key={col.title} className="dr-col">
                             <span className="mega-title">{col.title}</span>
                             {col.links.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
-                            {col.more && <Link href={col.more.href} className="mega-more">{col.more.label} →</Link>}
                           </div>
                         ))}
+                        {item.footer && item.footer.links.map((l) => <Link key={l.href} href={l.href} className="mega-more">{l.label} →</Link>)}
                       </div>
                     </div>
                   </>

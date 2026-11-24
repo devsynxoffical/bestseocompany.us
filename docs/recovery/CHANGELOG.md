@@ -403,3 +403,29 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
 - Build OK. Crawl: 0 problems.
 - No overflow at 390px or 1366px.
 - Tested: reveal, hover lift, 3D tilt and the progress ring (full at page bottom).
+
+## Batch 14 · 2026-11-24 · Header dropdowns redesigned (owner request)
+
+| Dropdown | Before | After |
+|---|---|---|
+| Services | 4 uneven columns (5, 2, 5, 3) with a full sentence from each page intro under every link; the green audit card stretched to the full height | 3 columns of 5 (Core SEO, By business, AI search and more). Each link has an icon, a bold name and a one-line description. Compact audit card. Bottom strip: "Plans from $1,500 a month" with "See pricing" and "All 15 services" |
+| Industries | 5 uneven columns, long "X SEO" labels | 4 columns of 5 with plain names (Contractors, Plumbers, Dentists, Law firms...). Side card "SEO built for your market". Bottom strip "All 50 industries" |
+| Free tools | full-width panel with one column | narrow panel under its own trigger: 4 tools with icons and a "Live tool" card |
+| Resources | full-width panel; guide questions as long labels | narrow panel: Blog, Guides, Results with icons, plus 5 short guide links |
+| Company | small panel pinned oddly to the right | small panel under its trigger, 4 links with icons |
+
+**Design**
+- White panels with a soft shadow and a subtle open animation.
+- Each column has a theme-color marker.
+- Link hover is tinted in the column color; the icon tile scales and fills.
+- Bottom strip on each dropdown with "All ..." links.
+
+**Responsive**
+- Below 1240px the side card of the two wide panels is hidden, so the descriptions are never cut off. Checked at 1080px and 1366px: no panel goes off screen.
+- The mobile menu lists the same short labels, plus the bottom-strip links.
+
+**Files**
+- `lib/pages/menu.ts` rewritten with short labels and descriptions.
+- New `components/layout/MenuIcon.tsx`.
+- `components/layout/Header.tsx` dropdown markup updated.
+- Mega menu CSS in `app/pages.css` replaced.
