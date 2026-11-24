@@ -276,3 +276,24 @@ The figures are unchanged and come from `lib/results.ts`, exactly as Google show
 **Validation:**
 - Build OK. Crawl: 0 problems.
 - Homepage shows 3 rows and /results shows 10. No overflow at 390px or 1366px.
+
+## Batch 8 · 2026-11-24 · Proof loop section above the footer (owner request, RankEmpire kit)
+
+- **What:** a new dark "Proof loop" band on the homepage only, placed after the final CTA and directly above the footer. It is an auto-scrolling row of 9 recorded client-call screenshots that pauses on hover. No other section was changed or moved.
+- **Files:**
+  - `components/sections/ProofLoop.tsx`
+  - `app/proof-loop.css` (kit CSS scoped to `.pmq`, plus site fonts), imported by `app/page.tsx` only
+  - 9 images in `public/proof/`, about 340 KB in total, all lazy-loaded
+- **Footer spacing:** the footer's 40px top margin is removed only when this section is the last thing on the page, so the dark band meets the dark footer. Other pages are unchanged; checked on /pricing.
+- **Captions:** the kit's tags ("Rank tracking", "Technical audit", "Keyword mapping") did not match the screenshots. The screenshots show video calls, an ads report, a landing page and Instagram insights. Tags, captions and alt text now describe what each image shows, and nothing is labelled as an SEO result.
+- **Copy:**
+  - Heading: "Inside our client sessions, on a loop."
+  - Intro: "Recorded calls from real client work by our partner team, published with permission."
+  - The button goes to /results.
+- **Owner to confirm:**
+  - The people shown agreed to appear on bestseocompany.us, not only on rankempire.us.
+  - Some screenshots show participant names, for example "George Roros" and "Gaurav Kapoor". The kit's own guide says to blur names.
+- **Validation:**
+  - Build OK. Crawl: 0 problems.
+  - No horizontal overflow at 390px or 1366px.
+  - Section order checked: blog, FAQ, CTA, proof loop, then the footer.

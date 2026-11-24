@@ -11,6 +11,8 @@ import { AboutBento } from "@/components/sections/AboutBento";
 import { DashboardReel } from "@/components/sections/DashboardReel";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { GscResults } from "@/components/sections/GscResults";
+import { ProofLoop } from "@/components/sections/ProofLoop";
+import "./proof-loop.css";
 import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -50,6 +52,7 @@ export default function HomePage() {
         <Blog />
         <Faq />
         <Cta />
+        <ProofLoop />
       </main>
     </>
   );
