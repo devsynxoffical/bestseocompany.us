@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/2e1rf-w9ebfxe.css","style"]
+:HL["/_next/static/chunks/248ppj2k1b3tu.css","style"]
 :HL["/_next/static/chunks/10ienwnnz9pju.css","style"]
 :HL["/_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/0d3323de857e1fce-s.p.38hmww4cj4vme.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -9,4 +9,4 @@
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"event-planner-seo","s":[]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":"industries","h":131136,"c":"$Q2"}]]
-0:{"b":"_bZbO5MeE3YdmSLnTyVGQ","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
+0:{"b":"7qoGQXVUqMjTGLhO_qdcr","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
