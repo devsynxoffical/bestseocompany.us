@@ -263,3 +263,16 @@ Removed secondary keywords that the report assigns to sister sites, so our pages
 **Footer text is accurate:** "10 Search Console reports", "Figures exactly as Google shows them", "Shared with permission". The kit's "Live recording" and "Real client sessions" labels were dropped because they do not describe these images.
 
 **Validation:** build OK, 0 crawl problems, all 10 images load, the animation runs, no overflow at 390px and 1280px, 1 H1 on the homepage.
+
+## Batch 7 · 2026-11-24 · Results shown one by one (owner request)
+
+| Change | Before | After |
+|---|---|---|
+| Homepage results section | "Proof loop": a dark, auto-scrolling row of small tilted windows with all 10 reports | "Real results from Search Console.": 3 results, each in its own full-width row (education website, publisher network, home services company), plus a "See all 10 results" button |
+| /results | 3-column grid of small cards | 10 full-width rows. Each row has a large screenshot beside its clicks, impressions, CTR and average position, alternating left and right |
+| Code | `components/sections/ProofLoop.tsx` and its CSS (about 50 lines) | removed. `GscResults` now takes `ids` to pick which reports to show |
+
+The figures are unchanged and come from `lib/results.ts`, exactly as Google shows them.
+**Validation:**
+- Build OK. Crawl: 0 problems.
+- Homepage shows 3 rows and /results shows 10. No overflow at 390px or 1366px.

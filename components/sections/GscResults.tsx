@@ -3,13 +3,15 @@ import { SplitText } from "@/components/ui/SplitText";
 import { Reveal } from "@/components/ui/Reveal";
 import { gscResults, RESULTS_DISCLOSURE, type GscResult } from "@/lib/results";
 
-function ResultCard({ r, i, eager }: { r: GscResult; i: number; eager?: boolean }) {
+/** One result per row: the full Search Console screenshot beside its numbers. */
+function ResultCard({ r, n }: { r: GscResult; n: number }) {
   return (
-    <Reveal as="figure" delay={((i % 3) || undefined) as 1 | 2 | undefined} className="gsc-card">
+    <Reveal as="figure" className={`gsc-card${n % 2 === 0 ? " flip" : ""}`}>
       <div className="gsc-shot">
-        <img src={r.img} width={r.width} height={r.height} alt={`Google Search Console report for a ${r.client.toLowerCase()}: ${r.clicks} clicks and ${r.impressions} impressions over ${r.period.toLowerCase()}`} loading={eager ? "eager" : "lazy"} decoding="async" />
+        <img src={r.img} width={r.width} height={r.height} alt={`Google Search Console report for a ${r.client.toLowerCase()}: ${r.clicks} clicks and ${r.impressions} impressions over ${r.period.toLowerCase()}`} loading="lazy" decoding="async" />
       </div>
       <figcaption>
+        <span className="gsc-num">Result {String(n).padStart(2, "0")}</span>
         <div className="gsc-top">
           <b>{r.client}</b>
           <span>{r.period}</span>
@@ -26,9 +28,12 @@ function ResultCard({ r, i, eager }: { r: GscResult; i: number; eager?: boolean 
   );
 }
 
-/** Real Search Console results. `limit` shows the first N with a link to the full page. */
-export function GscResults({ limit, heading = "Real Search Console results.", id = "results" }: { limit?: number; heading?: string; id?: string }) {
-  const items = limit ? gscResults.slice(0, limit) : gscResults;
+/**
+ * Real Search Console results, each shown on its own.
+ * `ids` picks specific reports (in that order) and adds a link to the full results page.
+ */
+export function GscResults({ ids, heading = "Real Search Console results.", id = "results" }: { ids?: string[]; heading?: string; id?: string }) {
+  const items = ids ? ids.map((x) => gscResults.find((r) => r.id === x)).filter((r): r is GscResult => !!r) : gscResults;
   return (
     <section className="block" id={id} style={{ paddingTop: 24 }}>
       <div className="wrap">
@@ -36,10 +41,10 @@ export function GscResults({ limit, heading = "Real Search Console results.", id
           <SplitText parts={[heading]} />
           <Reveal as="p">{RESULTS_DISCLOSURE}</Reveal>
         </div>
-        <div className="gsc-grid">
-          {items.map((r, i) => <ResultCard key={r.id} r={r} i={i} />)}
+        <div className="gsc-list">
+          {items.map((r, i) => <ResultCard key={r.id} r={r} n={i + 1} />)}
         </div>
-        {limit && (
+        {ids && (
           <Reveal className="gsc-more">
             <Link href="/results" className="btn">See all {gscResults.length} results <span className="arrow" aria-hidden="true">↗</span></Link>
           </Reveal>
