@@ -11,6 +11,7 @@ import { Analytics } from "@/components/Analytics";
 import { StickyCta } from "@/components/layout/StickyCta";
 import "./globals.css";
 import "./pages.css";
+import "./footer.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const interTight = Inter_Tight({ subsets: ["latin"], weight: ["500", "600", "700", "800"], variable: "--font-inter-tight", display: "swap" });

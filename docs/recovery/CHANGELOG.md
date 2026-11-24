@@ -347,3 +347,59 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
 - **Closing call to action:** shortened to "Rank #1 with Best SEO Company. Start with a free 40-point audit." It sits beside "best" from 1200px wide and below the wordmark on smaller screens, where it would otherwise overlap.
 
 **Validation:** build OK. Crawl: 0 problems. No overflow at 360, 390, 820, 1024, 1200, 1366 and 1600px.
+
+## Batch 13 · 2026-11-24 · Footer fully redesigned and animated (owner request)
+
+**New look:** dark ink base in the site palette (lavender, pink, lime, taupe).
+
+**Background**
+- Four slowly drifting color glows ("aurora").
+- A moving 3D perspective grid floor behind the wordmark.
+- Two floating glass orbs placed in empty space (checked: they never cover text at 1200 to 1440px; hidden below 1100px).
+
+**CTA band** (only on pages without their own lead section)
+- Pulsing eyebrow dot.
+- "rank?" in an animated color gradient.
+- Pill buttons with a sliding fill on hover.
+
+**Service ticker:** a scrolling row of services, alternating solid and outline text, with spinning color stars. It slows down on hover.
+
+**Columns**
+- Each column has its own accent color: a diamond that spins on hover, and a heading underline that draws in on reveal.
+- Links slide right with an arrow and a colored underline.
+- "All ..." links widen their arrow gap on hover.
+
+**Brand block**
+- The logo mark flips in 3D on hover.
+- The email has a gradient underline.
+- The hours have a live "ping" dot.
+
+**Newsletter**
+- Rotating rainbow gradient border.
+- 3D tilt toward the cursor, with a soft spotlight that follows it.
+- Glowing focus ring on the email field.
+
+**Wordmark** "best" / "seocompany.us"
+- 3D extruded letters in theme tints.
+- The whole word tilts in 3D toward the cursor.
+- Letters flip in one by one when the footer scrolls into view.
+- Hovered letters lift, light up and glow.
+- The lime dot bounces.
+
+**Legal bar**
+- Animated underlines.
+- The back-to-top button is a ring that fills as you scroll down the page.
+
+**Performance and accessibility**
+- Animations pause while the footer is off screen.
+- Everything is static with prefers-reduced-motion.
+- Content is fully visible without JavaScript.
+
+**Files**
+- New `app/footer.css`; the old footer block was removed from `app/pages.css`.
+- `components/layout/Footer.tsx` rewritten. Same links, forms, newsletter handler and Google button.
+
+**Validation**
+- Build OK. Crawl: 0 problems.
+- No overflow at 390px or 1366px.
+- Tested: reveal, hover lift, 3D tilt and the progress ring (full at page bottom).

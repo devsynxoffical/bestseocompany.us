@@ -430,93 +430,11 @@ main{overflow-x:clip}
 .scta .btn{padding:10px 14px;font-size:14px}
 @media(min-width:1060px){.scta{display:none}}
 
-/* ===== Footer (dark, professional) ===== */
-footer.ft{--fbg:#0E0E0D;--ffg:#F3F2EE;--fmut:#A3A19A;--fline:#2A2A27;background:var(--fbg);color:var(--ffg);padding-block:0 28px;margin-top:40px;position:relative;overflow:hidden}
-.ft a{color:inherit}
-.ft-cta{display:grid;gap:22px;padding-block:clamp(48px,7vw,84px) clamp(40px,5vw,56px);border-bottom:1px solid var(--fline)}
-@media(min-width:960px){.ft-cta{grid-template-columns:1.4fr auto;align-items:end;column-gap:48px}}
-.ft-cta-copy{display:grid;gap:12px;min-width:0}
-.ft-eyebrow{justify-self:start;font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--lime);border-radius:999px;padding:6px 12px}
-.ft-cta h2{font-size:clamp(38px,5.4vw,76px);letter-spacing:-.055em;line-height:.95;color:var(--ffg)}
-.ft-cta p{color:var(--fmut);font-size:clamp(16px,1.4vw,19px);max-width:52ch}
-.ft-cta-actions{display:flex;flex-wrap:wrap;gap:12px}
-.ft .ft-btn-primary{background:var(--lime);border-color:var(--lime);color:var(--ink)}
-.ft .ft-btn-primary::after{background:var(--ffg)}
-.ft .ft-btn-ghost{background:transparent;border-color:#4A4A46;color:var(--ffg)}
-.ft .ft-btn-ghost:hover{color:var(--ink)}
-.ft-trust{grid-column:1/-1;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--fmut);font-size:14px}
-.ft-trust li{display:flex;align-items:center;gap:8px}
-.ft-trust li::before{content:"✓";width:18px;height:18px;border-radius:50%;background:#1E1E1C;border:1px solid var(--fline);color:var(--lime);display:grid;place-items:center;font-size:10px}
-.ft-main{display:grid;gap:44px;padding-block:60px 44px}
-@media(min-width:1100px){.ft-main{grid-template-columns:minmax(250px,1fr) 3.3fr;gap:64px;align-items:start}}
-.ft-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--font-display);font-weight:800;font-size:21px;letter-spacing:-.04em}
-.ft-logo .logo-mark{background:#1E1E1C;border:1px solid var(--fline)}
-.ft-tld{color:var(--fmut);font-weight:600}
-.ft-tag{color:var(--fmut);margin-top:14px;max-width:32ch;font-size:15.5px;line-height:1.5}
-.ft-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fmut)}
-.ft-contact{margin:24px 0 0;display:grid;gap:14px}
-.ft-contact div{display:grid;gap:3px}
-.ft-contact dt{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fmut)}
-.ft-contact dd{margin:0;font-size:15px}
-.ft-contact a{text-decoration:none;border-bottom:1px solid #4A4A46}
-.ft-contact a:hover{border-color:var(--lime)}
-.ft-ps{margin-top:26px;display:grid;gap:10px;justify-items:start}
-.ft-ps .ps-btn{max-width:290px}
-.ft-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 24px}
-@media(min-width:720px){.ft-cols{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(min-width:1100px){.ft-cols{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}}
-.ft-col h3{font-family:var(--font-mono);font-weight:500;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ffg);margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid var(--fline)}
-.ft-col ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.ft-col a{text-decoration:none;font-size:14.5px;color:var(--fmut);display:inline-block;transition:color .2s,transform .3s var(--ease)}
-.ft-col a:hover{color:var(--ffg);transform:translateX(3px)}
-.ft-more-li{margin-top:4px}
-.ft-col a.ft-more{font-weight:600;color:var(--lime)}
-.ft-col a.ft-more:hover{color:var(--ffg)}
-/* Newsletter strip */
-.ft-news{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:center;border:1px solid var(--fline);border-radius:24px;background:#151513;padding:clamp(20px,3vw,30px)}
-@media(min-width:860px){.ft-news{grid-template-columns:1fr minmax(320px,440px);gap:40px}}
-.ft-news-copy{display:grid;gap:6px}
-.ft-news-copy b{font-family:var(--font-display);font-size:clamp(20px,2vw,26px);letter-spacing:-.03em;font-weight:700;color:var(--ffg)}
-.ft-news-row{display:flex;gap:6px;min-width:0;background:#0E0E0D;border:1px solid var(--fline);border-radius:999px;padding:5px;transition:border-color .2s}
-.ft-news-row:focus-within{border-color:var(--lime)}
-.ft-news input{flex:1;min-width:0;width:100%;border:0;background:transparent;font:inherit;font-size:15px;padding:9px 14px;outline:none;color:var(--ffg)}
-.ft-news input::placeholder{color:#6F6D67}
-.ft-news button{appearance:none;border:0;border-radius:999px;background:var(--lime);color:var(--ink);font:inherit;font-weight:600;font-size:14px;padding:10px 20px;cursor:pointer;transition:background .2s}
-.ft-news button:hover{background:var(--ffg)}
-.ft-news-note{margin:0;font-size:13px;color:var(--fmut);min-height:1.3em}
-/* Two-line wordmark: "best" / "seo.us", tinted with the site colors */
-.ft-mark{margin-top:0;font-size:clamp(38px,13.4vw,170px);line-height:.8;letter-spacing:-.075em;display:grid;user-select:none;white-space:nowrap;overflow:hidden;padding-bottom:.2em}
-.ft-mark-line{display:flex;line-height:.8}
-.ft-mark-line + .ft-mark-line{margin-top:-.17em}
-.ft-bottom{display:grid;gap:28px;margin-top:clamp(40px,5vw,64px);align-items:end}
-@media(min-width:1200px){.ft-bottom{display:block;position:relative}.ft-close{position:absolute;top:.4em;right:max(16px,env(safe-area-inset-right,0px));width:min(380px,40%)}}
-.ft-close{display:grid;gap:18px;justify-items:start;padding-bottom:.6em}
-.ft-close p{margin:0;color:var(--fmut);font-size:16px;line-height:1.55}
-.ft-close-btn{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--ink)!important;text-decoration:none;font-weight:600;font-size:15px;border-radius:999px;padding:13px 22px;transition:background .2s,transform .3s var(--ease)}
-.ft-close-btn:hover{background:var(--ffg);transform:translateY(-2px)}
-.ft-mark i{transition:transform 1s var(--ease),color .35s}
-.ft-mark i.w-a{color:color-mix(in srgb,var(--lav) 30%,#0E0E0D)}
-.ft-mark i.w-b{color:color-mix(in srgb,var(--pink) 28%,#0E0E0D)}
-.ft-mark i.w-c{color:color-mix(in srgb,var(--lime) 26%,#0E0E0D)}
-.ft-mark i.w-d{color:color-mix(in srgb,var(--taupe) 26%,#0E0E0D)}
-.ft-mark i.dot{color:var(--lime)}
-.ft-mark i.w-a:hover{color:var(--lav)}.ft-mark i.w-b:hover{color:var(--pink)}.ft-mark i.w-c:hover,.ft-mark i.dot:hover{color:var(--lime)}.ft-mark i.w-d:hover{color:var(--taupe)}
-.ft-legal{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;border-top:1px solid var(--fline);padding-top:22px;margin-top:clamp(24px,3vw,36px);font-size:13.5px;color:var(--fmut)}
-.ft-legal-links{display:flex;flex-wrap:wrap;gap:6px 18px}
-.ft-legal-links a{text-decoration:none}
-.ft-legal-links a:hover{color:var(--ffg)}
-.ft-top{appearance:none;background:transparent;border:1px solid #4A4A46;color:var(--ffg);border-radius:999px;padding:7px 14px;font:inherit;font-size:13px;cursor:pointer;transition:border-color .2s,color .2s}
-.ft-top:hover{border-color:var(--lime);color:var(--lime)}
-/* Pages that already end with their own lead section don't repeat the footer CTA. */
-body:has(.lead-band, main .cta) .ft-cta{display:none}
-body:has(.lead-band, main .cta) .ft-main{padding-top:64px}
-
 /* Google "Preferred source" button */
 .ps-btn{display:inline-flex;align-items:center;gap:10px;background:#1a73e8;color:#fff!important;text-decoration:none;font-family:var(--font-body);font-weight:500;font-size:14px;line-height:1.25;padding:9px 14px 9px 9px;border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:background .2s,box-shadow .2s;max-width:100%}
 .ps-btn:hover{background:#1765cc;box-shadow:0 2px 6px rgba(26,115,232,.45)}
 .ps-btn:focus-visible{outline:3px solid #8ab4f8;outline-offset:2px}
 .ps-g{flex:none;width:24px;height:24px;border-radius:4px;background:#fff;display:grid;place-items:center}
-.ft-ps{margin-top:22px;display:grid;gap:8px;justify-items:start}
 .ps-callout{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;border:1px solid #d2e3fc;background:#f3f8ff;border-radius:18px;padding:20px 22px}
 .ps-callout div{display:grid;gap:4px;max-width:46ch}
 .ps-callout b{font-family:var(--font-display);font-size:19px;letter-spacing:-.02em}
