@@ -54,7 +54,7 @@ const footerColumns: FooterColumn[] = [
   { title: "Industries", links: [indLink("dental-seo", "SEO for dentists"), indLink("law-firm-seo", "SEO for lawyers"), indLink("plumber-seo", "SEO for plumbers"), indLink("roofing-seo", "SEO for roofers"), indLink("contractor-seo", "SEO for contractors"), indLink("medical-seo", "SEO for doctors")], more: { href: "/industries", label: `All ${industryPages.length} industries` } },
   { title: "Free tools", links: [{ href: "/tools/seo-audit-tool", label: "SEO audit tool" }, { href: "/tools/backlink-checker", label: "Backlink checker" }, { href: "/tools/website-traffic-checker", label: "Traffic checker" }, { href: "/tools/seo-rank-checker", label: "Rank checker" }], more: { href: "/tools/free-seo-tools", label: "All free tools" } },
   { title: "Resources", links: [{ href: "/blog", label: "Blog" }, { href: "/guides/what-is-seo", label: "What is SEO?" }, { href: "/guides/seo-cost", label: "SEO cost" }, { href: "/guides/seo-keyword-research", label: "Keyword research" }, { href: "/guides/track-seo-rankings", label: "Track rankings" }], more: { href: "/guides", label: "All guides" } },
-  { title: "Company", links: [{ href: "/about", label: "About us" }, { href: "/pricing", label: "Pricing" }, { href: "/free-seo-audit", label: "Free SEO audit" }, { href: "/#results", label: "Results" }, { href: "/contact", label: "Contact" }] },
+  { title: "Company", links: [{ href: "/about", label: "About us" }, { href: "/pricing", label: "Pricing" }, { href: "/free-seo-audit", label: "Free SEO audit" }, { href: "/results", label: "Results" }, { href: "/contact", label: "Contact" }] },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

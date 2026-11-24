@@ -10,7 +10,7 @@ import { Services } from "@/components/sections/Services";
 import { AboutBento } from "@/components/sections/AboutBento";
 import { DashboardReel } from "@/components/sections/DashboardReel";
 import { WhyUs } from "@/components/sections/WhyUs";
-import { CaseStack } from "@/components/sections/CaseStack";
+import { GscResults } from "@/components/sections/GscResults";
 import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -41,7 +41,7 @@ export default function HomePage() {
         <AboutBento />
         <DashboardReel />
         <WhyUs />
-        <CaseStack />
+        <GscResults limit={3} />
         <BeforeAfter />
         <Process />
         <Testimonials />

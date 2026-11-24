@@ -224,3 +224,23 @@ Removed secondary keywords that the report assigns to sister sites, so our pages
 - Build OK. Crawl of 106 URLs: 0 problems.
 - Each page: 1 H1, title under 60, description under 155, FAQPage JSON-LD identical to the visible questions and answers, no horizontal overflow at 390px.
 - 0 em dashes. Keyword map: 0 duplicates, 0 overlaps.
+
+## Batch 7 · 2026-11-24 · Real Search Console results
+
+**Source:** 10 Google Search Console screenshots from client projects of our partner agency, shared with permission (the owner asked not to name the partner).
+
+**Display rules:**
+- Each result is labelled as partner work, never as our own clients.
+- Client names are hidden. The one name in the source index was replaced with "Student education platform".
+- Figures and periods are exactly as shown in each screenshot. Periods come from the chart dates.
+
+| Change | Where | Before | After |
+|---|---|---|---|
+| New page "SEO Results: Real Google Search Console Reports" with all 10 reports | /results | none | 10 cards: screenshot, client type, period, clicks, impressions, CTR, position |
+| Homepage results section | / | "Sample case studies, replace with your own" (invented Austin Plumbing etc.) | 3 real reports plus a "See all 10 results" button (CaseStack removed from the homepage; the component file is kept) |
+| Results links | header mega menu, footer, nav, /site-map, sitemap.xml | /#results, "Example client outcomes." | /results, "Real Search Console reports." |
+| Images | public/gsc/*.webp | n/a | 10 WebP files, 16 to 43 KB each, lazy-loaded with width and height set |
+
+**Validation:** build OK, 107 sitemap URLs crawl with 0 problems, /results has 1 H1 and a unique title and description, all 10 images load, no overflow at 390px.
+
+**Still SAMPLE on the homepage:** hero stats, about bento stats, dashboard reel and testimonials.

@@ -23,7 +23,7 @@ export const nav = [
   { label: "Industries", href: "/industries" },
   { label: "Free tools", href: "/tools" },
   { label: "Guides", href: "/guides" },
-  { label: "Results", href: "/#results" },
+  { label: "Results", href: "/results" },
   { label: "Pricing", href: "/pricing" },
 ];
 

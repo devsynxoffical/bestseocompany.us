@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     e("", 1, "weekly"),
     e("/free-seo-audit", 0.9), e("/pricing", 0.9), e("/services", 0.9), e("/industries", 0.9),
-    e("/about", 0.7), e("/contact", 0.7), e("/guides", 0.8), e("/blog", 0.8, "weekly"),
+    e("/results", 0.8), e("/about", 0.7), e("/contact", 0.7), e("/guides", 0.8), e("/blog", 0.8, "weekly"),
     ...servicePages.map((p) => e(`/services/${p.slug}`, 0.9)),
     ...industryPages.map((p) => e(`/industries/${p.slug}`, 0.8)),
     ...toolPages.map((p) => e(`/tools/${p.slug}`, p.slug === "seo-audit-tool" ? 0.9 : 0.7)),

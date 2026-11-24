@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 export default function HtmlSitemap() {
   const crumbs = [{ name: "Home", path: "/" }, { name: "Sitemap", path: "/site-map" }];
   const sections: Array<{ title: string; links: Array<[string, string]> }> = [
-    { title: "Company", links: [["/", "Home"], ["/about", "About"], ["/pricing", "Pricing"], ["/free-seo-audit", "Free SEO audit"], ["/contact", "Contact"], ["/editorial-policy", "Editorial policy"], ["/privacy", "Privacy policy"], ["/terms", "Terms of use"]] },
+    { title: "Company", links: [["/", "Home"], ["/about", "About"], ["/pricing", "Pricing"], ["/results", "Results"], ["/free-seo-audit", "Free SEO audit"], ["/contact", "Contact"], ["/editorial-policy", "Editorial policy"], ["/privacy", "Privacy policy"], ["/terms", "Terms of use"]] },
     { title: "Services", links: [["/services", "All services"], ...servicePages.map((p): [string, string] => [`/services/${p.slug}`, p.name])] },
     { title: "Free tools", links: toolPages.map((p): [string, string] => [`/tools/${p.slug}`, p.name]) },
     ...industryCategories.map((c) => ({ title: `Industries: ${c.name}`, links: c.slugs.map((s): [string, string] => [`/industries/${s}`, `${industryPages.find((p) => p.slug === s)?.name} SEO`]) })),

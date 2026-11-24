@@ -79,7 +79,7 @@ export function buildMenu(): MenuItem[] {
       columns: [
         { title: "Company", links: [
           { href: "/about", label: "About us", desc: "Who we are and how we work." },
-          { href: "/#results", label: "Results", desc: "Example client outcomes." },
+          { href: "/results", label: "Results", desc: "Real Search Console reports." },
           { href: "/contact", label: "Contact", desc: "Talk to a strategist." },
           { href: "/free-seo-audit", label: "Free SEO audit", desc: "Start here." },
         ] },
