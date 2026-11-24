@@ -1,4 +1,5 @@
-:HL["/_next/static/chunks/16ekndse6lmut.css","style"]
+:HL["/_next/static/chunks/3x7ksyaydlgdi.css","style"]
+:HL["/_next/static/chunks/10ienwnnz9pju.css","style"]
 :HL["/_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/0d3323de857e1fce-s.p.38hmww4cj4vme.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/4a0b7dd978568ff2-s.p.3fofz6dws3mg0.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -8,4 +9,4 @@
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"car-rental-seo","s":[]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":"industries","h":131136,"c":"$Q2"}]]
-0:{"b":"-LXFlQ6MovvRB0zTqx-dd","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
+0:{"b":"2IaeioVL5sC9hQrLVqc2-","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
