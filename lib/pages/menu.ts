@@ -2,7 +2,9 @@ import { industryPages, servicePages } from "./index";
 
 export type MenuIconName =
   | "pin" | "gear" | "search" | "link" | "store" | "spark" | "robot" | "user" | "branches" | "bag" | "cart" | "building"
-  | "box" | "chat" | "tag" | "gauge" | "backlink" | "traffic" | "rank" | "book" | "pen" | "info" | "trophy" | "mail" | "check" | "grid";
+  | "box" | "chat" | "tag" | "gauge" | "backlink" | "traffic" | "rank" | "book" | "pen" | "info" | "trophy" | "mail" | "check" | "grid"
+  | "hammer" | "drop" | "roof" | "snow" | "bolt" | "tooth" | "cross" | "spine" | "leaf" | "paw" | "scale" | "shield" | "car" | "calc"
+  | "umbrella" | "fork" | "house" | "wrench" | "bed" | "cloud";
 
 export type MenuLink = { href: string; label: string; desc?: string; icon?: MenuIconName };
 export type MenuColumn = { title: string; links: MenuLink[]; tone?: string };
@@ -43,19 +45,19 @@ const svc = (slug: string): MenuLink => {
 };
 
 /** Industry links, grouped into four balanced columns of five. */
-const IND_GROUPS: { title: string; tone: string; items: [string, string][] }[] = [
-  { title: "Home services", tone: "var(--lime)", items: [["contractor-seo", "Contractors"], ["plumber-seo", "Plumbers"], ["roofing-seo", "Roofers"], ["hvac-seo", "HVAC"], ["electrician-seo", "Electricians"]] },
-  { title: "Health", tone: "var(--pink)", items: [["dental-seo", "Dentists"], ["medical-seo", "Doctors and clinics"], ["chiropractor-seo", "Chiropractors"], ["med-spa-seo", "Med spas"], ["veterinary-seo", "Veterinarians"]] },
-  { title: "Legal and finance", tone: "var(--lav)", items: [["law-firm-seo", "Law firms"], ["personal-injury-seo", "Personal injury"], ["car-accident-lawyer-seo", "Car accident lawyers"], ["accountant-seo", "Accountants"], ["insurance-agency-seo", "Insurance agencies"]] },
-  { title: "Local business", tone: "var(--taupe)", items: [["restaurant-seo", "Restaurants"], ["real-estate-seo", "Real estate"], ["auto-repair-seo", "Auto repair"], ["hotel-seo", "Hotels"], ["saas-seo", "SaaS"]] },
+const IND_GROUPS: { title: string; tone: string; items: [string, string, MenuIconName][] }[] = [
+  { title: "Home services", tone: "var(--lime)", items: [["contractor-seo", "Contractors", "hammer"], ["plumber-seo", "Plumbers", "drop"], ["roofing-seo", "Roofers", "roof"], ["hvac-seo", "HVAC", "snow"], ["electrician-seo", "Electricians", "bolt"]] },
+  { title: "Health", tone: "var(--pink)", items: [["dental-seo", "Dentists", "tooth"], ["medical-seo", "Doctors and clinics", "cross"], ["chiropractor-seo", "Chiropractors", "spine"], ["med-spa-seo", "Med spas", "leaf"], ["veterinary-seo", "Veterinarians", "paw"]] },
+  { title: "Legal and finance", tone: "var(--lav)", items: [["law-firm-seo", "Law firms", "scale"], ["personal-injury-seo", "Personal injury", "shield"], ["car-accident-lawyer-seo", "Car accident lawyers", "car"], ["accountant-seo", "Accountants", "calc"], ["insurance-agency-seo", "Insurance agencies", "umbrella"]] },
+  { title: "Local business", tone: "var(--taupe)", items: [["restaurant-seo", "Restaurants", "fork"], ["real-estate-seo", "Real estate", "house"], ["auto-repair-seo", "Auto repair", "wrench"], ["hotel-seo", "Hotels", "bed"], ["saas-seo", "SaaS", "cloud"]] },
 ];
 const industryColumns = (): MenuColumn[] =>
   IND_GROUPS.map((g) => ({
     title: g.title,
     tone: g.tone,
-    links: g.items.map(([slug, label]) => {
+    links: g.items.map(([slug, label, icon]) => {
       if (!industryPages.some((x) => x.slug === slug)) throw new Error(`menu: unknown industry ${slug}`);
-      return { href: `/industries/${slug}`, label };
+      return { href: `/industries/${slug}`, label, icon };
     }),
   }));
 

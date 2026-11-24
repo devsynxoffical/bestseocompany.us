@@ -429,3 +429,13 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
 - New `components/layout/MenuIcon.tsx`.
 - `components/layout/Header.tsx` dropdown markup updated.
 - Mega menu CSS in `app/pages.css` replaced.
+
+## Batch 15 · 2026-11-24 · Icons in the Industries dropdown (owner request)
+
+- All 20 industry links now have a line icon in a tile tinted with their column color, the same style as the Services dropdown:
+  - **Home services:** hammer, water drop, roof, snowflake, bolt
+  - **Health:** tooth, medical cross, spine, leaf, paw
+  - **Legal and finance:** scales, shield, car, calculator, umbrella
+  - **Local business:** fork and knife, house, wrench, bed, cloud
+- 20 new icons were added to `components/layout/MenuIcon.tsx`, and `lib/pages/menu.ts` assigns them.
+- **Validation:** build OK. The panel fits at 1080px and 1366px with nothing cut off.
