@@ -244,3 +244,22 @@ Removed secondary keywords that the report assigns to sister sites, so our pages
 **Validation:** build OK, 107 sitemap URLs crawl with 0 problems, /results has 1 H1 and a unique title and description, all 10 images load, no overflow at 390px.
 
 **Still SAMPLE on the homepage:** hero stats, about bento stats, dashboard reel and testimonials.
+
+## Batch 8 · 2026-11-24 · Proof loop section on the homepage
+
+**Source:** the "Proof loop" section kit (design and CSS only).
+
+| Change | Where | Before | After |
+|---|---|---|---|
+| Dark auto-scrolling row of tilted window cards (CSS only; pauses on hover or focus; static and scrollable with reduced motion) | / (#results) | 3 static result cards | All 10 Search Console reports on a loop, with a "See all results" button to /results |
+| Card data | components/sections/ProofLoop.tsx | n/a | Uses lib/results.ts (same 10 reports as /results). Tag = business type, caption = period, right label = clicks |
+| Kit CSS adapted | app/globals.css | n/a | Site fonts. Edge fades changed to a mask so the background glow shows through. Long tags truncate on one line |
+
+**Kit images NOT used:** the 9 screenshots in the kit are partner client video calls. They were left out because:
+- they show faces and readable names, such as "George Roros"
+- they show ads and funnels material (Meta Ads ROAS table, Instagram insights, a high-ticket clients landing page), which is outside this site's SEO-only niche
+- the kit tags labelled them as SEO work ("Rank tracking", "Technical audit", "Keyword mapping") they do not show
+
+**Footer text is accurate:** "10 Search Console reports", "Figures exactly as Google shows them", "Shared with permission". The kit's "Live recording" and "Real client sessions" labels were dropped because they do not describe these images.
+
+**Validation:** build OK, 0 crawl problems, all 10 images load, the animation runs, no overflow at 390px and 1280px, 1 H1 on the homepage.
