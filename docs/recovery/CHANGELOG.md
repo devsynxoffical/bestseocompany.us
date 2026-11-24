@@ -338,3 +338,12 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
 **Validation:**
 - Build OK. Crawl: 0 problems.
 - No overflow at 390px, 820px and 1366px. Checked on / and /pricing.
+
+## Batch 12 · 2026-11-24 · Footer wordmark: "best" / "seocompany.us" (owner request)
+
+- **Text:** the second line now reads the full domain, "seocompany.us", not "seo.us".
+- **Colors:** "best" lavender, "seo" pink, "company" taupe, dot lime, "us" green.
+- **Size:** `clamp(38px,13.4vw,170px)`, so the 13-letter line fits from 360px to 1600px+ wide (measured, never clipped). There is extra bottom room so the descenders of "p" and "y" show.
+- **Closing call to action:** shortened to "Rank #1 with Best SEO Company. Start with a free 40-point audit." It sits beside "best" from 1200px wide and below the wordmark on smaller screens, where it would otherwise overlap.
+
+**Validation:** build OK. Crawl: 0 problems. No overflow at 360, 390, 820, 1024, 1200, 1366 and 1600px.

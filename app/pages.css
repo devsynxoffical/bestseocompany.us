@@ -485,11 +485,11 @@ footer.ft{--fbg:#0E0E0D;--ffg:#F3F2EE;--fmut:#A3A19A;--fline:#2A2A27;background:
 .ft-news button:hover{background:var(--ffg)}
 .ft-news-note{margin:0;font-size:13px;color:var(--fmut);min-height:1.3em}
 /* Two-line wordmark: "best" / "seo.us", tinted with the site colors */
-.ft-mark{margin-top:0;font-size:clamp(92px,24vw,230px);line-height:.8;letter-spacing:-.075em;display:grid;user-select:none;white-space:nowrap;overflow:hidden;padding-bottom:.06em}
+.ft-mark{margin-top:0;font-size:clamp(38px,13.4vw,170px);line-height:.8;letter-spacing:-.075em;display:grid;user-select:none;white-space:nowrap;overflow:hidden;padding-bottom:.2em}
 .ft-mark-line{display:flex;line-height:.8}
 .ft-mark-line + .ft-mark-line{margin-top:-.17em}
 .ft-bottom{display:grid;gap:28px;margin-top:clamp(40px,5vw,64px);align-items:end}
-@media(min-width:960px){.ft-bottom{grid-template-columns:auto minmax(280px,380px);justify-content:space-between;gap:48px}}
+@media(min-width:1200px){.ft-bottom{display:block;position:relative}.ft-close{position:absolute;top:.4em;right:max(16px,env(safe-area-inset-right,0px));width:min(380px,40%)}}
 .ft-close{display:grid;gap:18px;justify-items:start;padding-bottom:.6em}
 .ft-close p{margin:0;color:var(--fmut);font-size:16px;line-height:1.55}
 .ft-close-btn{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--ink)!important;text-decoration:none;font-weight:600;font-size:15px;border-radius:999px;padding:13px 22px;transition:background .2s,transform .3s var(--ease)}
@@ -498,8 +498,9 @@ footer.ft{--fbg:#0E0E0D;--ffg:#F3F2EE;--fmut:#A3A19A;--fline:#2A2A27;background:
 .ft-mark i.w-a{color:color-mix(in srgb,var(--lav) 30%,#0E0E0D)}
 .ft-mark i.w-b{color:color-mix(in srgb,var(--pink) 28%,#0E0E0D)}
 .ft-mark i.w-c{color:color-mix(in srgb,var(--lime) 26%,#0E0E0D)}
+.ft-mark i.w-d{color:color-mix(in srgb,var(--taupe) 26%,#0E0E0D)}
 .ft-mark i.dot{color:var(--lime)}
-.ft-mark i.w-a:hover{color:var(--lav)}.ft-mark i.w-b:hover{color:var(--pink)}.ft-mark i.w-c:hover,.ft-mark i.dot:hover{color:var(--lime)}
+.ft-mark i.w-a:hover{color:var(--lav)}.ft-mark i.w-b:hover{color:var(--pink)}.ft-mark i.w-c:hover,.ft-mark i.dot:hover{color:var(--lime)}.ft-mark i.w-d:hover{color:var(--taupe)}
 .ft-legal{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;border-top:1px solid var(--fline);padding-top:22px;margin-top:clamp(24px,3vw,36px);font-size:13.5px;color:var(--fmut)}
 .ft-legal-links{display:flex;flex-wrap:wrap;gap:6px 18px}
 .ft-legal-links a{text-decoration:none}

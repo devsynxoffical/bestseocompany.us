@@ -8,10 +8,15 @@ import { useReveal } from "@/hooks/useReveal";
 import { submitLead } from "@/lib/lead";
 import { PreferredSourceButton } from "@/components/ui/PreferredSource";
 
-// Two-line wordmark: "best" / "seo.us". `k` keeps the letter-by-letter reveal order across both lines.
+// Two-line wordmark: "best" / "seocompany.us". `k` keeps the letter-by-letter reveal order across both lines.
 const wordLines: { ch: string; cls?: string }[][] = [
   [..."best"].map((ch) => ({ ch, cls: "w-a" })),
-  [...[..."seo"].map((ch) => ({ ch, cls: "w-b" })), { ch: ".", cls: "dot" }, ...[..."us"].map((ch) => ({ ch, cls: "w-c" }))],
+  [
+    ...[..."seo"].map((ch) => ({ ch, cls: "w-b" })),
+    ...[..."company"].map((ch) => ({ ch, cls: "w-d" })),
+    { ch: ".", cls: "dot" },
+    ...[..."us"].map((ch) => ({ ch, cls: "w-c" })),
+  ],
 ];
 
 export type FooterLink = { href: string; label: string };
@@ -115,7 +120,7 @@ export function Footer({ columns }: { columns: FooterColumn[] }) {
           ))}
         </div>
         <div className="ft-close">
-          <p>Rank #1 with Best SEO Company. Start with a free 40-point audit and a clear plan for your first 90 days.</p>
+          <p>Rank #1 with Best SEO Company. Start with a free 40-point audit.</p>
           <Link href="/free-seo-audit" className="ft-close-btn">Get my free audit <span aria-hidden="true">↗</span></Link>
         </div>
       </div>
