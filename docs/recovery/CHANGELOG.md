@@ -497,3 +497,23 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
 **IndexNow:** the first submission created the key. Bing returned "no key file" because the file isn't live yet. Resubmit after the Hostinger deploy.
 
 **IndexNow update (24 Nov, after deploy):** the key file is live on www.bestseocompany.us. Submitted 9 URLs: /, /pricing, /services/small-business-seo, /services/local-seo, /industries/contractor-seo, /industries/plumber-seo, /blog/how-long-does-seo-take, /blog/plumber-seo-checklist and /llms.txt. Status: submitted (Bing and the other IndexNow engines verify the key file first).
+
+## Batch 19 · 2026-11-25 · Locations hub + Texas and California (City Plan, week 2)
+
+**Why now:** every week 1 row of the 25 Nov page map is blocked by the 7-day rule (until 30 Nov or 1 Dec) or needs the owner. The owner approved starting the week 2 city pages instead. 3 new pages this run, the maximum per run.
+
+| URL | Action | Words | Unique vs siblings | Checks |
+|---|---|---|---|---|
+| /locations | New hub ("seo services near me", "seo agency near me", "local seo company near me") | 764 | n/a (hub) | 200, self canonical, 1 H1, title 59, description 157, JSON-LD BreadcrumbList + Service + FAQPage, FAQ schema matches visible text, 0 em dashes, no overflow at 390px |
+| /locations/texas | New state page ("seo company texas") | 1,240 | 71.6% | same checks pass, 5 sourced facts, title 39, description 152 |
+| /locations/california | New state page ("seo company california") | 1,195 | 70.7% | same checks pass, 5 sourced facts, title 44, description 154 |
+| /sitemap-locations.xml | New: hub + state pages | | | listed in robots.txt; Hostinger .htaccess serves it as application/xml |
+| /sitemap.xml | +3 location URLs | | | crawl of 110 URLs: 0 problems |
+| Footer (all pages) | Company column: + "SEO in Texas", "SEO in California", "All locations" | | | link only, no page rewrite |
+| /llms.txt | + Locations section | | | |
+
+**Sources used on the pages:**
+- SBA Office of Advocacy, 2025 Small Business Profiles for Texas and California (number of small businesses, employees, sector counts, net job growth)
+- U.S. Census Bureau QuickFacts (July 1, 2024 population)
+
+**No local offices, clients or reviews are claimed.** The results section uses the national Search Console reports and is labeled "not [state]-specific".

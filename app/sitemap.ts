@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/content";
 import { guidePages, industryPages, servicePages, toolPages } from "@/lib/pages";
 import { blogPosts } from "@/lib/pages/blog-index";
+import { locationPages } from "@/data/locations";
 
 const UPDATED = new Date("2026-11-18T12:00:00Z");
 
@@ -17,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...toolPages.map((p) => e(`/tools/${p.slug}`, p.slug === "seo-audit-tool" ? 0.9 : 0.7)),
     ...guidePages.map((p) => e(`/guides/${p.slug}`, 0.7)),
     ...blogPosts.map((p) => e(`/blog/${p.slug}`, 0.6, "monthly", new Date(`${p.date}T12:00:00Z`))),
+    e("/locations", 0.8, "monthly", new Date("2026-11-25T12:00:00Z")),
+    ...locationPages.map((p) => e(`/locations/${p.slug}`, 0.7, "monthly", new Date(`${p.updated}T12:00:00Z`))),
     e("/site-map", 0.3, "monthly"), e("/editorial-policy", 0.3, "yearly"), e("/privacy", 0.2, "yearly"), e("/terms", 0.2, "yearly"),
   ];
 }

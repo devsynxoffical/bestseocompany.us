@@ -1,0 +1,36 @@
+Type,URL,Target keywords,US volume/mo (Semrush 25 Nov),KD,Action,Week
+Fix,disavow,n/a,,,Upload 81-domain file,1
+Fix,"/services/answer-engine-optimization, /services/generative-engine-optimization",RankEmpire lane,,,Retitle as guides linking to RankEmpire or noindex (after approval),1
+Fix,/industries/roofing-seo,roofing lane,,,Short guide linking to roofingsystems.co/roofing-seo,1
+Upgrade,/,best seo company,9900,30,"Retitle, answer block, compare table",1
+Upgrade,/pricing,seo pricing; how much does seo cost,10000,55-56,Upgrade,2
+Upgrade,/services/small-business-seo,small business seo; is seo worth it for small business,5660,25-29,Upgrade,2
+Upgrade,/services/local-seo,local seo services; how much does local seo cost,27420,26-47,Upgrade,4
+Upgrade,/industries/plumber-seo,seo for plumbers,2900,19,Upgrade,4
+New or upgrade,/industries/contractor-seo,seo for contractors,2900,21,Build or upgrade home-services-seo,5
+Upgrade,/industries/car-accident-lawyer-seo,personal injury seo,1000,19,Retitle Personal Injury SEO,5
+New,/guides/how-long-does-seo-take,how long does seo take,1300,25,Write,9
+City,/locations,seo services near me; seo agency near me; local seo company near me,25800,9-37,Build hub,2
+City,/locations/texas,seo company texas,1000,9,Build,2
+City,/locations/california,seo company california,880,6,Build,2
+City,/locations/florida,seo company florida,720,25,Build,3
+City tier 1,/locations/birmingham-al,seo company birmingham,1900,15,Build,3
+City tier 1,/locations/new-orleans-la,seo company new orleans,720,10,Build,3
+City tier 1,/locations/fort-myers-fl,seo company fort myers,720,14,Build,4
+City tier 1,/locations/the-woodlands-tx,seo company the woodlands,720,13,Build,4
+City tier 1,/locations/boise-id,seo company boise,590,7,Build,4
+City tier 1,/locations/albuquerque-nm,seo company albuquerque,590,14,Build,5
+City tier 1,/locations/frisco-tx,seo company frisco,590,12,Build,5
+City tier 1,/locations/grand-rapids-mi,seo company grand rapids,480,5,Build,5
+City tier 1,/locations/boca-raton-fl,seo company boca raton,480,13,Build,6
+City tier 1,/locations/naperville-il,seo company naperville,480,12,Build,6
+City tier 1,/locations/plano-tx,seo company plano,480,14,Build,6
+City tier 1,/locations/virginia-beach-va,seo company virginia beach,480,11,Build,7
+City tier 1,/locations/oklahoma-city-ok,seo company oklahoma city,390,5,Build,7
+City tier 1,/locations/des-moines-ia,seo company des moines,390,3,Build,7
+City tier 1,/locations/long-beach-ca,seo company long beach,390,13,Build,8
+City tier 1,/locations/rochester-ny,seo company rochester,390,13,Build,8
+City tier 1,/locations/scottsdale-az,seo company scottsdale,390,15,Build,8
+City,"/locations/{new-jersey, north-carolina, utah}",seo company [state],590-1300,23-33,Build,8
+City tier 2,"fort-lauderdale, detroit, san-jose, indianapolis, salt-lake-city, charleston, west-palm-beach, sarasota, tulsa, st-louis, spokane, naples, honolulu, pittsburgh, reno, buffalo, tucson, louisville, chattanooga, el-paso, providence, hartford",seo company [city],170-720 each,7-24,If tier 1 earns impressions,9-11
+City tier 3,"long-island, orange-county, jacksonville, san-antonio, portland, raleigh, cleveland",seo company [city],480-1900 each,30-42,After month 4,later
