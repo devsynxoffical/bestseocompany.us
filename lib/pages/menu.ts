@@ -1,4 +1,5 @@
 import { industryPages, servicePages } from "./index";
+import { caseStudies } from "../case-studies";
 
 export type MenuIconName =
   | "pin" | "gear" | "search" | "link" | "store" | "spark" | "robot" | "user" | "branches" | "bag" | "cart" | "building"
@@ -123,15 +124,21 @@ export function buildMenu(): MenuItem[] {
     {
       label: "Company",
       href: "/about",
-      size: "sm",
+      size: "md",
       columns: [
         { title: "Company", tone: "var(--taupe)", links: [
           { href: "/about", label: "About us", desc: "Who we are and how we work", icon: "info" },
-          { href: "/results", label: "Results", desc: "Real Search Console reports", icon: "trophy" },
+          { href: "/locations", label: "Locations", desc: "SEO services by state", icon: "pin" },
           { href: "/contact", label: "Contact", desc: "Talk to a strategist", icon: "mail" },
           { href: "/free-seo-audit", label: "Free SEO audit", desc: "The best place to start", icon: "check" },
         ] },
+        { title: "Case studies", tone: "var(--lime)", links: ["01", "09", "07", "06", "10"].map((id) => {
+          const c = caseStudies.find((x) => x.id === id);
+          if (!c) throw new Error(`menu: no case study ${id}`);
+          return { href: `/results/${c.slug}`, label: c.r.client, desc: id === "10" ? "Clicks up 47%, CTR doubled" : `${c.r.clicks} clicks, ${c.r.period.split(",")[0].toLowerCase()}`, icon: "rank" as MenuIconName };
+        }) },
       ],
+      footer: { text: "Real Google Search Console reports, shared with permission.", links: [{ href: "/results", label: `All ${caseStudies.length} case studies` }] },
     },
   ];
 }

@@ -5,6 +5,7 @@ import { industryCategories } from "@/lib/pages/categories";
 import type { GuideSection } from "@/lib/pages/types";
 import { gscResults, RESULTS_DISCLOSURE } from "@/lib/results";
 import { locationPages } from "@/data/locations";
+import { caseStudies } from "@/lib/case-studies";
 
 const u = (p: string) => `${site.url}${p}`;
 const first = (s: string) => s.split(". ")[0].replace(/\.$/, "") + ".";
@@ -43,6 +44,7 @@ export function buildLlmsTxt() {
       if (p) lines.push(`- [${p.name} SEO](${u(`/industries/${s}`)}): SEO for ${p.audience}. ${first(p.intro)}`);
     }
   }
+  lines.push("", "## Case studies (Google Search Console reports)", ...caseStudies.map((c) => `- [${c.h1}](${u(`/results/${c.slug}`)}): ${c.r.clicks} clicks, ${c.r.impressions} impressions, ${c.r.ctr} CTR, position ${c.r.position} (${c.r.period}).`));
   lines.push("", "## Locations", `- [SEO services by state](${u("/locations")}): local SEO across the US (served remotely, no local offices)`, ...locationPages.map((p) => `- [${p.h1}](${u(`/locations/${p.slug}`)}): ${p.answer.split(". ")[0]}.`));
   lines.push("", "## Free tools", ...toolPages.map((p) => `- [${p.name}](${u(`/tools/${p.slug}`)}): ${first(p.intro)}`), "");
   lines.push("## Guides", ...guidePages.map((p) => `- [${p.question}](${u(`/guides/${p.slug}`)}): ${p.answer}`), "");

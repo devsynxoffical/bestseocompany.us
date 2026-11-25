@@ -517,3 +517,21 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
 - U.S. Census Bureau QuickFacts (July 1, 2024 population)
 
 **No local offices, clients or reviews are claimed.** The results section uses the national Search Console reports and is labeled "not [state]-specific".
+
+## Batch 20 · 2026-11-25 · 10 case study pages from the Search Console reports (owner request)
+
+| Change | Detail |
+|---|---|
+| New: /results/{slug} × 10 | education-website-6-months, education-platform-28-days, education-website-3-months, publisher-network, digital-agency-france, saas-analytics-blog, home-services-company, seo-consultant-site, ecommerce-store, b2b-saas-tool |
+| Page content | Each page has: 4 KPI tiles; the full report screenshot; an answer block; 3 to 4 notes on what the report shows; how to read the metrics; what we can share; related services; 3 more case studies; lead form |
+| Honesty rules | Only the figures in each screenshot, simple math labeled "about" (such as clicks per day) and trends visible in the chart. No client names and no invented work. An optional `approach` field (lib/case-studies.ts) renders a "What was done" section only once the owner or partner agency confirms details |
+| Schema | BreadcrumbList + Article |
+| /results and homepage | Each result row links "Read the case study"; the button reads "See all 10 case studies" |
+| Header, Company dropdown | sm → md panel: Company column (About, Locations, Contact, Free SEO audit) + "Case studies" column (5 case studies with clicks) + bottom strip "All 10 case studies" |
+| sitemap.xml, llms.txt | 10 case study URLs added |
+
+**Validation:**
+- All 10 pages: 200, self canonical, 1 H1, unique titles of 40 to 55 characters, descriptions of 128 to 160, valid JSON-LD, 0 em dashes, no overflow at 390px, the report image loads.
+- About 460 to 515 words each.
+- The dropdown fits on screen at 1366px.
+- Crawl: 0 problems.

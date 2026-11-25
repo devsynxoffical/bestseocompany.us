@@ -555,3 +555,28 @@ main{overflow-x:clip}
 .loc-areas p{margin:0;color:var(--ink-2)}
 .loc-areas ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .loc-areas li{border:1px solid var(--line);background:var(--white);border-radius:999px;padding:6px 14px;font-size:14.5px}
+
+/* ===== Case study pages (/results/[slug]) ===== */
+.cs-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:18px}
+@media(min-width:800px){.cs-kpis{grid-template-columns:repeat(4,1fr)}}
+.cs-kpis div{border:1px solid var(--line);border-radius:20px;padding:18px 20px;display:grid;gap:4px;background:var(--white)}
+.cs-kpis div.on{background:var(--lime);border-color:var(--ink)}
+.cs-kpis span{font-size:13px;color:var(--ink-2)}
+.cs-kpis .on span{color:var(--ink)}
+.cs-kpis b{font-family:var(--font-display);font-size:clamp(30px,3.6vw,46px);letter-spacing:-.045em;line-height:1}
+.cs-shot{margin:0;border:1px solid var(--line);border-radius:26px;background:#f6f8fc;padding:clamp(12px,2vw,24px);display:grid;gap:12px}
+.cs-shot img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 8px 30px rgba(17,17,17,.08)}
+.cs-shot figcaption{font-size:13px;color:var(--ink-2)}
+.cs-two{display:grid;gap:16px}
+@media(min-width:900px){.cs-two{grid-template-columns:1fr 1fr}}
+.cs-read,.cs-note{border:1px solid var(--line);border-radius:24px;padding:clamp(20px,3vw,30px);background:var(--white);display:grid;gap:12px;align-content:start}
+.cs-note{background:#FAFAF8}
+.cs-read h2,.cs-note h2{font-size:clamp(22px,2.4vw,28px);letter-spacing:-.03em}
+.cs-read dl{margin:0;display:grid;gap:12px}
+.cs-read dt{font-weight:600}
+.cs-read dd{margin:2px 0 0;color:var(--ink-2)}
+.cs-note p{margin:0;color:var(--ink-2)}
+.cs-note a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.cs-approach{margin:0;padding-left:20px;display:grid;gap:8px}
+.gsc-cs{font-weight:600;color:var(--ink);text-decoration:none;display:inline-flex;gap:6px;transition:gap .25s var(--ease)}
+.gsc-cs:hover{gap:10px}

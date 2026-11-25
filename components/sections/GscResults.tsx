@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SplitText } from "@/components/ui/SplitText";
 import { Reveal } from "@/components/ui/Reveal";
 import { gscResults, RESULTS_DISCLOSURE, type GscResult } from "@/lib/results";
+import { caseSlugForResult } from "@/lib/case-studies";
 
 /** One result per row: the full Search Console screenshot beside its numbers. */
 function ResultCard({ r, n }: { r: GscResult; n: number }) {
@@ -23,6 +24,7 @@ function ResultCard({ r, n }: { r: GscResult; n: number }) {
           <div><dt>Avg. position</dt><dd>{r.position}</dd></div>
         </dl>
         {r.note && <p className="gsc-note">{r.note}</p>}
+        {caseSlugForResult(r.id) && <Link href={`/results/${caseSlugForResult(r.id)}`} className="gsc-cs">Read the case study <span aria-hidden="true">→</span></Link>}
       </figcaption>
     </Reveal>
   );
@@ -46,7 +48,7 @@ export function GscResults({ ids, heading = "Real Search Console results.", id =
         </div>
         {ids && (
           <Reveal className="gsc-more">
-            <Link href="/results" className="btn">See all {gscResults.length} results <span className="arrow" aria-hidden="true">↗</span></Link>
+            <Link href="/results" className="btn">See all {gscResults.length} case studies <span className="arrow" aria-hidden="true">↗</span></Link>
           </Reveal>
         )}
       </div>
