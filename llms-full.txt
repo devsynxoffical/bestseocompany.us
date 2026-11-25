@@ -96,6 +96,23 @@ Key facts:
 - [Daycare SEO](https://www.bestseocompany.us/industries/daycare-seo): SEO for daycares and child care centers. Parents searching for child care read reviews closely, check licensing and compare programs before they schedule a tour.
 - [SaaS SEO](https://www.bestseocompany.us/industries/saas-seo): SEO for SaaS companies. SaaS buyers research for weeks before they talk to sales.
 
+## Case studies (Google Search Console reports)
+- [Education website: 42.1K clicks from Google in 6 months](https://www.bestseocompany.us/results/education-website-6-months): 42.1K clicks, 240K impressions, 17.6% CTR, position 7.5 (6 months, Apr to Oct 2026).
+- [Student education platform: 9.04K clicks and a 26.9% CTR in 28 days](https://www.bestseocompany.us/results/education-platform-28-days): 9.04K clicks, 33.6K impressions, 26.9% CTR, position 6.1 (28 days, Sep to Oct 2026).
+- [Education website: 25.4K clicks in 3 months at a 19.5% CTR](https://www.bestseocompany.us/results/education-website-3-months): 25.4K clicks, 130K impressions, 19.5% CTR, position 7.5 (3 months, Jul to Oct 2026).
+- [Publisher network: 3.45M clicks and 421M impressions in 3 months](https://www.bestseocompany.us/results/publisher-network): 3.45M clicks, 421M impressions, 0.8% CTR, position 14.4 (3 months, Jul to Oct 2022).
+- [Digital agency, France: 15.6K clicks and 5.52M impressions in 28 days](https://www.bestseocompany.us/results/digital-agency-france): 15.6K clicks, 5.52M impressions, 0.3% CTR, position 16.6 (28 days, Aug 2025).
+- [SaaS analytics blog: 11.5K clicks and 314K impressions](https://www.bestseocompany.us/results/saas-analytics-blog): 11.5K clicks, 314K impressions, 3.7% CTR, position 23.2 (Mar to May 2022).
+- [Home services company: 5.85K clicks and 822K impressions in 3 months](https://www.bestseocompany.us/results/home-services-company): 5.85K clicks, 822K impressions, 0.7% CTR, position 33.4 (3 months, Aug to Oct 2022).
+- [SEO consultant site: 5.21K clicks and 7.37M impressions in 16 months](https://www.bestseocompany.us/results/seo-consultant-site): 5.21K clicks, 7.37M impressions, 0.1% CTR, position 34.5 (16 months).
+- [E-commerce store: 2.26K clicks from Google in 24 hours](https://www.bestseocompany.us/results/ecommerce-store): 2.26K clicks, 129K impressions, 1.7% CTR, position 30 (24 hours, Dec 2024).
+- [B2B SaaS tool: clicks up 47% and CTR doubled](https://www.bestseocompany.us/results/b2b-saas-tool): 693 clicks, 17.1K impressions, 4.1% CTR, position 45.6 (Last 3 months vs previous 3 months).
+
+## Locations
+- [SEO services by state](https://www.bestseocompany.us/locations): local SEO across the US (served remotely, no local offices)
+- [SEO Company in Texas](https://www.bestseocompany.us/locations/texas): Best SEO Company helps Texas contractors, clinics, restaurants and other local businesses rank on Google and in the map pack across the cities they serve.
+- [SEO Company in California](https://www.bestseocompany.us/locations/california): Best SEO Company works with California law firms, accountants, architects, clinics and other businesses that need to stand out in some of the most crowded search results in the country.
+
 ## Free tools
 - [Free SEO Tools](https://www.bestseocompany.us/tools/free-seo-tools): Four free tools to check how your site is doing in search.
 - [Free SEO Audit Tool](https://www.bestseocompany.us/tools/seo-audit-tool): Enter a URL and get an instant check of that page's technical and on-page SEO basics.

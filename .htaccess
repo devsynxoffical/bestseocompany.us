@@ -49,9 +49,9 @@ RewriteRule ^(.+?)/?$ $1.html [L]
 AddType application/manifest+json .webmanifest
 AddType text/plain .txt
 AddType application/rss+xml .xml
-<Files "sitemap.xml">
+<FilesMatch "^sitemap(-locations)?\.xml$">
   ForceType application/xml
-</Files>
+</FilesMatch>
 
 # Keep config and docs private
 <FilesMatch "^(config\.php|HOSTINGER-README\.md)$">
