@@ -1,5 +1,6 @@
 import { industryPages, servicePages } from "./index";
 import { caseStudies } from "../case-studies";
+import { locationPages } from "../../data/locations";
 
 export type MenuIconName =
   | "pin" | "gear" | "search" | "link" | "store" | "spark" | "robot" | "user" | "branches" | "bag" | "cart" | "building"
@@ -120,6 +121,18 @@ export function buildMenu(): MenuItem[] {
       ],
       footer: { text: "New guides every week.", links: [{ href: "/guides", label: "All guides" }] },
     },
+    {
+      label: "Locations",
+      href: "/locations",
+      size: "sm",
+      columns: [
+        { title: "SEO by location", tone: "var(--lime)", links: [
+          { href: "/locations", label: "All locations", desc: "SEO services near you, by state", icon: "pin" },
+          ...locationPages.map((l) => ({ href: `/locations/${l.slug}`, label: `SEO in ${l.name}`, desc: `${l.facts[0].stat} small businesses`, icon: "pin" as MenuIconName })),
+        ] },
+      ],
+      footer: { text: "More states and cities coming soon.", links: [{ href: "/contact", label: "Ask about your area" }] },
+    },
     { label: "Pricing", href: "/pricing" },
     {
       label: "Company",
@@ -128,7 +141,7 @@ export function buildMenu(): MenuItem[] {
       columns: [
         { title: "Company", tone: "var(--taupe)", links: [
           { href: "/about", label: "About us", desc: "Who we are and how we work", icon: "info" },
-          { href: "/locations", label: "Locations", desc: "SEO services by state", icon: "pin" },
+          { href: "/results", label: "Results", desc: "All 10 case studies", icon: "trophy" },
           { href: "/contact", label: "Contact", desc: "Talk to a strategist", icon: "mail" },
           { href: "/free-seo-audit", label: "Free SEO audit", desc: "The best place to start", icon: "check" },
         ] },

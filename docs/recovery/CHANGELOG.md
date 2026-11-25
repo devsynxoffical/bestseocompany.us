@@ -535,3 +535,10 @@ The CTA band at the top of the footer, all links, the newsletter form handler an
 - About 460 to 515 words each.
 - The dropdown fits on screen at 1366px.
 - Crawl: 0 problems.
+
+## Batch 21 · 2026-11-25 · Locations dropdown in the header (owner request)
+
+- **New top-level "Locations" dropdown** (between Resources and Pricing): All locations, SEO in Texas and SEO in California, each with a pin icon and its small business count. The bottom strip reads "More states and cities coming soon" with an "Ask about your area" link. It lists new location pages automatically from `data/locations.ts`.
+- **Company dropdown:** Results moved back into the Locations slot (Locations now has its own menu). The Case studies column is unchanged.
+- **7 menu items on smaller desktops:** labels never wrap, and spacing tightens from 1060px to 1279px. Checked at 1060, 1180 and 1366px: one line, no overlap with the logo or the Free audit button, no horizontal scroll, and the dropdown stays on screen.
+- **Mobile menu:** gets the Locations section automatically.
